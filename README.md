@@ -33,8 +33,8 @@
 | [前端专项字典](docs/learning/references/frontend.md) | HTML/CSS/a11y、JS/TS、React、SSR/Next、Node、性能与测试 | REFERENCE |
 | [后端专项字典](docs/learning/references/backend.md) | Java/JVM/Spring/安全、FastAPI、SQL、消息、缓存按需深挖 | REFERENCE |
 | [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) | 复现、证据、失败与修复记录 | TEMPLATE |
-| [项目蓝图](docs/project/PROJECT-BLUEPRINT.md) | 目标 Monorepo 目录、数据流、API 草案；**尚未生成应用代码** | DESIGN_ONLY |
-| [12 项验收](docs/learning/ACCEPTANCE.md) | G01–G12 的负例、状态和独立证据 | NOT_RUN |
+| [项目蓝图](docs/project/PROJECT-BLUEPRINT.md) | 已有 React/FastAPI S0 合成核对，数据库/异步/Java/上线仍为设计态 | PARTIALLY_IMPLEMENTED |
+| [24 项验收](docs/learning/ACCEPTANCE.md) | G01–G24 的负例、状态和本人独立证据 | LEARNER_NOT_RUN |
 | [AI Coding 边界](docs/learning/AI-CODING-POLICY.md) | 本人先写与 AI 可辅助范围、L1–L3 标准 | REFERENCE |
 | [落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md) | V3.0 八周基线与十六周拓展的一致性核验 | DOCUMENTED |
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
@@ -68,6 +68,6 @@ X-SuperPlay-FullStack-Learning-OS（本仓：唯一学习路线与个人实验�
 
 ## 当前已完成与未完成
 
-- 已创建：路线、索引、学习模板及资料入口。
+- 已创建：路线、索引、学习模板和资料入口，以及合成核对 S0 API/React 代码和两套实际通过的 GitHub CI（文档与前后端测试/构建）。
 - 未开展/未验证：W1–W24 实验、主项目编码、持续集成、生产部署、个人闭卷考核与跨仓产品交付。
 - 所有 `NOT_RUN` 应在实际发生并保存证据后更新，不把文档创建等同于任务完成。新扩展 G13–G24 同样默认 NOT_RUN。

@@ -1,6 +1,6 @@
 # V3.0 全栈 Roadmap 覆盖与一致性核查
 
-> **DOCUMENTED / LEARNING_NOT_RUN**。文档索引检查不等于执行任何编程实验或个人独立通过。
+> **DOCUMENTED / SYNTHETIC_S0_CODE_AND_CI_VERIFIED / LEARNING_NOT_RUN**。当前已存在 S0 合成核对 API/React 代码和真实 CI；这不等于完成全部课程、上线产品或个人独立通过。
 
 ## 权威归属
 
@@ -32,7 +32,7 @@
 
 1. **路线一条**：W1–W8 144h 保留；W09–W24 288h；总 24×18=**432h** 参考预算，非保证期限。
 2. **Java/Spring 为必修**；Next.js SSR/Node 比较实验必修，**完整 Next 迁移**属于 P2；不能再把 Java 同时称为 P2。
-3. **仅一个贯穿应用** `ai-fullstack-workbench`；Java 服务独立业务边界与 DB 所有权，Next/Node 仅 Labs。
+3. **仅一个贯穿应用** `ai-fullstack-workbench`：S0 API/React 合成核对已实现并有 CI 证据，Java/DB/SSE/Next/Node 为后续扩展且仍需本人实验；Java 服务独立业务边界与 DB 所有权，Next/Node 仅 Labs。
 4. G01–G12 不失效；G13–G24 新增，所有 Gate 不能因“计划编写”打 PASS。
 5. Dev-Workbench 11 个工程阶段仍为过程权威，Utility-Sites 未授权业务不能被学习项目擅自开发。
-6. 本轮只核实 GitHub 文档与相对链接；真实程序/容器/CI/性能/安全与独立答辩仍 `NOT_RUN`。
+6. 文档 CI 与 S0 API/React 单元/API/构建 CI 已真实执行成功；真实数据库、容器生产部署、性能/安全验收、Java 跨语言系统与本人独立答辩仍 `NOT_RUN`。

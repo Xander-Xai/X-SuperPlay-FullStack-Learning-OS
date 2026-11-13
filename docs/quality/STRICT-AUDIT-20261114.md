@@ -53,3 +53,11 @@
 ## 新阶段状态：学习仓已拥有真实合成业务代码
 
 此前报告所记的“没有应用代码”是当时的事实；现已由 React/Vite + FastAPI 代码与真正的 GitHub Actions 单元/API/前端测试和 build 取代。见 [训练源码](../../ai-fullstack-workbench/README.md) 与 [产品驱动映射](../learning/PRODUCT-DRIVEN-EXECUTION.md)。**S0 合成程序可构建 ≠ 独立课程考核 PASS ≠ Utility-Sites 商业产品可上线**。仍须完成 OpenAPI 代码生成、PostgreSQL、权限、安全 CSV、幂等任务、SSE/Java/事件、真实部署及 [上线门禁](../project/DOWNSTREAM-RELEASE-GATES.md)。
+
+## 实战代码阶段最终验收（2026-11-14）
+
+- **真实代码**：学习仓 `ai-fullstack-workbench/apps/api`（FastAPI + Decimal）、`apps/web`（React/Vite/TypeScript）以及前后端测试/锁文件已经提交。
+- **最新实战 CI**：[ReconLab synthetic slice #43476058819](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/actions/runs/43476058819) = SUCCESS。含 Python API/Unit Test、npm ci/React 测试、TS/Vite build。无 Browser E2E、真实 DB、安全/部署结论。
+- **最新文档 CI**：[Roadmap document integrity #43476059220](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/actions/runs/43476059220) = SUCCESS。
+- **可执行需求**：24 周产品驱动映射、S0–S4 五个 GitHub Issues、商业上线 Gate 已写入本仓；Utility-Sites README 索引学习代码但保持 `DEVELOPMENT_ON_HOLD`；Dev-Workbench [PR #43](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/pull/43) verify 成功并合并。
+- **状态分离**：S0 AI-assisted starter / CI_VERIFIED；学员独立学习验收 W1–W24 = NOT_RUN；ReconCheck 正式产品代码/授权/上市 = BLOCKED。旧版本历史记录中“没有应用代码”不再代表当前状态。

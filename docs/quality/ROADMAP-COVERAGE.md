@@ -1,12 +1,12 @@
-# V3.0 全栈 Roadmap 覆盖与一致性核查
+# V4.0 全栈知识地图与按需学习一致性核查
 
-> **DOCUMENTED / SYNTHETIC_S0_CODE_AND_CI_VERIFIED / LEARNING_NOT_RUN**。当前已存在 S0 合成核对 API/React 代码和真实 CI；这不等于完成全部课程、上线产品或个人独立通过。
+> **KNOWLEDGE_GRAPH_VERIFIED / OPTIONAL_S0_DEMO_CI_VERIFIED / LEARNER_NOT_RUN**。本仓覆盖下游多种产品，不再要求按W1–W24日历或只做ReconLab。静态知识图验证与学生技能、商业产品上线仍严格分离。
 
 ## 权威归属
 
-- 学习唯一执行路线：[ROADMAP.md](../../ROADMAP.md)，W1–W24。
+- 学习方式：[DEMAND-ROUTER](../learning/DEMAND-ROUTER.md)优先，按[KNOWLEDGE-GRAPH](../learning/KNOWLEDGE-GRAPH.md)最低先修跳转；[ROADMAP](../../ROADMAP.md)是完整知识覆盖坐标，不是固定学习先后。
 - 学习唯一状态台账：[PROGRESS.md](../learning/PROGRESS.md)，初始 24 周均 NOT_RUN。
-- Java 必修与项目边界：[ADR-0002](../decisions/ADR-0002-v3-multistack-expansion.md)，覆盖历史 [ADR-0001](../decisions/ADR-0001-stack-and-boundaries.md) 对 Java 后置的决策。
+- 当前学习治理：[ADR-0003](../decisions/ADR-0003-demand-driven-learning.md)覆盖原单项目/按周限制；[ADR-0002](../decisions/ADR-0002-v3-multistack-expansion.md)保留Java/Spring与前端专项覆盖范围。
 - 专题索引：[CAPABILITY-MATRIX](../learning/CAPABILITY-MATRIX.md)、[frontend](../learning/references/frontend.md)、[backend](../learning/references/backend.md)。
 - 最终考核：[ACCEPTANCE](../learning/ACCEPTANCE.md)，G01–G24。
 - 技术蓝图：[PROJECT-BLUEPRINT](../project/PROJECT-BLUEPRINT.md)，新目录属于设计态，非已实现业务代码。
@@ -30,9 +30,18 @@
 
 ## 不可违反的一致性规则
 
-1. **路线一条**：W1–W8 144h 保留；W09–W24 288h；总 24×18=**432h** 参考预算，非保证期限。
-2. **Java/Spring 为必修**；Next.js SSR/Node 比较实验必修，**完整 Next 迁移**属于 P2；不能再把 Java 同时称为 P2。
-3. **仅一个贯穿应用** `ai-fullstack-workbench`：S0 API/React 合成核对已实现并有 CI 证据，Java/DB/SSE/Next/Node 为后续扩展且仍需本人实验；Java 服务独立业务边界与 DB 所有权，Next/Node 仅 Labs。
-4. G01–G12 不失效；G13–G24 新增，所有 Gate 不能因“计划编写”打 PASS。
+1. **一份完整能力地图**：W1–W8及W09–W24总24个覆盖坐标；432h是自愿全面补课的历史参考预算，不是强制期限。
+2. **Java/Spring/Next/Node全部覆盖在知识目录**；选择Java岗位时实际必学相应节点，纯静态工具站则不需要强行Java或Next。
+3. **不限定一个项目**：已有 `ai-fullstack-workbench` S0合成核对案例与CI，只是可选实战；有授权的下游真实项目、最小Lab亦可学习。按[REQUIREMENTS-COVERAGE](../learning/REQUIREMENTS-COVERAGE.md)检查多场景覆盖。
+4. G01–G24全部保留为独立能力证据类别，按当前需求选取相关Gate；不因计划编写或前置无关Gate未通过就自动失败。
 5. Dev-Workbench 11 个工程阶段仍为过程权威，Utility-Sites 未授权业务不能被学习项目擅自开发。
 6. 文档 CI 与 S0 API/React 单元/API/构建 CI 已真实执行成功；真实数据库、容器生产部署、性能/安全验收、Java 跨语言系统与本人独立答辩仍 `NOT_RUN`。
+
+
+## V4.0 新增硬验收
+
+- [知识图 JSON](../learning/knowledge-map.json) 29个独立知识节点、25条最小先修边、24坐标/24Gate覆盖，不允许先修环路或悬空节点。
+- [官方原始资料库](../learning/OFFICIAL-RESOURCES.md) 每个节点可追溯到标准/官方文档及专题学习内容；外部网页存活与具体版本仍需使用时复核。
+- [需求路由器](../learning/route_need.py) 支持自然语言关键词和NodeID直接查最小先修/资料；不把关键词匹配当全部业务理解。
+- [场景覆盖](../learning/REQUIREMENTS-COVERAGE.md) 对静态站/SaaS/企业Web/小程序/移动App/AI工具/Java/Node/结算案例进行取舍；不宣布所有产品同时可以直接上线。
+- 旧24模块状态校验必须允许 `IN_PROGRESS`/`PARTIAL`/`PASS_WITH_EVIDENCE`，通过要有证据；不能强制所有学习状态永久NOT_RUN。

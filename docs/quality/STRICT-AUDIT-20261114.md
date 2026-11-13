@@ -61,3 +61,11 @@
 - **最新文档 CI**：[Roadmap document integrity #43476059220](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/actions/runs/43476059220) = SUCCESS。
 - **可执行需求**：24 周产品驱动映射、S0–S4 五个 GitHub Issues、商业上线 Gate 已写入本仓；Utility-Sites README 索引学习代码但保持 `DEVELOPMENT_ON_HOLD`；Dev-Workbench [PR #43](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/pull/43) verify 成功并合并。
 - **状态分离**：S0 AI-assisted starter / CI_VERIFIED；学员独立学习验收 W1–W24 = NOT_RUN；ReconCheck 正式产品代码/授权/上市 = BLOCKED。旧版本历史记录中“没有应用代码”不再代表当前状态。
+
+
+## V4.0 纠偏：下游多场景与需求自由跳学
+
+- 用户明确否定“全仓围绕ReconLab/ReconCheck”和“强制W1→W24按周通关”。已以[ADR-0003](../decisions/ADR-0003-demand-driven-learning.md)替换旧执行规定；保留已有代码案例及历史演变记录。
+- 目前可从[DEMAND-ROUTER](../learning/DEMAND-ROUTER.md)→[知识图](../learning/KNOWLEDGE-GRAPH.md)→[官方资料](../learning/OFFICIAL-RESOURCES.md)→真实业务/独立故障实验，知识坐标与学习顺序不再混用。
+- [下游能力覆盖](../learning/REQUIREMENTS-COVERAGE.md)包含静态Web、SaaS、企业Web、微信小程序、移动App、AI/Agent、Node CLI、Java/Spring与电商结算案例；未覆盖全部平台特殊细节，应用边界仍以真实需求与授权为准。
+- 新增`route_need.py`按NodeID或关键词打印作用、最低先修、官方资料；GitHub Actions静态验证知识图关系无环、覆盖W01–W24及G01–G24、资料索引，并运行CLI单测。**静态工具和文档CI通过不等于用户已经学会任何模块。**

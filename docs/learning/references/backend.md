@@ -1,6 +1,6 @@
 # 后端专项深挖字典 V3.0：Java/JVM/Spring + Python + 数据/架构
 
-> **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。本页按 [唯一主线 W1–W24](../../../ROADMAP.md) 检索；Java Core/JVM/Spring **W09–W13 正式必修**，不再是 P2。语言熟悉程度不由历史项目自动推断。
+> **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。本页按[知识地图](../../../ROADMAP.md)检索；Java Core/JVM/Spring属于全面覆盖的重要专题，但只有当前需求/岗位使用Java时才需优先学，不是每个下游产品的强制栈。语言熟悉程度不由历史项目自动推断。
 
 ## 一、Java 语言与 JVM（W09–W11）
 
@@ -55,7 +55,7 @@
 
 - **认证鉴权**：OAuth2/OIDC/Authorization Code+PKCE、Session/Token、CSRF/XSS/SSRF、RBAC/ABAC、租户隔离、服务间身份与密钥轮换。
 - **运维**：Linux/进程/端口/权限、Nginx、Docker/Compose/Profiles、CI/CD、HTTPS、备份/恢复/回滚；K8s 核心对象可认知，真机集群 P2。
-- **观测**：日志、Metrics、Trace、SLI/SLO、JVM JFR/GC、SQL/Redis/HTTP P95/P99、前端 LCP/INP/CLS。W8 最小 OTel 仍必修，W23 跨 Java/Python 深挖。
+- **观测**：日志、Metrics、Trace、SLI/SLO、JVM JFR/GC、SQL/Redis/HTTP P95/P99、前端 LCP/INP/CLS。涉及追踪与上线可靠性时需要最小OTel验证；W8/W23只是其旧知识坐标。
 - **系统设计**：单体分层、领域边界、API/事件契约、消息幂等、缓存一致性、容量/成本、微服务拆分触发条件、威胁建模、ADR。
 - **同项目集成**：React+FastAPI 主业务不变，Java Spring 拥有独立审计/通知业务域；不得两个服务无所有权边界写同一业务表。
 

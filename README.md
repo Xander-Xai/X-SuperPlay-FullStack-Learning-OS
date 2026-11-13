@@ -43,7 +43,7 @@
 
 ## 文档结构自动验收
 
-GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integrity.yml) 在相关文档提交/PR 时检查 24 周、24 个 Gate、96 个 D1–D6 任务、初始进度与内部相对链接。**只保证文档结构自洽，不等于学员通过或应用测试通过。**
+GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integrity.yml) 在相关文档提交/PR 时检查24个知识坐标、24项Gate、96个可选D1–D6任务、可合法更新的学习状态、知识图先修无环、官方来源索引、路由器测试与内部相对链接。**只保证文档结构自洽，不等于学员通过或应用测试通过。**
 
 ## 唯一执行机制（不是唯一步骤顺序）
 

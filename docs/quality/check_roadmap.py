@@ -69,7 +69,8 @@ def main() -> None:
     progress_rows = re.findall(r"^\| (W(?:[1-8]|0[9]|1[0-9]|2[0-4])) \|", progress, re.M)
     equals(progress_rows, [f"W{i}" for i in range(1, 9)] +
            [f"W{i:02d}" for i in range(9, 25)], "progress W1-W24")
-    equals(len(re.findall(r"\| NOT_RUN \|", progress)), 24, "initial week states")
+    week_state_rows = re.findall(r"^\| W(?:[1-8]|0[9]|1[0-9]|2[0-4]) \|[^\n]*\| NOT_RUN \|", progress, re.M)
+    equals(len(week_state_rows), 24, "initial week states (weekly rows only)")
     # Every week added by V3 must retain its own actionable six-day checklist.
     sections = re.split(r"(?=^### W(?:0[9]|1[0-9]|2[0-4])｜)", playbook, flags=re.M)[1:]
     equals(len(sections), 16, "V3 weekly playbook sections")

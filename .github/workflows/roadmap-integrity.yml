@@ -1,0 +1,32 @@
+name: Roadmap document integrity
+
+on:
+  push:
+    paths:
+      - "ROADMAP.md"
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/roadmap-integrity.yml"
+  pull_request:
+    paths:
+      - "ROADMAP.md"
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/roadmap-integrity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  roadmap-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check canonical roadmap structure, gates, progress, links
+        run: python docs/quality/check_roadmap.py

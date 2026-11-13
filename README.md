@@ -23,6 +23,10 @@
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
 | [架构与选型决策](docs/decisions/ADR-0002-v3-multistack-expansion.md) | V3.0 Java 必修、Next SSR 对比与架构边界 | ACCEPTED_FOR_PLAN |
 
+## 文档结构自动验收
+
+GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integrity.yml) 在相关文档提交/PR 时检查 24 周、24 个 Gate、96 个 D1–D6 任务、初始进度与内部相对链接。**只保证文档结构自洽，不等于学员通过或应用测试通过。**
+
 ## 唯一执行规则
 
 1. 按 [ROADMAP](ROADMAP.md) 推进**一个**项目，不另外执行独立前端 8 周 + 后端 8 周路线；缺什么查专项字典并做最小故障实验。

@@ -15,11 +15,31 @@ LEARN = ROOT / "docs" / "learning"
 def validate() -> dict:
     data = json.loads((LEARN / "knowledge-map.json").read_text(encoding="utf-8"))
     nodes = data["nodes"]
-    if data.get("version") != "4.0" or len(nodes) < 24:
+    if data.get("version") != "4.1" or len(nodes) < 42:
         raise AssertionError("knowledge graph missing/too small or obsolete")
     by_id = {n["id"]: n for n in nodes}
     if len(by_id) != len(nodes):
         raise AssertionError("duplicate capability ids")
+
+    upstream_sources = set()
+    for node in nodes:
+        for link in node.get("upstream", []):
+            parsed = urlparse(link)
+            if parsed.scheme != "https" or parsed.hostname != "github.com":
+                raise AssertionError(f"{node['id']}: upstream source is not a GitHub link")
+            if "/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/" not in link:
+                raise AssertionError(f"{node['id']}: wrong upstream asset origin")
+            upstream_sources.add(link)
+    if len(upstream_sources) < 15:
+        raise AssertionError(f"upstream content underindexed: {len(upstream_sources)} unique links")
+
+    upstream_index = (LEARN / "UPSTREAM-ASSET-INDEX.md").read_text(encoding="utf-8")
+    mental = (LEARN / "FULLSTACK-MENTAL-MODEL.md").read_text(encoding="utf-8")
+    if upstream_index.count("X-SuperPlay-AI-Learning-OS/blob/main/") < 20:
+        raise AssertionError("missing direct upstream links")
+    if mental.count("~~~mermaid") < 3:
+        raise AssertionError("mental model needs architecture, taxonomy and request sequence")
+
 
     official_md = (LEARN / "OFFICIAL-RESOURCES.md").read_text(encoding="utf-8")
     graph_md = (LEARN / "KNOWLEDGE-GRAPH.md").read_text(encoding="utf-8")
@@ -73,9 +93,10 @@ def validate() -> dict:
         raise AssertionError("need-first workflow or downstream coverage missing")
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    if "DEMAND-ROUTER.md" not in readme or "KNOWLEDGE-GRAPH.md" not in readme:
+    if not all(x in readme for x in ("DEMAND-ROUTER.md", "KNOWLEDGE-GRAPH.md", "UPSTREAM-ASSET-INDEX.md", "FULLSTACK-MENTAL-MODEL.md")):
         raise AssertionError("need-first entry is not primary")
     return {"nodes": len(nodes), "hard_edges": sum(len(n["requires"]) for n in nodes),
+            "distinct_upstream_references": len(upstream_sources),
             "weeks_covered": len(expect_weeks), "gates_covered": len(expect_gates)}
 
 

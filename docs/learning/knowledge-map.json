@@ -1,5 +1,5 @@
 {
-  "version": "4.0",
+  "version": "4.1",
   "updated": "2026-11-14",
   "semantics": "requires = minimum concept only; optional ecosystem nodes never block unrelated project delivery",
   "nodes": [

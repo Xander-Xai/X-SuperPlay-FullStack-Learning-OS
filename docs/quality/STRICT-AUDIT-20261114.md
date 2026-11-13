@@ -1,4 +1,6 @@
-# V3.0 对抗审查与修复记录（2026-11-14）
+# 历史V3.0对抗审查与修复记录（2026-11-14）
+
+> **历史快照，不代表当前学习治理或CI要求。** 本文件的“Java必修/每周必达”等内容描述的是已由[ADR-0003](../decisions/ADR-0003-demand-driven-learning.md)废止的旧全量课表。当前有效审查与最新CI证据请以[V4.2严格验收报告](AUDIT-V4.2-20261114.md)为准，勿按本历史报告旧结论执行。
 
 > 验收对象：FullStack-Learning-OS 的 main 文档与跨仓索引。状态：**DOCUMENTATION_AUDITED / TRAINING_NOT_RUN**。这不是对代码、CI 测试、实际部署和学员能力的验收报告。
 

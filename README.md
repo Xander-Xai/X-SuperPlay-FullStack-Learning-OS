@@ -1,6 +1,6 @@
 # X-SuperPlay-FullStack-Learning-OS
 
-> **V4.0 全栈能力操作系统** · 需求驱动学习 · 知识图谱与权威资料 · 实战及独立验收。
+> **V4.2 全栈能力操作系统** · 需求驱动学习 · 知识图谱与权威资料 · 实战及独立验收。
 >
 > **完整覆盖与执行顺序分离**：保留 W1–W24、G01–G24 的系统性知识地图，原432小时只是全部覆盖时的参考预算。**不要求从W1顺序学到W24**，也不要求所有下游应用同时采用Python、Java、React和Next.js。
 
@@ -14,14 +14,21 @@
 
 **[42节点知识图 + 官方原文](docs/learning/KNOWLEDGE-GRAPH.md)**：补足Vue/Nuxt、Node/NestJS、桌面Electron/Tauri、Go/Rust/C++、MCP/实时协议、PWA等；覆盖广不等于每个项目都要用。
 
+**[可立即运行的需求驱动实验](docs/learning/labs/README.md)**：JavaScript请求竞态（Node原生测试）、已有FastAPI合成API用例，以及Spring/PG的带条件教学案例；准确标注实测与NOT_RUN。
+
+**[42张可直接学习的专业/大白话知识卡](docs/learning/NODE-STUDY-CARDS.md)**：每个节点有机制、比喻的边界、上下层关系、官方具体章节、最小动手实验与失败用例，防止只剩一个网址。
+
+**[前后端技术生态外围分支](docs/learning/OPTIONAL-TECH-LANDSCAPE.md)**：.NET/C#、PHP/Laravel、Ruby/Rails、Angular/SvelteKit、GraphQL/gRPC、Spring Cloud、Serverless、MongoDB等只需认知定位；不是新的必修课。
+
 ## 第一入口：我当前要做什么？
 
 1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。
 2. **[全栈知识关系图（42个节点）](docs/learning/KNOWLEDGE-GRAPH.md)**：看每个技术在哪一层、解决什么问题、如何与其他技术连接，以及最低先修依赖。
 3. **[权威官方学习资料](docs/learning/OFFICIAL-RESOURCES.md)**：对应具体知识点和章节学习，不刷完整文档目录。
-4. **[下游能力覆盖表](docs/learning/REQUIREMENTS-COVERAGE.md)**：静态工具/SaaS/企业Web/Java/CLI/微信小程序/移动App/AI应用等。
-5. **[需求学习会话模板](docs/learning/GAP-SESSION-TEMPLATE.md)**：原理→亲手改代码→错误注入→独立验收→继续项目。
-6. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
+4. **[42节点学习卡](docs/learning/NODE-STUDY-CARDS.md)**：从一个知识点理解到真实错误实验，不强制整张图通关。
+5. **[下游能力覆盖表](docs/learning/REQUIREMENTS-COVERAGE.md)**：静态工具/SaaS/企业Web/Java/CLI/微信小程序/移动App/AI应用等。
+6. **[需求学习会话模板](docs/learning/GAP-SESSION-TEMPLATE.md)**：原理→亲手改代码→错误注入→独立验收→继续项目。
+7. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
 
 **还可用**：Vue3列表状态 → F08；Nuxt SSR → F09；NestJS API → B07；Electron/Tauri → M03；MCP Server → A02；已有上游LAB可按节点直达，**不必再创建一个练习项目**。
 
@@ -49,9 +56,13 @@
 | [项目蓝图](docs/project/PROJECT-BLUEPRINT.md) | 已有 React/FastAPI S0 合成核对，数据库/异步/Java/上线仍为设计态 | PARTIALLY_IMPLEMENTED |
 | [24 项验收](docs/learning/ACCEPTANCE.md) | G01–G24 的负例、状态和本人独立证据 | LEARNER_NOT_RUN |
 | [AI Coding 边界](docs/learning/AI-CODING-POLICY.md) | 本人先写与 AI 可辅助范围、L1–L3 标准 | REFERENCE |
-| [落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md) | V3.0 八周基线与十六周拓展的一致性核验 | DOCUMENTED |
+| [落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md) | V4.2覆盖完整性、资料来源、概念先修与证据边界 | DOCUMENTED |
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
 | [学习治理决策](docs/decisions/ADR-0003-demand-driven-learning.md) | V4.0需求驱动、知识依赖图、下游多场景覆盖 | ACCEPTED_FOR_PLAN |
+
+## 最终验收记录与限制
+
+[严格对抗验收 V4.2](docs/quality/AUDIT-V4.2-20261114.md)列出旧问题、修复、真实CI证据及仍未实操的能力。自动检查证明的是仓库文档和机制级实验，不是个人技术熟练度或下游上线。
 
 ## 文档结构自动验收
 

@@ -17,10 +17,17 @@ python docs/learning/route_need.py --query "Vue3后台"
 python docs/learning/route_need.py --query "Electron桌面应用"
 python docs/learning/route_need.py --query "MCP Server"
 python docs/learning/route_need.py --node B04
+python docs/learning/route_need.py --node F08 --json
 python docs/learning/route_need.py --list
 ~~~
 
-程序读取[机器可读知识图](knowledge-map.json)，输出作用、最低先修、旧模块编号、Gate、官方文档、[上游相关资料](UPSTREAM-ASSET-INDEX.md)与建议实验。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
+程序读取[机器可读知识图](knowledge-map.json)，输出**专业定义、机制、大白话、理解边界、最低先修、官方专题章节、上游相关资料类型、实验与失败负例**；`--json` 可交给Coding Agent做定向学习计划，不能由它自动认定个人已会。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
+
+## 可运行的按需实验示例
+
+- **JavaScript异步竞态**：`node --test docs/learning/labs/request-race.test.mjs`；先看[最小Lab](labs/README.md)和F03/F08节点。
+- **现存FastAPI契约**：[最小Lab命令与官方资料](labs/README.md)（已有合成API测试；不代表权限/生产上线）。
+- **Spring资源授权 / PostgreSQL并发**：同一Lab文档有可复现步骤，但当前仍标 `NOT_RUN`，勿将说明变成实验PASS。
 
 ## 一、最短的学习循环（每次只解决一个真实 Gap）
 
@@ -37,7 +44,7 @@ python docs/learning/route_need.py --list
 
 ## 二、先看系统关系图，再选当下需要的一角
 
-先阅读[全栈专业定义与大白话全景图](FULLSTACK-MENTAL-MODEL.md)，再结合[上游资料汇合索引](UPSTREAM-ASSET-INDEX.md)定位 Vue/React、Java/Spring、Node/MCP、数据/部署的具体教程。**学习方向由当前需求决定，知识结构由依赖图提供；这两个目标并不矛盾。**
+先阅读[全栈专业定义与大白话全景图](FULLSTACK-MENTAL-MODEL.md)，再结合[上游资料汇合索引](UPSTREAM-ASSET-INDEX.md)定位 Vue/React、Java/Spring、Node/MCP、数据/部署的具体教程与[42张含官方章节、正负例的节点学习卡](NODE-STUDY-CARDS.md)。**学习方向由当前需求决定，知识结构由依赖图提供；这两个目标并不矛盾。**
 
 ## 三、按“要做什么”直接进入知识
 

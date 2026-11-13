@@ -27,6 +27,24 @@
 | 明确学习目标 ANL | [阅读原文](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md) | 已知目标时选择原始资料与可执行实验 | P01 |
 | 已有SaaS小程序合成实验 | [阅读原文](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/labs/freelance-proof-20261025/README.md) | 既有代码/测试入口，不代表本人通过 | M01 B01 E01 |
 
+## 增量资料：42节点里额外出现的上游原文
+
+此前表格列出20个策展入口；机器知识图还有4个独立上游路径，下面补齐，避免把20个表格入口误当全部源材料：
+
+- [LAB07.md](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB07.md)：按知识卡节点相关度查阅，实际实验未执行。
+- [LAB03.md](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB03.md)：按知识卡节点相关度查阅，实际实验未执行。
+- [LAB04.md](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB04.md)：按知识卡节点相关度查阅，实际实验未执行。
+- [LAB06.md](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB06.md)：按知识卡节点相关度查阅，实际实验未执行。
+
+## 来源类别说明
+
+- **direct_lab**：上游已有专题Lab文本；不证明代码/测试已运行。
+- **track_or_course**：任务/课程/场景说明；可能只提供教学计划，不等于可运行实例。
+- **overview_or_reference**：技术总图或背景；**不能当做细节实现教程**。
+- **learning_method**：需求→学习目标的方法；不是技术实操素材。
+
+最新可查询的节点、真实阅读章节与失败实验在[42节点卡](NODE-STUDY-CARDS.md)，不重建第二份学习进度。
+
 ## 差异与本轮补全
 
 - **旧图遗漏**：Vue3与Nuxt分支、桌面 Electron/Tauri、Node NestJS、Go/Rust/C++、WebSocket/MCP、构建打包等在上游有完整概念或课程入口。本轮把这些补入知识图及官方文档，不强制每个下游使用。

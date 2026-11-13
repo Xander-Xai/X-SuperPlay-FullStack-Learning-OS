@@ -1,6 +1,6 @@
 # 仓库索引与上游/下游关系
 
-> 索引建立：2026-11-13；本页登记**职责与链接**，不是自动依赖/代码引用/跨仓同步或发布授权。
+> 索引建立：2026-11-13；当前V4.2更新于2026-11-14；本页登记**职责与链接**，不是自动依赖/代码引用/跨仓同步或发布授权。
 
 | 方向 | 仓库 | 角色 | 权威信息 | 本仓如何使用 |
 |---|---|---|---|---|
@@ -37,3 +37,8 @@
 - [上游全栈专项 Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md)
 - [上游独立考核](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-fullstack-rubric.md)
 - [Dev-Workbench 11 阶段指南](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/blob/main/docs/learning/FULLSTACK-LIFECYCLE-GUIDE.md)
+
+## V4.2 全栈知识深度与实战入口
+
+- [42张专业+大白话学习卡](learning/NODE-STUDY-CARDS.md)补上全部节点实质内容；[按需可运行Lab](learning/labs/README.md)与[外围技术生态](learning/OPTIONAL-TECH-LANDSCAPE.md)分别服务实际验证和技术认知。
+- [严格对抗验收报告](quality/AUDIT-V4.2-20261114.md)覆盖错误硬先修、上游源匹配、CI与未实测边界，不修改上游或业务下游的所有权。

@@ -1,34 +1,35 @@
 # X-SuperPlay-FullStack-Learning-OS
 
-> **全栈工程学习执行仓** · 24 周 / 432 小时参考预算（原 8 周作为阶段 A） · 唯一学习主线 · 初始状态：`PLAN / NOT_RUN`
+> **V4.0 全栈能力操作系统** · 需求驱动学习 · 知识图谱与权威资料 · 实战及独立验收。
+>
+> **完整覆盖与执行顺序分离**：保留 W1–W24、G01–G24 的系统性知识地图，原432小时只是全部覆盖时的参考预算。**不要求从W1顺序学到W24**，也不要求所有下游应用同时采用Python、Java、React和Next.js。
 
-从已有 Python/FastAPI/RAG/Agent 项目经验出发，系统补齐**Java Core/JVM/Spring Boot**、完整 Web/前端工程（HTML/CSS/a11y/React/Next.js SSR/Node.js）、数据库与消息中间件、API 契约/安全、性能和生产交付，在唯一项目 `ai-fullstack-workbench` 中按阶段验证。**W1–W8 为基础，W9–W24 为深入；不是开三条平行路线。**
+## 第一入口：我当前要做什么？
 
-## 从真实下游产品倒推全栈技能
+1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。
+2. **[全栈知识关系图（29个节点）](docs/learning/KNOWLEDGE-GRAPH.md)**：看每个技术在哪一层、解决什么问题、如何与其他技术连接，以及最低先修依赖。
+3. **[权威官方学习资料](docs/learning/OFFICIAL-RESOURCES.md)**：对应具体知识点和章节学习，不刷完整文档目录。
+4. **[下游能力覆盖表](docs/learning/REQUIREMENTS-COVERAGE.md)**：静态工具/SaaS/企业Web/Java/CLI/微信小程序/移动App/AI应用等。
+5. **[需求学习会话模板](docs/learning/GAP-SESSION-TEMPLATE.md)**：原理→亲手改代码→错误注入→独立验收→继续项目。
+6. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
 
-- **[可运行的 ReconLab 业务纵切源码](ai-fullstack-workbench/README.md)**：React/TypeScript + FastAPI/Decimal，合成账单核对；已有代码与 CI，但尚不是 ReconCheck 产品或完成学习。
-- **[产品驱动 W1–W24 理论＋实战映射](docs/learning/PRODUCT-DRIVEN-EXECUTION.md)**：每周一个产品功能、一个故障实验和一个 Gate，不再只背知识清单。
-- **[S0 合成用例与独立练习](docs/project/RECON-LAB-CASE.md)**：真实修改代码/运行测试；AI 生成基线不等于本人学会。
-- **[下游正式上线门禁](docs/project/DOWNSTREAM-RELEASE-GATES.md)**：Utility-Sites 冻结、商业验证、隐私安全、授权部署的独立条件。
+**学习问题示例**：现在要写 Spring API → 先查 B04，补最低 Java B03 → 阅读官方 Spring MVC → 做接口+错误测试；遇到数据库问题才补 D01/B05。无须先把 React、Next、Celery 学完。
 
-## 现在可领取的产品实战任务
+## 实战代码与下游仓的区别
 
-| 里程碑 | GitHub Issue | 目标 |
-|---|---|---|
-| **S0 从现在开始** | [#1 独立改造合成核对](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/1) | 理论/代码修改/故障复现与本人考核 |
-| S1 数据和权限 | [#2 CSV + PostgreSQL + AuthZ](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/2) | 受控数据导入和用户隔离 |
-| S2 后台可靠性 | [#3 Celery + SSE](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/3) | 异步核对与恢复 |
-| S3 Java 多栈 | [#4 Spring + Outbox](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/4) | 独立审计业务与最终一致性 |
-| S4 真正上线 | [#5 产品开发与发布 Gate](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/5) | 需要真实市场验证、授权和发布验收 |
+- **学习实战可在任何有权限的当前项目进行**。本仓提供学习路线、官方资料、诊断和独立验收证据；业务方向反过来决定先学习的技能。
+- [Dev-Workbench](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench)：现有 Node CLI / 测试 / CI 真实代码，可用于按需维护和交付工程训练。
+- [Utility-Sites](https://github.com/Xander-Xai/X-SuperPlay-Utility-Sites)：下游产品候选；ReconCheck 仍未获正式产品开发/发布授权。
+- [ReconLab 合成业务示例](ai-fullstack-workbench/README.md)：React + FastAPI 已有代码和 CI，是**可选教材**，不是本仓唯一主项目或你的默认学习任务。[S0–S4 实战案例索引](docs/learning/PRODUCT-DRIVEN-EXECUTION.md)仅供适合此业务时使用。
 
 ## 从这里开始
 
 | 入口 | 作用 | 事实状态 |
 |---|---|---|
-| [ROADMAP.md](ROADMAP.md) | **V3.0 唯一 W1–W24 学习计划（含原 V2 基线）**：每周时间细分、重点实验、资料、门槛 | PLAN |
-| [学习进度](docs/learning/PROGRESS.md) | W1–W24 状态、Gap、证据与复盘 | NOT_RUN |
+| [ROADMAP.md](ROADMAP.md) | V4.0 全面知识覆盖坐标；原24周可选引导式学习，不强制先后顺序 | REFERENCE + OPTIONAL_PLAN |
+| [学习进度](docs/learning/PROGRESS.md) | **以真实需求会话为先**；W坐标/Gate只做能力覆盖与证据索引 | NOT_RUN |
 | [能力地图](docs/learning/CAPABILITY-MATRIX.md) | Java/JVM/Spring/前端/系统设计的知识点→周次→Gate 索引 | REFERENCE |
-| [W09–W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md) | 每周 D1–D6 任务、先修检查、故障实验与完成条件 | PLAN |
+| [W09–W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md) | 可选系统补基础的D1–D6任务样例，非必修日历 | OPTIONAL_SPRINT_TEMPLATE |
 | [版本选择约束](docs/learning/STACK-VERSION-POLICY.md) | JDK/Boot/Node 稳定版本、兼容矩阵、许可证与锁定机制 | REFERENCE |
 | [前端专项字典](docs/learning/references/frontend.md) | HTML/CSS/a11y、JS/TS、React、SSR/Next、Node、性能与测试 | REFERENCE |
 | [后端专项字典](docs/learning/references/backend.md) | Java/JVM/Spring/安全、FastAPI、SQL、消息、缓存按需深挖 | REFERENCE |
@@ -38,19 +39,19 @@
 | [AI Coding 边界](docs/learning/AI-CODING-POLICY.md) | 本人先写与 AI 可辅助范围、L1–L3 标准 | REFERENCE |
 | [落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md) | V3.0 八周基线与十六周拓展的一致性核验 | DOCUMENTED |
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
-| [架构与选型决策](docs/decisions/ADR-0002-v3-multistack-expansion.md) | V3.0 Java 必修、Next SSR 对比与架构边界 | ACCEPTED_FOR_PLAN |
+| [学习治理决策](docs/decisions/ADR-0003-demand-driven-learning.md) | V4.0需求驱动、知识依赖图、下游多场景覆盖 | ACCEPTED_FOR_PLAN |
 
 ## 文档结构自动验收
 
 GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integrity.yml) 在相关文档提交/PR 时检查 24 周、24 个 Gate、96 个 D1–D6 任务、初始进度与内部相对链接。**只保证文档结构自洽，不等于学员通过或应用测试通过。**
 
-## 唯一执行规则
+## 唯一执行机制（不是唯一步骤顺序）
 
-1. 按 [ROADMAP](ROADMAP.md) 推进**一个**项目，不另外执行独立前端 8 周 + 后端 8 周路线；缺什么查专项字典并做最小故障实验。
-2. **阶段 A：** W1–W8 Web/TS/React/FastAPI/DB/Celery/部署；**阶段 B：** W9–W16 Java/JVM/Spring 与前端深度；**阶段 C：** W17–W24 SSR/Node/事件一致性/安全/性能/跨语言集成。
-3. 每周的“完成”必须有**本人独立操作、可复现命令、测试证据、commit SHA 与失败路径**；本仓当前只是学习计划，不宣称已通过。
-4. 有真实岗位/产品交付优先级冲突时按事实动态调度；不得因为八周时间盒耽误更重要的工作。
-5. AI 可协助重复性代码，跨端状态/刷新、SQL 锁与幂等、Worker 故障及 SSE 解析必须先做本人最小实现和独立验收。
+1. 当前需求决定需要补哪个知识节点；知识图说明最低先修和相邻原理，**不按W编号强制排序**。
+2. 为具体任务选一份官方权威资料和真实可跑的实验；已掌握的技术直接应用，不反复教程。
+3. 本人独立实现、负例测试和解释后记录证据；相关Gxx可以按需验收，不因其他Gxx未通过阻止当前合理需求。
+4. 可选采用原W1–W24/432h作为全面查漏的参考课程；不是所有产品上线的强制条件。
+5. 项目开发与发布由各目标仓真实授权、风险和工程验收控制，不以学习仓CI替代生产批准。
 
 ## 仓库定位
 
@@ -58,7 +59,7 @@ GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integr
 X-SuperPlay-AI-Learning-OS       上游：知识研究、岗位需求、评分参考
               │
               ▼
-X-SuperPlay-FullStack-Learning-OS（本仓：唯一学习路线与个人实验台账）
+X-SuperPlay-FullStack-Learning-OS（本仓：知识图谱、需求驱动学习、证据台账）
               │
               ├──► X-SuperPlay-Dev-Workbench  下游：工程方法/工具与交付证据标准
               └──► X-SuperPlay-Utility-Sites  下游：可选产品实践场景（开发仍受业务授权约束）
@@ -69,5 +70,5 @@ X-SuperPlay-FullStack-Learning-OS（本仓：唯一学习路线与个人实验�
 ## 当前已完成与未完成
 
 - 已创建：路线、索引、学习模板和资料入口，以及合成核对 S0 API/React 代码和两套实际通过的 GitHub CI（文档与前后端测试/构建）。
-- 未开展/未验证：W1–W24 实验、主项目编码、持续集成、生产部署、个人闭卷考核与跨仓产品交付。
+- 未开展/未验证：个人独立需求会话与W1–W24能力验收、可选高级模块实验、生产部署、跨仓商业交付；S0只有合成样例的CI证据。
 - 所有 `NOT_RUN` 应在实际发生并保存证据后更新，不把文档创建等同于任务完成。新扩展 G13–G24 同样默认 NOT_RUN。

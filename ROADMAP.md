@@ -1,25 +1,25 @@
-# 全栈开发系统学习路线 V3.0 — 唯一执行主线（24 周能力全景）
+# 全栈知识 Roadmap V4.0｜知识逻辑完整，按需求自由跳学
 
-> 状态：**LEARNING_NOT_RUN / SYNTHETIC_S0_CI_VERIFIED / PRODUCTION_NOT_AUTHORIZED**。S0 代码在 GitHub CI 测试/构建成功；不能由此推断学习者本人掌握、W1–W24 已验收或生产部署完成。
-> 版本：2026-11-14；**W1–W8 = 144h 基础阶段；W9–W24 = 288h 拓展；24 周累计 432h 参考预算**。不按日历毕业，真实岗位可依据 Gap 跳学，证据验收仍不可跳过。
+> **统一能力地图，不是按周通关日历。** 旧W1–W24保留知识覆盖坐标和可选引导式任务；原24周/432小时只是完整补基础的历史参考预算，**你实际学习什么、先学哪个模块，都由项目/JD/故障需求决定**。
+>
+> **先用[需求驱动入口](docs/learning/DEMAND-ROUTER.md)选择目标** → [知识依赖关系图](docs/learning/KNOWLEDGE-GRAPH.md)看技术作用与最小先修 → [权威资料](docs/learning/OFFICIAL-RESOURCES.md)查具体章节 → [模板](docs/learning/GAP-SESSION-TEMPLATE.md)真正编码/测试/复盘。下游覆盖见[能力覆盖矩阵](docs/learning/REQUIREMENTS-COVERAGE.md)。
+>
+> **实战载体不限定单个项目**：有权限的当前下游项目、隔离Labs、以及[ReconLab可选合成演示](ai-fullstack-workbench/README.md)均可。该演示CI通过不等于学习者独立掌握或ReconCheck获授权上线。
 
-## 核心执行转向：先做产品，再补原理（不新增第二条进度表）
+## 0. 执行原则
 
-**本仓现已包含可运行的业务代码**：[ReconLab 合成核对纵切](ai-fullstack-workbench/README.md)。按照 [产品驱动 W1–W24 映射](docs/learning/PRODUCT-DRIVEN-EXECUTION.md)，每周从结算核对的实际功能、故障与可交付标准倒推理论，完成自己的代码修改和测试，而不只是收藏教程。已有代码是 AI-assisted starter，不代表本人独立掌握。
-
-- 结算核对业务来源：下游 Utility-Sites 的公开产品方向；仅在本仓以合成样本做学习沙箱。
-- Dev-Workbench 的真实运行时与 11 阶段用作工程方法/交付 Dogfood；不在此重做其工具，也不未经授权修改其运行时代码。
-- 完成课程≠自动取得 ReconCheck 生产开发/发布授权。产品迁移必须经过 [下游真实上线门禁](docs/project/DOWNSTREAM-RELEASE-GATES.md)。
-
-## 0. 一句话决策
-
-**只执行这一条全栈路线（W1–W24）**。前端、后端既有路线降为专项知识字典，遇到真实 Gap 再查阅和补实验，不分别推进第二套 8 周进度。上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 保留岗位驱动六周专题作为*参考与紧急 Gap 训练*，与本仓 **W1–W24** 统一执行主线不是相互竞争的进度表。
+- **学习地图是系统化的**：了解客户端/网络/API/业务/数据/异步/安全/部署每层的责任、关系、替代方案；W坐标只帮助查漏。
+- **学习路径是动态的**：例如直接开始Spring MVC的B04，只先补B03最低Java语法；需要事务时再学D01/B05。不能要求必须学完W1–W11才能接Java岗位。
+- **目标是能做下游多种产品**：静态站/SaaS/企业Web/小程序/移动App/AI应用/CLI等按实际技术与平台选择，不为一个产品强制装齐所有技术。
+- **技术能力有证据**：每项通过原理L1→独立实现L2→故障诊断L3；证据与当前项目的交付验收分开，只有在本人实验后更新[PROGRESS](docs/learning/PROGRESS.md)。
+- **参考体系**：W1–W24原有专题、专项字典和96个D1–D6任务仍保留，作为**可选查漏材料**而非必经顺序。
+- **Java/Spring Boot 已升级为 W9–W13 必修**：这描述V3全量能力覆盖时的必要专题；在V4针对单一需求时，Java是按目标岗位/现有架构选择的能力，不代表每个项目都必须Java，也不要求按W编号排序。
 
 ## 1. 学习目标与非目标
 
-- 目标：掌握 **需求→设计→数据模型→API 契约→前端→后端→异步→测试→部署→观测→排障→复盘** 全链路；独立维护并解释一个 AI Web 工作台。
+- 目标：理解 **需求→设计→数据模型→API 契约→前端→后端→异步→测试→部署→观测→排障→复盘** 的责任关系；按当前产品需要独立实现、部署与维护相应部分，而不把单一工作台当唯一终点。
 - 已有 Python/FastAPI/RAG/Agent 经验可快速诊断、跳过重复入门，但必须完成实际考核；不存在“做过项目=掌握”的自动豁免。
-- 项目：`ai-fullstack-workbench`（本学习仓内已有第一段可运行合成核对纵切；后续增加 CSV/DB/权限/消息/Java 独立审计服务，不自动迁移到下游产品仓）。
+- 实战选项：当前有权限的产品或代码仓优先；也可以选择独立小实验，`ai-fullstack-workbench` 仅为本仓已有的合成核对**可选教材**，后续CSV/DB/Java等是该案例扩展思路，不绑定所有学习。
 - 核心栈：React + TypeScript + Vite/React Router + TanStack Query/Tailwind/shadcn/ui；Python FastAPI/Pydantic/SQLAlchemy；**Java 核心/JVM/Spring Boot/Spring MVC/Spring Security/Spring Data**；PostgreSQL/Redis/Celery；OpenAPI/Orval；Docker/Nginx/CI/E2E。W9–W24 增加 Java/JVM、前端进阶、Node/SSR 原理和分布式可靠性。
 - **Java/Spring Boot 已升级为 W9–W13 必修**；Next.js SSR 核心比较与 Node 运行时基础安排 W17–W18，深度框架迁移、Kubernetes 真机集群、复杂微服务与重复构建完整 RAG 平台仍是 P2。岗位 MUST 可触发优先级重排并记录原因。
 - 资源优先官方文档；不追求工具数量。无客户授权时只用合成/许可数据；不产生真实业务/生产部署宣称。
@@ -35,9 +35,9 @@
 - SSE 必须处理网络块≠事件、代理缓冲、重连以及连接取消；原生 EventSource 与 fetch-stream 的 Header/方法限制不同。
 - AI 可生成重复 UI/CRUD/CI 初稿，但**跨端状态、认证刷新、并发锁、幂等与流解析**必须先本人独立实现最小正确版本；所有代码均需本人审查和测试。
 
-## 3. 阶段 A：W1–W8 端到端基础（原 V2.0 保留）
+## 3. 历史知识组 A：W1–W8（覆盖坐标，按需跳学）
 
-> 下列八周是**阶段 A 基线，不是整个 V3.0 的全部**。八周 144h 的 G01–G12 不受拓展课程替代。
+> 以下W1–W8为历史课程顺序，仅代表基础知识领域及其相关实验。可以直接按需求选其中W3、W6等；G01–G12是能力类别，而不是当前任务的前置锁。
 
 | 周 | 主题 | 预算 | 验收产物 |
 |---|---|---:|---|
@@ -208,7 +208,7 @@ FastAPI Router + Pydantic（接口权威）
 - 输出架构图、ERD、API 契约/部署操作手册、性能/测试报告、ADR 和一场本人独立技术答辩。
 - **验收**：严格按 [G01–G12](docs/learning/ACCEPTANCE.md) 逐项给真实证据；关键门槛未过必须记录 FAIL/PARTIAL 后返工，不能因到 W8 自动毕业。
 
-## 4. 项目 MVP / P1 / P2
+## 4. ReconLab 可选教学案例：MVP / P1 / P2
 
 **设计目标目录、业务数据流、API 草案和按阶段演进见 [PROJECT-BLUEPRINT](docs/project/PROJECT-BLUEPRINT.md)**。业务代码目录尚不存在，不将蓝图视为已实现。
 
@@ -221,11 +221,11 @@ FastAPI Router + Pydantic（接口权威）
 
 **不可提前将 Mock/API Stub/单次 CI 通过写作生产交付或个人独立能力达标。**
 
-## 5. 每周节奏和验证协议
+## 5. 可选周节奏及按需实验验证协议
 
 **详细 AI Coding 责任边界与 L1–L3 评分见 [AI-CODING-POLICY](docs/learning/AI-CODING-POLICY.md)**。生成文件≠测试通过≠本人独立掌握。
 
-- 参考每周 18 小时：原理 3h、编码 9h、故障实验 4h、复盘 2h。按实际主题调整。
+- 如选择连续课程，可参考每周18小时：原理3h、编码9h、故障实验4h、复盘2h。**真实需求驱动时按一次Gap任务安排学习时长，不强制凑满18小时。**
 - 每个知识点：**原理→本人先写→故障注入→测试/排障→闭卷讲解→迁移复测**。
 - 人的能力级别：L1 能解释；L2 能独立编写和测试；L3 能复现故障、归因、修复并说明取舍。**不等于** Dev-Workbench 的工程成熟度 L0–L6、也不替代 AI-Learning-OS 的 0–4 人工评分量表。
 - 每周记录 [学习进度](docs/learning/PROGRESS.md)；使用 [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) 记测试命令、结果、环境、截图/日志定位、未验证项。
@@ -269,13 +269,13 @@ FastAPI Router + Pydantic（接口权威）
 
 - **唯一 Roadmap**：根目录 `ROADMAP.md`，现覆盖 W1–W24；不要另创建 `docs/learning/roadmap.md` 造成冲突。
 - **唯一进度**：`docs/learning/PROGRESS.md`；当前 W1–W24 均 `NOT_RUN / UNASSESSED`。
-- **唯一项目**：`ai-fullstack-workbench` 是计划中的应用工作目录，目标结构见 [完整项目蓝图](docs/project/PROJECT-BLUEPRINT.md)；今天没有创建应用功能代码。
+- **项目不是唯一**：`ai-fullstack-workbench` 已有可运行合成案例，只作为可选实验载体；真实需求优先选择有权限的下游项目或最小独立Lab。目标结构见 [案例蓝图](docs/project/PROJECT-BLUEPRINT.md)。
 - **参考字典**：[frontend](docs/learning/references/frontend.md) / [backend](docs/learning/references/backend.md) 按 Gap 查资料、做最小实验、回主线记录证据，不是第二/第三份进度计划。
 - **AI 边界**：重点跨端状态、刷新并发、数据库锁/幂等、SSE 解析、Worker 恢复本人先写；CRUD/UI/测试/CI 框架可 AI 辅助，所有生成代码仍需运行与审查。参见 [AI-CODING-POLICY](docs/learning/AI-CODING-POLICY.md)。
 - **L1/L2/L3**：L1 不看资料解释，L2 自己实现与测试，L3 故障注入/归因/修复/取舍；与上游 0–4 和 Dev-Workbench L0–L6 各自分离。
 - **内容验收映射**：[V3.0 落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md)；这是文档核对，不是个人技能通过。
 
-## 十、V3.0 升级：八周不是完整全栈的终点
+## 十、V3.0 历史强化组（保留W09–W24作覆盖索引）
 
 **原 V2.0 的 W1–W8 保留为第一阶段“端到端基线”，其学时、实验和 G01–G12 验收不重置。** 但它只覆盖 React/FastAPI 主链路，无法代表具备 Java/Spring 生态、成熟前端架构、复杂数据一致性与生产级交付的完整能力。V3.0 在**同一个 ROADMAP** 中继续 W9–W24，不另创建“Java 8 周”或“前端 8 周”竞争路线。
 
@@ -285,7 +285,7 @@ FastAPI Router + Pydantic（接口权威）
 | **B 语言/框架深入** | W9–W16 | Java/JVM/Spring 完整基础，深入 HTML/CSS/TS/React 工程 | 8×18=**144h** | 能维护 Java API + 前端进阶，不靠教程照抄 |
 | **C 多栈交付与架构** | W17–W24 | SSR/Node 原理、消息与一致性、安全/云/性能和最终答辩 | 8×18=**144h** | 两种后端协作 + 前端性能/跨端故障，G01–G24 |
 
-总参考：**24 周 / 432 小时**（每周 6 天，每天约 3h）。新增 W09–W24 的 [6天×3h 详细执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md)；开发环境需按 [工具版本约束](docs/learning/STACK-VERSION-POLICY.md) 选择和固定。它是学习与验收预算，不是“保证 24 周成为资深架构师”。岗位面试可按真实 JD 使用同一任务台账进行 **Gap Jump**：重排例如 W9 Java 基础 / W12 Spring API 的具体实验，仍需补回对应 Gate，不产生第二套计划。
+**全覆盖历史参考预算**：24周/432小时（每周6天×3h）是自愿系统补课时的估算；**不是用户的执行顺序与强制学时**。新增 W09–W24 的 [6天×3h 详细执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md)；开发环境需按 [工具版本约束](docs/learning/STACK-VERSION-POLICY.md) 选择和固定。它是学习与验收预算，不是“保证 24 周成为资深架构师”。岗位面试可按真实 JD 使用同一任务台账进行 **Gap Jump**：重排例如 W9 Java 基础 / W12 Spring API 的具体实验，仍需补回对应 Gate，不产生第二套计划。
 
 ### 十一、扩展后的技术能力地图
 
@@ -307,11 +307,11 @@ FastAPI Router + Pydantic（接口权威）
 | 生产交付 | Git/测试/CI/CD、Docker/Nginx、Linux、监控/Traces/性能、安全、备份/恢复 | W7–W8、W21–W24 | P0+P1 |
 | 选修生态 | Vue3 对比、GraphQL/gRPC 深挖、WebFlux、微服务拆分、K8s 集群、NoSQL/搜索 | 按真实 JD 触发 | P2 |
 
-**P0 定义**：完成最终全栈项目的必修能力；**P1**：本路线扩展期必须完成的最小比较/集成实验；**P2**：按业务需要的深挖，不强制同时上所有栈。这个优先级不代表全行业所有岗位的统一 JD。
+**P0/P1/P2 是全面能力地图的覆盖深度，不是所有项目共同的技术栈**。当前需求只有静态工具时，Java/Spring和消息队列不应变成上线阻塞。需求选择请以[需求路由](docs/learning/DEMAND-ROUTER.md)为准。这个优先级不代表全行业所有岗位的统一 JD。
 
-### 十二、W9–W24 唯一连续执行表
+### 十二、W9–W24 强化知识坐标（可任意选择专题）
 
-> 每周主题是**概要**；六天任务、先修、反例和可复现 DoD 位于 [W09-W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md)。两处使用同一周号，不开第二份进度。
+> 周主题仅是索引；六天教学任务、先修、反例和DoD位于[旧版可选执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md)。按需只做与当前功能有关的模块和最低先修，不要求6天打卡。
 
 | 周次 | 核心模块 | 小时 | 交付与独立验收 |
 |---|---|---:|---|

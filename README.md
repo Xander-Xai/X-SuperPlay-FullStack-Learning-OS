@@ -8,6 +8,8 @@
 
 **[前后端脑内全景图：专业定义 + 大白话 + 3张关系图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：用一个点击提交的流程理解浏览器、Vue/React、HTTP、FastAPI/Spring/Nest、数据库、任务、交付与监控如何协作。
 
+**[AI原生按需学习操作协议](docs/learning/AI-NATIVE-LEARNING-PROTOCOL.md)**：可复制的AI导师指令，当前需求→诊断Gap→专业与大白话解释→官方小节→真实故障实验→独立复测。
+
 **[上游 AI-Learning-OS 20份资料直达索引](docs/learning/UPSTREAM-ASSET-INDEX.md)**：技术语言图、Vue3/FastAPI实训、Java专项、18个企业AI LAB、多端产品、BDL/ANL教练与独立评分，打开链接即可读到原文。
 
 **[42节点知识图 + 官方原文](docs/learning/KNOWLEDGE-GRAPH.md)**：补足Vue/Nuxt、Node/NestJS、桌面Electron/Tauri、Go/Rust/C++、MCP/实时协议、PWA等；覆盖广不等于每个项目都要用。

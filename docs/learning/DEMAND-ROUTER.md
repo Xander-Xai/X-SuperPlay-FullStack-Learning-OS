@@ -4,6 +4,8 @@
 >
 > **不限 ReconLab 或某个下游仓**。工作台/静态站/SaaS/企业系统/小程序/移动App/AI应用/Java岗位都可触发不同学习路径。真正开发需遵循对应仓库授权与工程流程。
 
+**AI辅助路线**：如果只有业务需求，参考[上游BDL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md)；已明确技能目标，参考[上游ANL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md)。完整可复制的导师指令见[AI原生按需学习协议](AI-NATIVE-LEARNING-PROTOCOL.md)。
+
 ## 命令行按需反查（可运行，不只是一张表）
 
 在仓库根目录使用Python 3.12+：

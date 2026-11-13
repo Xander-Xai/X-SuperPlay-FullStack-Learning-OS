@@ -51,3 +51,5 @@
 - 上游已核对并链接20份文件：[前后端资产索引](../learning/UPSTREAM-ASSET-INDEX.md)；专业解释与大白话贯通：[全栈脑内地图](../learning/FULLSTACK-MENTAL-MODEL.md)。
 - 机器知识图42节点/40条最低先修，包含Vue/Nuxt、Node/NestJS、Go/Rust/C++、桌面Electron/Tauri、小程序跨端、MCP、存储/搜索。
 - 这些新增节点属**覆盖资产**而非学员学习PASS；旧24坐标和24Gate保持不变，学习顺序以真实需求为准。
+
+- [AI原生按需学习协议](../learning/AI-NATIVE-LEARNING-PROTOCOL.md) 约定业务目标→当前Gap→官方资料→AI脚手架辅助→本人故障实测→独立变式复测；无需按W编号机械训练。

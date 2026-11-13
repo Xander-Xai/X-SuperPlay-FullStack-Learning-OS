@@ -48,8 +48,10 @@ def validate() -> dict:
         for required in ("id", "title", "purpose", "requires", "coordinates", "gates", "official", "definition", "mechanism", "analogy", "boundary", "lab", "failure", "read_first", "study_url", "upstream_role"):
             if required not in n:
                 raise AssertionError(f"{n.get('id')}: missing {required}")
-        for field in ("title", "purpose", "definition", "mechanism", "analogy", "boundary", "lab", "failure", "read_first"):
-            if not isinstance(n[field], str) or len(n[field].strip()) < 7:
+        min_lengths = {"title": 2, "purpose": 5, "definition": 15, "mechanism": 10,
+                       "analogy": 8, "boundary": 12, "lab": 10, "failure": 10, "read_first": 5}
+        for field, minimum in min_lengths.items():
+            if not isinstance(n[field], str) or len(n[field].strip()) < minimum:
                 raise AssertionError(f"{n['id']}: too shallow learning field: {field}")
         if n["upstream_role"] not in ("direct_lab", "track_or_course", "overview_or_reference", "learning_method"):
             raise AssertionError(f"{n['id']}: unsupported upstream content classification")

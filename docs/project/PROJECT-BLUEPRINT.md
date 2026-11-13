@@ -1,6 +1,6 @@
-# ai-fullstack-workbench：单项目全栈蓝图
+# ai-fullstack-workbench：ReconLab可选教学案例蓝图
 
-> **PARTIALLY_IMPLEMENTED / SYNTHETIC_ONLY / NOT_PRODUCTION_READY**。已有 React/FastAPI 合成核对纵切代码；数据库、异步、Java 服务、正式上线仍未实现。本文件剩余结构是设计态。所有测试只允许合成或明确获授权的数据。
+> **OPTIONAL_LEARNING_CASE / PARTIALLY_IMPLEMENTED / SYNTHETIC_ONLY / NOT_PRODUCTION_READY**。此案例不能替代本仓的全部学习路线。真实需求从[需求路由](../learning/DEMAND-ROUTER.md)选择相应模块/实战载体，不要求每个下游都实现本蓝图。
 
 ## 当前可运行代码与设计态差异
 
@@ -10,7 +10,7 @@
 
 ## 项目目标
 
-企业 AI 工作台纵切闭环：登录→项目管理/分页→文档上传→后端业务与权限→数据库→Celery 异步→SSE 进度→错误重试→部署/追踪与恢复。先普通 Web MVP，再强化可靠性；W9–W24 在**同一个产品**中添加 Java Spring 的独立审计/通知业务边界，并做前端深入与体系化排障；RAG 用 Mock/已有适配器。不要为学两门后端语言而重复构建同一套业务。
+企业 AI 工作台纵切闭环：登录→项目管理/分页→文档上传→后端业务与权限→数据库→Celery 异步→SSE 进度→错误重试→部署/追踪与恢复。先普通 Web MVP，再强化可靠性；W9–W24 在**同一个产品**中添加 Java Spring 的独立审计/通知业务边界，并做前端深入与体系化排障；RAG 用 Mock/已有适配器。这是可选的跨语言练习设想，不是每个产品必须使用Spring和Python两种后端；任何真正产品均应由业务边界决定。
 
 ## 目标目录（部分已存在；完整项目结构仍是未来计划）
 

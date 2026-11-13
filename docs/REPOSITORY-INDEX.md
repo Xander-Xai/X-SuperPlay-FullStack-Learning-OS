@@ -5,13 +5,13 @@
 | 方向 | 仓库 | 角色 | 权威信息 | 本仓如何使用 |
 |---|---|---|---|---|
 | 上游 | [X-SuperPlay-AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) | AI/工程知识、市场驱动学习研究、独立评分 | 全栈研究、原六周按岗位 Gap Track（仅研究/参考，不单独执行）、0–4 评分量表 | 参考并按 Gap 深挖；不同时执行第二套进度；部分内容可能仅授权账户可读 |
-| 当前 | [X-SuperPlay-FullStack-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS) | 全栈知识转化为每周行动、独立实验与学习证据 | **ROADMAP.md**、**PROGRESS.md**、实验记录 | 唯一执行计划 |
+| 当前 | [X-SuperPlay-FullStack-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS) | 需求驱动全栈能力地图、权威资料、真实Gap实验 | **KNOWLEDGE-GRAPH + ROADMAP + PROGRESS** | 多下游能力底座，不绑定单一产品 |
 | 下游（工程方法） | [X-SuperPlay-Dev-Workbench](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench) | 工程生命周期、Profiles、Skills、交付与验证范式 | `src/catalog.mjs` 的 11 阶段 + `docs/learning/START-HERE.md` | 按需复用方法；不在本仓再发明另一套工程状态机 |
 | 下游（产品候选） | [X-SuperPlay-Utility-Sites](https://github.com/Xander-Xai/X-SuperPlay-Utility-Sites) | 可能用于未来产品实战的业务项目 | 本项目 README 中的产品定位与**开发授权状态** | 目前 `SELECTED_FOR_VALIDATION / DEVELOPMENT_ON_HOLD`；未经授权不得当作本学习项目的生产交付对象 |
 
 ## 权威冲突时的优先级
 
-- **学习进度/排期**：仅本仓 `ROADMAP.md` + `PROGRESS.md`，W1–W24 为同一执行主线（24 周 / 432 小时参考预算）；上游六周 Track 作为 JD 驱动的专项实验材料，不代替本仓的实际进度。
+- **学习路线/实际优先级**：本仓[按需路由](learning/DEMAND-ROUTER.md)+[知识图](learning/KNOWLEDGE-GRAPH.md)负责定位当前需要的知识；W1–W24只是完整知识覆盖坐标（24周/432h旧参考预算），[PROGRESS](learning/PROGRESS.md)是唯一实际学习会话/证据台账。
 - **岗位需求和课程取舍**：上游 AI-Learning-OS 记录资料与 rubric；只有真实有效岗位/授权业务信号才调整 P0 优先级。
 - **工程生命周期**：Dev-Workbench 的权威 11 阶段；本仓“需求→部署→复盘”是学习视图，并非新的 Workbench 状态源。
 - **具体产品方向和授权**：Utility-Sites 当前仓的产品和许可边界最高；学习仓不得宣称启动 ReconCheck 或获得真实客户验证。

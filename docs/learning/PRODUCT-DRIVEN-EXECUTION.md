@@ -1,19 +1,19 @@
-# 产品驱动全栈实战：W1–W24 唯一落地映射
+# ReconLab可选实战案例：旧W1–W24知识如何用于一个产品
 
 > 状态：**EXECUTION_SPEC + SYNTHETIC_SLICE_IMPLEMENTED / LEARNER_NOT_ASSESSED / PRODUCT_NOT_AUTHORIZED**。
 >
-> 唯一的时间路线是根目录 [ROADMAP](../../ROADMAP.md)；本文件只是把该路线的**理论→动手修改→故障注入→独立验收→下游采用**绑定到同一个具体产品，不增加第二套学习时钟。
+> **这只是ReconLab合成核对业务的一个可选案例，不是本仓唯一项目、默认学习入口或强制W1–W24日历。** 通用入口：[需求路由](DEMAND-ROUTER.md) · [知识图](KNOWLEDGE-GRAPH.md) · [下游覆盖](REQUIREMENTS-COVERAGE.md)。下方旧W→ReconLab映射保留以供需要这一案例时参考。
 >
 > 产品案例参考 [Utility-Sites](https://github.com/Xander-Xai/X-SuperPlay-Utility-Sites) 公开说明的 **ReconCheck（中小电商多平台结算与利润核对）**，但该产品仓目前 `DEVELOPMENT_ON_HOLD` 且没有产品代码/商业验证。所有代码只在学习仓 `ai-fullstack-workbench`，只用合成数据，不属于其商业应用开发或生产部署授权。
 
 ## 0. 执行策略：不再“先学 24 周，最后才做产品”
 
-- 每周从 **用户问题或产品故障** 倒推知识；先观察一段已有的可运行代码，再要求本人在不让 AI 代写答案的情况下独立完成**变化需求 + 失败路径**。
+- 每个真实需求从用户问题或故障倒推知识；**不要求每周选择ReconLab**。只有当该案例与实际Gap相关时才使用其代码，独立完成变化需求和失败路径。
 - **课程三层**：理论 L1（能解释机制）→ 独立修改 L2（有 commit 与测试）→ 故障排查 L3（复现、归因、修复、复测）。每周必须产生可运行产物；下游真实上线还必须经过单独的产品/安全/运营验收。
 - **代码基座与学习结果分开**：目前 S0 基座是 AI 辅助生成，GitHub CI 通过仅证明该版本的测试/构建，不证明学习者已掌握，也不证明商业产品可上线。
 - **用户需求原则**：平台结算语义、退款/分账/手续费、实际利润计算等不能凭开发者猜；没有官方账单样本、买家访谈、商户授权就只做合成模型，不将 demo 金额当真实利润。
 - **真实工程参照**：[Dev-Workbench](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench) 有运行代码、Node 工具与 CI；要按其 [SaaS/企业/静态工具开发 Gate](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/blob/main/docs/learning/PRODUCT-GUIDES.md) 做 Spec→AC→实现→验证→发布/回滚。Workbench 的 11 阶段才是工程方法权威。
-- **每周所需证据**：`project_repo@commit`、运行命令、实际输入输出、错误测试、本人不看答案的修复、结果截图/日志和学习反思。全部登记唯一 [PROGRESS](PROGRESS.md)，不凭计划内容给 PASS。
+- **每次相关实战所需证据**：`project_repo@commit`、运行命令、实际输入输出、错误测试、本人不看答案的修复、结果截图/日志和学习反思。全部登记唯一 [PROGRESS](PROGRESS.md)，不凭计划内容给 PASS。
 
 ## 1. 真实项目里不断扩大的产品能力切片
 
@@ -25,7 +25,7 @@
 | **S3 多语言模块与观测** | Java 独立保存审计/规则事件，Python 核算域保持数据所有权；跨服务可追溯 | 计划中 | Spring/PG Testcontainers、事件契约、Outbox、OTel/权限 |
 | **S4 上线候选** | 多租户、高并发、安全备份、灰度与回滚，有真实产品验证与明确授权才可能公开发布 | **BLOCKED（商业验证、授权及真实平台规则缺失）** | [真实上线门禁](../project/DOWNSTREAM-RELEASE-GATES.md) |
 
-## 2. 24 周：每周“理论—实战—故障—可验收”一一对应
+## 2. 如果选择ReconLab，该案例的24知识坐标实战参考（可跳）
 
 | 周 | 要学懂的原理 | 直接改动的 ReconLab / 工程功能 | 必测故障或独立变化题 | 对应 Gate |
 |---|---|---|---|---|
@@ -83,9 +83,9 @@
 - **独立改动题 C**：模拟 200ms/2s 请求、触发两次点击，修复任何可能出现的陈旧数据覆盖。
 - 本次已有源码与 CI 是 **AI-assisted baseline**，**不代替你自己完成上面三题**。只有提供新 commit + 实测故障日志才能把 W1/W2 的状态从 `NOT_RUN` 改为真实学习进展。
 
-## 6. 当前 S0–S4 的可执行 GitHub Issues
+## 6. ReconLab S0–S4 可选教学案例 Issues（非默认待办）
 
-- [#1 S0 独立修改与故障复现](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/1)（现在开始；不能因基线 CI 成功自动关闭）
+- [#1 S0 独立修改与故障复现](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/1)（仅选择该案例时领取；不能因基线CI成功自动关闭）
 - [#2 S1 CSV + PostgreSQL + AuthZ](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/2)
 - [#3 S2 Celery + SSE 可靠核对](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/3)
 - [#4 S3 Java/Spring + Outbox](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/4)

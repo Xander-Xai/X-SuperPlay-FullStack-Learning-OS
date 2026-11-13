@@ -1,6 +1,6 @@
 # 前端专项深挖字典 V3.0（按需查阅，不是第二条进度表）
 
-> **REFERENCE / NOT_RUN**。唯一时间安排见 [ROADMAP W1–W24](../../../ROADMAP.md)，独立状态见 [PROGRESS](../PROGRESS.md)。W1–W8 基线之外新增 W14–W18 前端必修、W23 性能。
+> **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。唯一时间安排见 [ROADMAP W1–W24](../../../ROADMAP.md)，独立状态见 [PROGRESS](../PROGRESS.md)。W1–W8 基线之外新增 W14–W18 前端必修、W23 性能。
 
 ## 一、HTML / CSS / Web 平台：不能被组件库替代
 

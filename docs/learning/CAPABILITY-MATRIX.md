@@ -1,6 +1,6 @@
-# V3.0 全栈能力地图与检索入口
+# V4.0 全栈能力坐标对照表
 
-> 这是知识索引，**不是第二套进度表**。W09–W24 的任务操作入口见 [扩展执行手册](W09-W24-EXECUTION-PLAYBOOK.md)。唯一时间轴为 [ROADMAP W1–W24](../../ROADMAP.md)，唯一实际状态台账为 [PROGRESS](PROGRESS.md)。所有能力目前 **UNASSESSED / NOT_RUN**。
+> 本表是旧W坐标/知识/验收编号的对照；优先从[需求路由](DEMAND-ROUTER.md)→[知识依赖图](KNOWLEDGE-GRAPH.md)→[权威资料](OFFICIAL-RESOURCES.md)进入。W1–W24不是时间轴或固定完成顺序，证据只在[PROGRESS](PROGRESS.md)登记。
 
 | 能力层 | 必备技能 | 周次 | 验收 Gate | 详情 |
 |---|---|---|---|---|
@@ -20,5 +20,5 @@
 ## 能力证据由 Gate 决定，而不是勾选技术名词
 
 - **L1**：不看资料解释语言/框架执行机制；**L2**：独立实现和测试；**L3**：故障注入、归因、修复、取舍和新场景复测。
-- **P0**：基础全栈与 Java/JVM/Spring 必修；**P1**：前端进阶/SSR/Node 最小实验/消息安全与系统设计；**P2**：完整 Next 迁移、NestJS/Vue/微服务/K8s 集群等由有效需求驱动。
-- **唯一项目**：`ai-fullstack-workbench`；Java 是其中新增独立业务边界，不因学 Java 自动拆成复杂微服务。
+- **P0/P1/P2 是旧全量学习覆盖深度**，不代表任何下游产品必须同时使用Java、Python、Next、Redis和消息系统；当前项目依照[能力覆盖矩阵](REQUIREMENTS-COVERAGE.md)选用。
+- **项目不唯一**：当前有权限的业务项目优先，其次独立最小Lab；`ai-fullstack-workbench`只是可选合成示例。

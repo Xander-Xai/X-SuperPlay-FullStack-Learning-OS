@@ -1,6 +1,6 @@
 # 后端专项深挖字典 V3.0：Java/JVM/Spring + Python + 数据/架构
 
-> **REFERENCE / NOT_RUN**。本页按 [唯一主线 W1–W24](../../../ROADMAP.md) 检索；Java Core/JVM/Spring **W09–W13 正式必修**，不再是 P2。语言熟悉程度不由历史项目自动推断。
+> **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。本页按 [唯一主线 W1–W24](../../../ROADMAP.md) 检索；Java Core/JVM/Spring **W09–W13 正式必修**，不再是 P2。语言熟悉程度不由历史项目自动推断。
 
 ## 一、Java 语言与 JVM（W09–W11）
 

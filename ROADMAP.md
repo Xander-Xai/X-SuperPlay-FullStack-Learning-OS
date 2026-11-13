@@ -492,7 +492,7 @@ FastAPI Router + Pydantic（接口权威）
 
 **验收编号**：G24。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
 
-### 十三、跨语言项目架构决策（防止“学会两套后端”变成无意义复杂微服务）
+### 十三、可选跨语言案例架构（仅在选取该实验时适用）
 
 - **W1–W8**：保持 React + FastAPI 单体分层纵向链路。
 - **W9–W11**：在同仓 Java `labs/java-core` / `apps/java-service` 学语言和 JVM，不拆 Python 主业务。
@@ -502,9 +502,9 @@ FastAPI Router + Pydantic（接口权威）
 
 单一应用蓝图见 [PROJECT-BLUEPRINT](docs/project/PROJECT-BLUEPRINT.md)；详细专题在 [前端字典](docs/learning/references/frontend.md) 和 [后端字典](docs/learning/references/backend.md)。
 
-### 十四、扩展毕业门槛与证据规则
+### 十四、全面知识覆盖挑战的可选毕业标准与证据规则
 
-原 **G01–G12** 不降级，新增 **G13–G24**，详见 [ACCEPTANCE](docs/learning/ACCEPTANCE.md)：
+原 **G01–G12** 与 **G13–G24** 都保留为独立能力索引，不降级；全面覆盖时可以逐项验证，详见 [ACCEPTANCE](docs/learning/ACCEPTANCE.md)：
 - **G13** Java 语言/集合/泛型/构建/设计规则；**G14** JVM、JMM/并发、JFR 与 I/O 负载；
 - **G15** Spring Boot IoC/MVC/API；**G16** Spring Data/事务/Security/Testcontainers；
 - **G17** HTML/CSS/响应式/a11y；**G18** JS/TS/ESM/Vite 构建与类型安全；

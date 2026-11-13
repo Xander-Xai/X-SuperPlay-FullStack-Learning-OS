@@ -49,9 +49,9 @@ flowchart TB
 
 | ID | 主题 | 最低概念先修 | 专业作用 | 官方专题章节 | 上游材料类型 | 独立实验 |
 |---|---|---|---|---|---|---|
-| P01 | 业务需求/验收 | 无 | 解决什么问题、什么算成功 | [阅读](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues) | 学习方法 | [查看本节点卡](NODE-STUDY-CARDS.md) |
+| P01 | 业务需求/验收 | 无 | 解决什么问题、什么算成功 | [阅读](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) | 学习方法 | [查看本节点卡](NODE-STUDY-CARDS.md) |
 | P02 | 架构与技术取舍 | P01 | 模块边界、数据归属、技术选型 | [阅读](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) | 概念综述 | [查看本节点卡](NODE-STUDY-CARDS.md) |
-| F01 | Web/HTTP/浏览器 | 无 | 请求、Cookie、状态码、CORS、TLS | [阅读](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) | 课程参考 | [查看本节点卡](NODE-STUDY-CARDS.md) |
+| F01 | Web/HTTP/浏览器 | 无 | 请求、Cookie、状态码、CORS、TLS | [阅读](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) | 课程参考 | [查看本节点卡](NODE-STUDY-CARDS.md) |
 | F02 | HTML/CSS/无障碍 | 无 | 布局、语义表单、响应式与键盘操作 | [阅读](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility) | 课程参考 | [查看本节点卡](NODE-STUDY-CARDS.md) |
 | F03 | JavaScript/TypeScript | 无 | 事件循环、异步取消、泛型、模块 | [阅读](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) | 概念综述 | [查看本节点卡](NODE-STUDY-CARDS.md) |
 | F04 | React/状态 | F02、F03 | 组件、路由、服务端数据与交互 | [阅读](https://react.dev/learn/state-as-a-snapshot) | 课程参考 | [查看本节点卡](NODE-STUDY-CARDS.md) |

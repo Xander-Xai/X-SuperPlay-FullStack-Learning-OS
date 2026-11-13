@@ -6,7 +6,7 @@
 
 | 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
 |---|---|---|---|---|
-| P01 业务需求/验收 | [官方精确小节](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues) | Issues / User story / Acceptance criteria | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md) | 需求被取消、无权限用户查看、弱网时也要有预期行为。 |
+| P01 业务需求/验收 | [官方精确小节](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) | Issues / User story / Acceptance criteria | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md) | 需求被取消、无权限用户查看、弱网时也要有预期行为。 |
 | P02 架构与技术取舍 | [官方精确小节](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) | Architecture styles / bounded contexts | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/ai-product-engineer-roadmap-20261028.md) | 一次跨模块事务失败时归谁回滚？ |
 | P03 生产发布/运营 | [官方精确小节](https://docs.github.com/en/actions) | GitHub Actions / deployments | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 错误迁移、资源用量异常、回滚后数据版本不兼容。 |
 | P04 支付/订阅 | [官方精确小节](https://docs.stripe.com/webhooks) | Stripe webhook signing / idempotency | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/labs/freelance-proof-20261025/README.md) | 伪造回调、重复通知、回调乱序/退款。 |
@@ -15,7 +15,7 @@
 
 | 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
 |---|---|---|---|---|
-| F01 Web/HTTP/浏览器 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) | HTTP overview / CORS / Fetch | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | 断网、超时、跨域预检失败与HTTP 500分别是什么？ |
+| F01 Web/HTTP/浏览器 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) | HTTP overview / CORS / Fetch | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | 断网、超时、跨域预检失败与HTTP 500分别是什么？ |
 | F02 HTML/CSS/无障碍 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility) | HTML forms / CSS layout / Accessibility | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | 缩放到200%、Tab导航、无标签输入时会怎样？ |
 | F03 JavaScript/TypeScript | [官方精确小节](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) | JavaScript execution model / TypeScript narrowing | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 旧请求最后返回是否覆盖新数据？运行时类型不符怎么办？ |
 | F04 React/状态 | [官方精确小节](https://react.dev/learn/state-as-a-snapshot) | State as a snapshot / Effects | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | StrictMode重复effect、切换查询导致旧数据、401后的UI状态。 |

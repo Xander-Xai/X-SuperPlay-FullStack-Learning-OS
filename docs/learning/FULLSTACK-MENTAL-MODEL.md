@@ -122,7 +122,11 @@ sequenceDiagram
 | Electron桌面工具 | JS/TS、主进程/渲染进程、安全IPC | 原生体积/系统能力限制才评估Tauri |
 | 小程序/移动应用 | 对应平台运行时、合法网络请求、真机/模拟器 | 按真实平台和设备能力增补 |
 
-## 七、核心权威来源与限制
+## 七、别把“整个前后端”误解成只剩Java、Python、React
+
+前后端是**职责分层**，不是特定框架组合。知识图的42个节点负责建立高频、可检验能力；其他如.NET/C#、PHP/Laravel、Ruby/Rails、Angular/SvelteKit、GraphQL/gRPC、Serverless、MongoDB、WebRTC等见[外围技术生态图](OPTIONAL-TECH-LANDSCAPE.md)。知道它们在哪一层、哪种场景用，与把每个框架都上手写一遍是两回事。
+
+## 八、核心权威来源与限制
 
 - [上游编程语言技术栈地图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)
 - [MDN 客户端与服务端](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview)

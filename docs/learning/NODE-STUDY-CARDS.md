@@ -20,7 +20,7 @@
 
 **与其他知识的关系**：最低概念先修：无；历史知识坐标 W24；相关验收分类 G12、G24，不强制按序通过。
 
-**官方阅读**：[准确专题入口](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues) — 先看 **Issues / User story / Acceptance criteria**。[基础文档](https://docs.github.com/en/issues)。
+**官方阅读**：[准确专题入口](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues) — 先看 **Issues / User story / Acceptance criteria**。[基础文档](https://docs.github.com/en/issues)。
 
 **上游相关资料**：[资料1](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md) · [资料2](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md)。来源性质：学习方法论（非技术实训）。
 
@@ -110,7 +110,7 @@
 
 **与其他知识的关系**：最低概念先修：无；历史知识坐标 W01、W05；相关验收分类 G01、G08，不强制按序通过。
 
-**官方阅读**：[准确专题入口](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) — 先看 **HTTP overview / CORS / Fetch**。[基础文档](https://developer.mozilla.org/en-US/docs/Web/HTTP)。
+**官方阅读**：[准确专题入口](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) — 先看 **HTTP overview / CORS / Fetch**。[基础文档](https://developer.mozilla.org/en-US/docs/Web/HTTP)。
 
 **上游相关资料**：[资料1](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md)。来源性质：课程/场景说明（非实测）。
 
@@ -446,7 +446,7 @@
 
 **上游相关资料**：[资料1](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md)。来源性质：已有专题LAB（仍需本人实际运行）。
 
-**最小亲手实验**：Spring Boot做GET/POST API与MockMvc测试，覆盖422/400/403。
+**最小亲手实验**：Spring Boot做GET/POST资源API并用MockMvc测试，覆盖400/403/500等约定错误路径。
 
 **故障/反例**：Bean循环依赖、校验失败、没有权限的订单访问。
 

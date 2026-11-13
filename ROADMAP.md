@@ -11,6 +11,7 @@
 - **[一张全栈链路图 + 一张语言/框架树 + 一张请求时序图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：解释客户端、网络与API、后端、数据、异步、安全、CI与运维各自负责什么。
 - **[42节点知识图](docs/learning/KNOWLEDGE-GRAPH.md)**、[42张专业+大白话学习卡](docs/learning/NODE-STUDY-CARDS.md)：含最低先修、官方原始资料、平行技术路线和具体上游讲解；不仅有React、FastAPI、Java，现已加入**Vue3/Nuxt、Node/NestJS、WebSocket、PWA、桌面Electron/Tauri、uni-app、Go/Rust/C++、MCP**等可选分支。
 - **[20份上游 AI-Learning-OS 前后端原资料](docs/learning/UPSTREAM-ASSET-INDEX.md)**：复用已有[编程语言全景图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)、Vue3+FastAPI案例、企业AI 18 Labs、Java专项、多端平台实训与评分规范。
+- **[生态外围备查：.NET/PHP/Rails/Angular/Svelte/GraphQL/gRPC](docs/learning/OPTIONAL-TECH-LANDSCAPE.md)**：只在岗位或真实代码要求时深入，不另起课程或虚增主地图节点。
 - **[官方资料逐节点索引](docs/learning/OFFICIAL-RESOURCES.md)**：MDN、Vue、Nuxt、React、Next、Node、Nest、FastAPI、Spring、PostgreSQL、Go/Rust、平台文档等；根据本次问题选择具体章节。
 - **[需求→知识→实验](docs/learning/DEMAND-ROUTER.md)**：项目需要Vue就查F08，需要Spring就查B04，需要MCP就查A02；不会的补最低先修，**不是必须花2–3个月从头按顺序学**。
 

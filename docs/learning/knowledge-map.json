@@ -29,7 +29,7 @@
       "lab": "写一个已有工单列表的3条AC和2条异常场景，并以测试或手工UAT执行。",
       "failure": "需求被取消、无权限用户查看、弱网时也要有预期行为。",
       "read_first": "Issues / User story / Acceptance criteria",
-      "study_url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues",
+      "study_url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues",
       "upstream_role": "learning_method"
     },
     {
@@ -88,7 +88,7 @@
       "lab": "DevTools观察GET/POST、401、缓存和跨域预检，并手写取消请求。",
       "failure": "断网、超时、跨域预检失败与HTTP 500分别是什么？",
       "read_first": "HTTP overview / CORS / Fetch",
-      "study_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+      "study_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
       "upstream_role": "track_or_course"
     },
     {
@@ -387,7 +387,7 @@
       "mechanism": "Bean/DI→MVC DispatcherServlet→Controller→Service→错误/测试。",
       "analogy": "容器帮你把业务部件装配好，HTTP请求沿着流水线走。",
       "boundary": "Spring Boot不是Java语言本身；DTO验证不能代替权限。",
-      "lab": "Spring Boot做GET/POST API与MockMvc测试，覆盖422/400/403。",
+      "lab": "Spring Boot做GET/POST资源API并用MockMvc测试，覆盖400/403/500等约定错误路径。",
       "failure": "Bean循环依赖、校验失败、没有权限的订单访问。",
       "read_first": "Servlet web applications / Spring MVC",
       "study_url": "https://docs.spring.io/spring-boot/reference/web/servlet.html",

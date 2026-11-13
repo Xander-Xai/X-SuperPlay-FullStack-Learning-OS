@@ -16,6 +16,8 @@
 
 **[42张可直接学习的专业/大白话知识卡](docs/learning/NODE-STUDY-CARDS.md)**：每个节点有机制、比喻的边界、上下层关系、官方具体章节、最小动手实验与失败用例，防止只剩一个网址。
 
+**[前后端技术生态外围分支](docs/learning/OPTIONAL-TECH-LANDSCAPE.md)**：.NET/C#、PHP/Laravel、Ruby/Rails、Angular/SvelteKit、GraphQL/gRPC、Spring Cloud、Serverless、MongoDB等只需认知定位；不是新的必修课。
+
 ## 第一入口：我当前要做什么？
 
 1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。

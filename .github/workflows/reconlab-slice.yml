@@ -40,5 +40,14 @@ jobs:
           node-version: "22"
       # First slice, lockfile pending. Do not deploy until lockfile is committed and npm ci succeeds.
       - run: npm install --no-audit --no-fund
+      - name: Bootstrap lockfile capture (only for initial pinning)
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const text = fs.readFileSync('package-lock.json').toString('base64');
+          console.log('LOCK_BEGIN');
+          for (let i = 0; i < text.length; i += 3000) console.log('LOCK_CHUNK:' + text.slice(i, i + 3000));
+          console.log('LOCK_END');
+          NODE
       - run: npm run test
       - run: npm run build

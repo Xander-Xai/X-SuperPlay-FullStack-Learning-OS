@@ -30,3 +30,7 @@ jobs:
           python-version: "3.12"
       - name: Check canonical roadmap structure, gates, progress, links
         run: python docs/quality/check_roadmap.py
+      - name: Validate knowledge graph and on-demand routing
+        run: |
+          python docs/quality/check_knowledge_map.py
+          python -m unittest discover -s docs/quality -p 'test_need_router.py'

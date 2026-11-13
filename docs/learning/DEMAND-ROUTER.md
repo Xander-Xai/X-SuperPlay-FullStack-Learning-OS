@@ -4,6 +4,19 @@
 >
 > **不限 ReconLab 或某个下游仓**。工作台/静态站/SaaS/企业系统/小程序/移动App/AI应用/Java岗位都可触发不同学习路径。真正开发需遵循对应仓库授权与工程流程。
 
+## 命令行按需反查（可运行，不只是一张表）
+
+在仓库根目录使用Python 3.12+：
+
+~~~bash
+python docs/learning/route_need.py --query "Spring Boot API"
+python docs/learning/route_need.py --query "微信小程序"
+python docs/learning/route_need.py --node B04
+python docs/learning/route_need.py --list
+~~~
+
+程序读取[机器可读知识图](knowledge-map.json)，输出作用、最低先修、关联的旧模块编号、Gate和官方资料。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
+
 ## 一、最短的学习循环（每次只解决一个真实 Gap）
 
 1. **需求**：本次要交付什么功能或修复什么故障？写一句用户结果与至少一个失败场景。

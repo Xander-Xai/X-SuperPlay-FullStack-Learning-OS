@@ -69,8 +69,18 @@ def main() -> None:
     progress_rows = re.findall(r"^\| (W(?:[1-8]|0[9]|1[0-9]|2[0-4])) \|", progress, re.M)
     equals(progress_rows, [f"W{i}" for i in range(1, 9)] +
            [f"W{i:02d}" for i in range(9, 25)], "progress W1-W24")
-    week_state_rows = re.findall(r"^\| W(?:[1-8]|0[9]|1[0-9]|2[0-4]) \|[^\n]*\| NOT_RUN \|", progress, re.M)
-    equals(len(week_state_rows), 24, "initial week states (weekly rows only)")
+    week_state_rows = re.findall(r"^\| W(?:[1-8]|0[9]|1[0-9]|2[0-4]) \|[^\n]*$", progress, re.M)
+    equals(len(week_state_rows), 24, "module status rows")
+    allowed = {"NOT_RUN", "IN_PROGRESS", "PARTIAL", "FAIL", "BLOCKED", "PASS_WITH_EVIDENCE"}
+    for line in week_state_rows:
+        cells = [value.strip() for value in line.strip("|").split("|")]
+        state = cells[2] if re.fullmatch(r"W[1-8]", cells[0]) else cells[3]
+        if state not in allowed:
+            raise AssertionError(f"{cells[0]} invalid state: {state}")
+        if state == "PASS_WITH_EVIDENCE":
+            evidence = cells[4] if re.fullmatch(r"W[1-8]", cells[0]) else cells[5]
+            if evidence in {"", "—", "-", "NOT_RUN"}:
+                raise AssertionError(f"{cells[0]} passed without real evidence link")
     # Every week added by V3 must retain its own actionable six-day checklist.
     sections = re.split(r"(?=^### W(?:0[9]|1[0-9]|2[0-4])｜)", playbook, flags=re.M)[1:]
     equals(len(sections), 16, "V3 weekly playbook sections")
@@ -82,7 +92,7 @@ def main() -> None:
         assert "本周 DoD" in section, f"{expected} missing DoD"
         assert "先修验收" in section, f"{expected} missing prerequisites"
 
-    assert "432h" in roadmap or "432 小时" in roadmap, "24-week budget missing"
+    assert "432" in roadmap and "参考" in roadmap, "historical 432h optional coverage budget missing"
     assert "SUPERSEDED IN PART" in adr1, "ADR-0001 outdated without supersession"
     assert "Java" in adr2 and ("W9–W13 必修" in adr2 or "W09–W13 必修" in adr2), "ADR-0002 must record Java mandatory W9-W13"
     assert re.search(r"Java/Spring Boot[^\n]*W0?9–W13[^\n]*必修", roadmap), "Java/Spring mandatory status missing"
@@ -90,8 +100,8 @@ def main() -> None:
     assert "STACK-VERSION-POLICY.md" in readme, "README versions entry missing"
 
     total = check_markdown_links()
-    print(f"ROADMAP DOCS PASS: 24 weeks; 24 gates; 16x6 daily tasks; "
-          f"{total} relative links checked; actual training remains NOT_RUN.")
+    print(f"ROADMAP DOCS PASS: 24 coordinates; 24 gates; 16x6 optional day templates; "
+          f"{total} relative links checked; learner results are not inferred.")
 
 if __name__ == "__main__":
     try:

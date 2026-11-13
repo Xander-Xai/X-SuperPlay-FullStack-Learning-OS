@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 GRAPH_PATH = Path(__file__).with_name("knowledge-map.json")
@@ -59,6 +60,14 @@ def load() -> dict:
     return {n["id"]: n for n in data["nodes"]}
 
 
+def alias_matches(alias: str, query: str) -> bool:
+    """Avoid Java matching JavaScript and js/ts matching NestJS as substrings."""
+    a = alias.casefold()
+    if a in {"java", "js", "ts", "go", "ci"}:
+        return bool(re.search(r"(?<![a-z0-9])" + re.escape(a) + r"(?![a-z0-9])", query))
+    return a in query
+
+
 def find(query: str, catalog: dict) -> list[dict]:
     q = query.casefold().strip()
     if not q:
@@ -72,7 +81,7 @@ def find(query: str, catalog: dict) -> list[dict]:
         if q in title or title in q:
             score += 15
         for alias in ALIASES.get(id_, []):
-            if alias.casefold() in q:
+            if alias_matches(alias, q):
                 score += 10 + min(len(alias), 10)
         if score:
             result.append((score, node))

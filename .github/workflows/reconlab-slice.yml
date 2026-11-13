@@ -27,3 +27,18 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install -r requirements.txt
       - run: python -m pytest -q
+
+  react-web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-fullstack-workbench/apps/web
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # First slice, lockfile pending. Do not deploy until lockfile is committed and npm ci succeeds.
+      - run: npm install --no-audit --no-fund
+      - run: npm run test
+      - run: npm run build

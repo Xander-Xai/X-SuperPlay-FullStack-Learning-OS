@@ -11,11 +11,14 @@
 ~~~bash
 python docs/learning/route_need.py --query "Spring Boot API"
 python docs/learning/route_need.py --query "微信小程序"
+python docs/learning/route_need.py --query "Vue3后台"
+python docs/learning/route_need.py --query "Electron桌面应用"
+python docs/learning/route_need.py --query "MCP Server"
 python docs/learning/route_need.py --node B04
 python docs/learning/route_need.py --list
 ~~~
 
-程序读取[机器可读知识图](knowledge-map.json)，输出作用、最低先修、关联的旧模块编号、Gate和官方资料。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
+程序读取[机器可读知识图](knowledge-map.json)，输出作用、最低先修、旧模块编号、Gate、官方文档、[上游相关资料](UPSTREAM-ASSET-INDEX.md)与建议实验。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
 
 ## 一、最短的学习循环（每次只解决一个真实 Gap）
 
@@ -30,11 +33,20 @@ python docs/learning/route_need.py --list
 
 **建议一次学习会话 60–180 分钟**（视难度调整）。其中“原理/官方资料 20–30%、亲手写与测试 50–60%、故障复盘 20–30%”只是参考配比，并非硬性考勤。
 
-## 二、按“要做什么”直接进入知识
+## 二、先看系统关系图，再选当下需要的一角
+
+先阅读[全栈专业定义与大白话全景图](FULLSTACK-MENTAL-MODEL.md)，再结合[上游资料汇合索引](UPSTREAM-ASSET-INDEX.md)定位 Vue/React、Java/Spring、Node/MCP、数据/部署的具体教程。**学习方向由当前需求决定，知识结构由依赖图提供；这两个目标并不矛盾。**
+
+## 三、按“要做什么”直接进入知识
 
 | 我现在想实现的功能/产品 | 先定位的技能节点 | 缺什么才补什么 | 不要求先学 |
 |---|---|---|---|
 | **网页/响应式工具、落地页** | F02、F03、U01、E01 | 有交互再F04；SEO/SSR再F05；部署再E02 | Spring、Redis、Celery |
+| **Vue3后台 / 现有Vue项目** | F08、F03、B01、E03 | 接口按项目选B02/B04/B07，SSR需求再F09；上游有Vue3+FastAPI实训 | 不强行迁移React或学Next |
+| **Nuxt+Vue全栈/SSR** | F08、F09、F01 | 需要SEO、渲染缓存时深入，配套最小服务器端安全实验 | 先把React或Next也学完 |
+| **桌面Electron/Tauri工具** | M03、F03、F02 | 本地文件/IPC/系统权限、安装签名；需求触发后深入Rust/Tauri | 全栈Web 24周先学完 |
+| **MCP工具或双向实时服务** | A02或F11、B01 | MCP工具Schema/授权；实时订阅区分SSE/WS、重连和顺序 | 一上来就做多Agent集群 |
+| **Go/Rust/C++工程** | B08或B09、E05 | 仅现有项目、岗位或瓶颈证据触发，按语言官方文档最小实现 | 把所有语言列成必修 |
 | **React后台/企业管理系统** | P01、F04、B01、E03 | 后端选B02或B04；数据存储D01；CI E01 | Next SSR、Kafka、全套Java与Python并学 |
 | **SaaS/Micro-SaaS** | P01、B01、D01、E03、E01、P03 | 根据团队选React/Next与FastAPI/Spring；需要收费才P04；跨服务才D03 | 强制多智能体、无业务理由的微服务 |
 | **Java/Spring岗位功能/修Bug** | B03、B04 | 涉及DB补D01/B05，安全补E03，JVM故障补B03并发/JFR | 必须按W1–W11顺序打卡 |

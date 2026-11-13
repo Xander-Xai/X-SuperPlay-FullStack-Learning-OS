@@ -28,6 +28,29 @@ class TestDemandRouter(unittest.TestCase):
         self.assertIn("A01", [n["id"] for n in route_need.find("Agent工具", self.nodes)])
         self.assertIn("B06", [n["id"] for n in route_need.find("SSE断连", self.nodes)])
 
+
+    def test_vue_nuxt_and_desktop_routes(self):
+        self.assertIn("F08", [n["id"] for n in route_need.find("我要做Vue3后台", self.nodes)])
+        self.assertIn("F09", [n["id"] for n in route_need.find("Nuxt SSR", self.nodes)])
+        self.assertIn("M03", [n["id"] for n in route_need.find("Electron桌面应用", self.nodes)])
+        self.assertIn("M04", [n["id"] for n in route_need.find("uni-app小程序", self.nodes)])
+
+    def test_node_protocol_and_native_routes(self):
+        self.assertIn("B07", [n["id"] for n in route_need.find("NestJS Node后端", self.nodes)])
+        self.assertIn("F11", [n["id"] for n in route_need.find("WebSocket双向消息", self.nodes)])
+        self.assertIn("A02", [n["id"] for n in route_need.find("MCP server工具", self.nodes)])
+        self.assertIn("B08", [n["id"] for n in route_need.find("Go语言API", self.nodes)])
+
+    def test_vue_prerequisites_and_refs(self):
+        n = self.nodes["F08"]
+        ids = [item["id"] for item in route_need.minimum_prerequisites(n, self.nodes)]
+        self.assertIn("F02", ids)
+        self.assertIn("F03", ids)
+        self.assertNotIn("F04", ids)
+        desc = route_need.describe(n, self.nodes)
+        self.assertIn("vuejs.org", desc)
+        self.assertIn("X-SuperPlay-AI-Learning-OS", desc)
+
     def test_known_node_and_unknown_query(self):
         self.assertEqual(route_need.find("B04", self.nodes)[0]["id"], "B04")
         self.assertEqual(route_need.find("不存在的神秘工具名", self.nodes), [])

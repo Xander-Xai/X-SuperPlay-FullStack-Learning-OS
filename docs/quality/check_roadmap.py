@@ -94,8 +94,10 @@ def main() -> None:
 
     assert "432" in roadmap and "参考" in roadmap, "historical 432h optional coverage budget missing"
     assert "SUPERSEDED IN PART" in adr1, "ADR-0001 outdated without supersession"
-    assert "Java" in adr2 and ("W9–W13 必修" in adr2 or "W09–W13 必修" in adr2), "ADR-0002 must record Java mandatory W9-W13"
-    assert re.search(r"Java/Spring Boot[^\n]*W0?9–W13[^\n]*必修", roadmap), "Java/Spring mandatory status missing"
+    adr3 = load("docs/decisions/ADR-0003-demand-driven-learning.md")
+    assert "Java" in adr2 and "历史" in adr3, "historical Java coverage must be documented"
+    assert "需求驱动" in adr3 and "requires" in adr3, "ADR-0003 demand-driven rule missing"
+    assert "不要求" in roadmap and "按需" in roadmap, "current roadmap must not force a weekly sequence"
     assert "W09-W24-EXECUTION-PLAYBOOK.md" in readme, "README playbook entry missing"
     assert "STACK-VERSION-POLICY.md" in readme, "README versions entry missing"
 

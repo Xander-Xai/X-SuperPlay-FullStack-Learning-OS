@@ -57,7 +57,7 @@ def validate() -> dict:
             raise AssertionError(f"{n['id']}: no primary source")
         if not re.search(r"^\|\s*" + re.escape(n["id"]) + r"\s*\|", graph_md, re.M):
             raise AssertionError(f"{n['id']}: missing from human graph")
-        if not re.search(r"^\|\s*" + re.escape(n["id"]) + r"\s*\|", official_md, re.M):
+        if not re.search(r"^\|\s*" + re.escape(n["id"]) + r"\s+[^|]*\|", official_md, re.M):
             raise AssertionError(f"{n['id']}: missing official learning section")
         if not re.search(r"^### " + re.escape(n["id"]) + r" · ", cards_md, re.M):
             raise AssertionError(f"{n['id']}: lacks detailed learning card")
@@ -71,8 +71,8 @@ def validate() -> dict:
             parsed = urlparse(url)
             if parsed.scheme != "https" or not parsed.hostname:
                 raise AssertionError(f"{n['id']}: invalid official URL {url}")
-            if url not in graph_md:
-                raise AssertionError(f"{n['id']}: official source not indexed in graph")
+            if url not in cards_md and url not in official_md:
+                raise AssertionError(f"{n['id']}: base official URL not indexed in learning cards")
         for dep in n["requires"]:
             if dep not in by_id or dep == n["id"]:
                 raise AssertionError(f"{n['id']}: bad minimal prerequisite {dep}")
@@ -105,11 +105,11 @@ def validate() -> dict:
     if not expect_weeks.issubset(weeks) or not expect_gates.issubset(gates):
         raise AssertionError(f"coverage gap weeks={expect_weeks-weeks} gates={expect_gates-gates}")
     if not all((LEARN / name).is_file() for name in
-               ["DEMAND-ROUTER.md", "GAP-SESSION-TEMPLATE.md", "REQUIREMENTS-COVERAGE.md"]):
+               ["DEMAND-ROUTER.md", "GAP-SESSION-TEMPLATE.md", "REQUIREMENTS-COVERAGE.md", "NODE-STUDY-CARDS.md"]):
         raise AssertionError("need-first workflow or downstream coverage missing")
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    if not all(x in readme for x in ("DEMAND-ROUTER.md", "KNOWLEDGE-GRAPH.md", "UPSTREAM-ASSET-INDEX.md", "FULLSTACK-MENTAL-MODEL.md")):
+    if not all(x in readme for x in ("DEMAND-ROUTER.md", "KNOWLEDGE-GRAPH.md", "UPSTREAM-ASSET-INDEX.md", "FULLSTACK-MENTAL-MODEL.md", "NODE-STUDY-CARDS.md")):
         raise AssertionError("need-first entry is not primary")
     return {"nodes": len(nodes), "hard_edges": sum(len(n["requires"]) for n in nodes),
             "distinct_upstream_references": len(upstream_sources),

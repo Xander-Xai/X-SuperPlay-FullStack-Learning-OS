@@ -1,4 +1,4 @@
-# 全栈知识 Roadmap V4.1（整合上游资料）｜知识逻辑完整，按需求自由跳学
+# 全栈知识 Roadmap V4.2（整合上游资料）｜知识逻辑完整，按需求自由跳学
 
 > **统一能力地图，不是按周通关日历。** 旧W1–W24保留知识覆盖坐标和可选引导式任务；原24周/432小时只是完整补基础的历史参考预算，**你实际学习什么、先学哪个模块，都由项目/JD/故障需求决定**。
 >
@@ -9,7 +9,7 @@
 ## 先在脑中建立技术的整体关系（不要求同时实作所有方向）
 
 - **[一张全栈链路图 + 一张语言/框架树 + 一张请求时序图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：解释客户端、网络与API、后端、数据、异步、安全、CI与运维各自负责什么。
-- **[42节点知识图](docs/learning/KNOWLEDGE-GRAPH.md)**：含最低先修、官方原始资料、平行技术路线和具体上游讲解；不仅有React、FastAPI、Java，现已加入**Vue3/Nuxt、Node/NestJS、WebSocket、PWA、桌面Electron/Tauri、uni-app、Go/Rust/C++、MCP**等可选分支。
+- **[42节点知识图](docs/learning/KNOWLEDGE-GRAPH.md)**、[42张专业+大白话学习卡](docs/learning/NODE-STUDY-CARDS.md)：含最低先修、官方原始资料、平行技术路线和具体上游讲解；不仅有React、FastAPI、Java，现已加入**Vue3/Nuxt、Node/NestJS、WebSocket、PWA、桌面Electron/Tauri、uni-app、Go/Rust/C++、MCP**等可选分支。
 - **[20份上游 AI-Learning-OS 前后端原资料](docs/learning/UPSTREAM-ASSET-INDEX.md)**：复用已有[编程语言全景图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)、Vue3+FastAPI案例、企业AI 18 Labs、Java专项、多端平台实训与评分规范。
 - **[官方资料逐节点索引](docs/learning/OFFICIAL-RESOURCES.md)**：MDN、Vue、Nuxt、React、Next、Node、Nest、FastAPI、Spring、PostgreSQL、Go/Rust、平台文档等；根据本次问题选择具体章节。
 - **[需求→知识→实验](docs/learning/DEMAND-ROUTER.md)**：项目需要Vue就查F08，需要Spring就查B04，需要MCP就查A02；不会的补最低先修，**不是必须花2–3个月从头按顺序学**。
@@ -30,6 +30,8 @@
 
 **[AI-Native学习协议与可复制导师指令](docs/learning/AI-NATIVE-LEARNING-PROTOCOL.md)**：利用AI定位代码、写脚手架和测试骨架；本人决定业务/权限/正确性，亲手做负例和陌生约束复考。遇到问题先修当前Gap，不机械重复所有基础课程。
 
+**严格验收**：只有每个节点同时具备专业定义、底层机制、大白话与适用边界、最小先修、具体官方小节、上游资料性质、动手实现与故障负例，才叫“资料能用”；详情见[42张知识卡](docs/learning/NODE-STUDY-CARDS.md)。阅读完仍不等于本人掌握。
+
 ## 0. 执行原则
 
 - **学习地图是系统化的**：了解客户端/网络/API/业务/数据/异步/安全/部署每层的责任、关系、替代方案；W坐标只帮助查漏。
@@ -37,7 +39,7 @@
 - **目标是能做下游多种产品**：静态站/SaaS/企业Web/小程序/移动App/AI应用/CLI等按实际技术与平台选择，不为一个产品强制装齐所有技术。
 - **技术能力有证据**：每项通过原理L1→独立实现L2→故障诊断L3；证据与当前项目的交付验收分开，只有在本人实验后更新[PROGRESS](docs/learning/PROGRESS.md)。
 - **参考体系**：W1–W24原有专题、专项字典和96个D1–D6任务仍保留，作为**可选查漏材料**而非必经顺序。
-- **Java/Spring Boot 已升级为 W9–W13 必修**：这描述V3全量能力覆盖时的必要专题；在V4针对单一需求时，Java是按目标岗位/现有架构选择的能力，不代表每个项目都必须Java，也不要求按W编号排序。
+- **Java/Spring Boot 是知识地图的重要分支**：旧V3曾将W9–W13标为全量课程必修；当前V4.2不强制所有产品学习Java。只因岗位、既有系统或目标功能触发，直接跳进对应节点与最低先修。
 
 ## 1. 学习目标与非目标
 
@@ -45,7 +47,7 @@
 - 已有 Python/FastAPI/RAG/Agent 经验可快速诊断、跳过重复入门，但必须完成实际考核；不存在“做过项目=掌握”的自动豁免。
 - 实战选项：当前有权限的产品或代码仓优先；也可以选择独立小实验，`ai-fullstack-workbench` 仅为本仓已有的合成核对**可选教材**，后续CSV/DB/Java等是该案例扩展思路，不绑定所有学习。
 - 核心栈：React + TypeScript + Vite/React Router + TanStack Query/Tailwind/shadcn/ui；Python FastAPI/Pydantic/SQLAlchemy；**Java 核心/JVM/Spring Boot/Spring MVC/Spring Security/Spring Data**；PostgreSQL/Redis/Celery；OpenAPI/Orval；Docker/Nginx/CI/E2E。W9–W24 增加 Java/JVM、前端进阶、Node/SSR 原理和分布式可靠性。
-- **Java/Spring Boot 已升级为 W9–W13 必修**；Next.js SSR 核心比较与 Node 运行时基础安排 W17–W18，深度框架迁移、Kubernetes 真机集群、复杂微服务与重复构建完整 RAG 平台仍是 P2。岗位 MUST 可触发优先级重排并记录原因。
+- **Java/Spring、Next/Nuxt、Node/Nest 等均纳入地图**，不因技术范围广就强制一一安装/实作；有目标岗位/现有系统才进入对应专题。Kubernetes、复杂微服务与重复搭建RAG均由实质需求触发。
 - 资源优先官方文档；不追求工具数量。无客户授权时只用合成/许可数据；不产生真实业务/生产部署宣称。
 
 ## 2. 学习与交付边界
@@ -174,7 +176,7 @@ FastAPI Router + Pydantic（接口权威）
 
 - `X-Request-ID` 只是便于检索的日志关联符；客户端值应在可信入口校验长度/格式或重新生成，并回传响应头。不能把未知 Header 原样写入日志。
 - `traceparent` 属 W3C Trace Context：只有实际 OpenTelemetry instrumentation、上下文传播、Span 收集与导出查看，才叫可验证的分布式 Trace。
-- PostgreSQL 查询不能仅凭 HTTP Header 就自动串起，需要显式日志关联或 DB 客户端 tracing。**W5 要求 Request ID/结构化日志可检索，W8 最小 OTel Trace 为必修**。
+- PostgreSQL 查询不能仅凭 HTTP Header 就自动串起，需要显式日志关联或 DB 客户端 tracing。**选择W5/W8整套旧课程时要求Request ID/结构化日志与OTel Trace；按当前任务只选择相关验证**。
 - 强化 HttpOnly/Secure/SameSite、CSRF、401 vs 403、刷新并发、资源级授权；同源反代可降低 CORS 复杂度但不能代替理解跨域。
 - **验收**：从浏览器复制 ID 找到 API 日志和异步触发的入队记录；用户 B 无法访问/修改 A 的资源；断网、上传失败、Token 失效、请求超时状态正确。
 
@@ -227,7 +229,7 @@ FastAPI Router + Pydantic（接口权威）
 **建议学时**：性能基线 **5h** + Metrics/Logs/Traces **4h** + 故障注入/性能优化 **5h** + 架构/答辩 **4h**。
 
 - 固定测试机器、并发、业务请求分布、数据规模；报告吞吐、错误率、P50/P95/P99、CPU/内存与优化前后差异，不设无上下文的绝对 P95 目标。
-- **最小 OpenTelemetry 实测是 W8/P1 必修**：至少跨一个后端服务或异步边界完成 Span/traceparent 传播、导出和查看，并用具体 Trace 定位慢请求。复杂仪表盘和广泛细粒度埋点可 P2 选修。
+- **如果选取原W8全面运维挑战，最小OpenTelemetry实测为其验收项**：至少跨一个后端服务或异步边界完成 Span/traceparent 传播、导出和查看，并用具体 Trace 定位慢请求。复杂仪表盘和广泛细粒度埋点可 P2 选修。
 - 复现 SQL 慢查询、任务延迟、数据库不可用和 SSE 断流，在日志/Trace/指标里归因并复测。
 - 输出架构图、ERD、API 契约/部署操作手册、性能/测试报告、ADR 和一场本人独立技术答辩。
 - **验收**：严格按 [G01–G12](docs/learning/ACCEPTANCE.md) 逐项给真实证据；关键门槛未过必须记录 FAIL/PARTIAL 后返工，不能因到 W8 自动毕业。
@@ -240,7 +242,7 @@ FastAPI Router + Pydantic（接口权威）
 |---|---|---|
 | MVP（必须先完成） | 登录/登出、项目 CRUD、列表筛选分页、基础 RBAC、统一错误态 | 浏览器→API→DB 可见；403 越权负例 |
 | P1（核心工程） | 上传、业务任务状态、Worker/Redis、SSE 进度、OpenAPI 自动化、数据库迁移、CI/部署 | 断连重连、重复提交、数据一致性、干净环境复现 |
-| P2（可选扩展） | 真实 RAG 问答、高级 OTel 仪表盘、完整 Next.js 迁移、NestJS/Vue/K8s 集群和其他专项 | 有真实业务/JD 触发才投入，Java/Spring 在 W09–W13 已是必修 |
+| P2（可选扩展） | 真实 RAG 问答、高级 OTel 仪表盘、完整 Next.js 迁移、NestJS/Vue/K8s 集群和其他专项 | 有真实业务/JD 触发才投入，Java/Spring旧W09–W13为覆盖坐标，现按需选择 |
 | P1（W8 必修补充） | 最小 OpenTelemetry Trace/Span 跨边界实测 | 不可由 Request ID 的日志关联替代 |
 
 **不可提前将 Mock/API Stub/单次 CI 通过写作生产交付或个人独立能力达标。**
@@ -289,7 +291,7 @@ FastAPI Router + Pydantic（接口权威）
 ## 8. 仓库协作关系
 
 统一看 [仓库索引](docs/REPOSITORY-INDEX.md)。主线知识和个人学习证据在此；工程方法在 Dev-Workbench，业务验证在 Utility-Sites；**知识引用不构成发布/改造/商业授权**。
-## 9. 执行补充：唯一项目结构、评分与资料检索约定
+## 9. 历史单项目案例与评分约定（本仓不绑定唯一项目）
 
 - **唯一 Roadmap**：根目录 `ROADMAP.md`，现覆盖 W1–W24；不要另创建 `docs/learning/roadmap.md` 造成冲突。
 - **唯一进度**：`docs/learning/PROGRESS.md`；当前 W1–W24 均 `NOT_RUN / UNASSESSED`。
@@ -323,7 +325,7 @@ FastAPI Router + Pydantic（接口权威）
 | React 工程 | Hooks/状态、Query/Mutation、表单、设计系统、性能分析、组件/E2E 测试 | W2、W16 | P0 |
 | 渲染选型 | CSR/SSR/SSG/ISR、Next.js/RSC 边界、SEO、缓存失效 | W17 | P1（对比实验） |
 | Node 后端基础 | Node Event Loop/Stream/背压/ESM、BFF/API、NestJS 认识 | W18 | P1（独立最小实验） |
-| Java 核心 | OOP、集合/泛型/Stream、异常、Maven/Gradle、并发/JMM/虚拟线程/JVM/GC/JFR | W9–W11 | **P0 必修** |
+| Java 核心 | OOP、集合/泛型/Stream、异常、Maven/Gradle、并发/JMM/虚拟线程/JVM/GC/JFR | W9–W11 | **按目标需求补齐** |
 | Spring 生态 | IoC/AOP/MVC、Boot 自动配置、JPA/JDBC/MyBatis 对比、事务、Security、JUnit/Testcontainers | W12–W13 | **P0 必修** |
 | Python 后端 | FastAPI、Pydantic、SQLAlchemy、依赖注入、Pytest、异步与 Worker | W3–W6 | P0（已有基础诊断可加速） |
 | 数据与中间件 | PostgreSQL/MySQL SQL 差异、Redis、RabbitMQ/Kafka 二选一、Outbox/幂等/重试/一致性 | W4、W6、W19–W20 | P0+P1 |

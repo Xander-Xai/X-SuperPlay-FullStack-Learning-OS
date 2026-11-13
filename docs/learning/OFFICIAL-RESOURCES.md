@@ -60,3 +60,26 @@
 ```
 
 阅读官方文档的目的不是收藏数量，而是能回答：它负责哪一层、与上下层怎样交互、什么时候不该用、怎样用失败测试证明理解。
+
+
+## V4.1：上游补充的前后端、跨端与其他语言官方直达资源
+
+> 节点编号与[知识图JSON](knowledge-map.json)一一对应。**官方原理**负责定义，**上游资料**负责已有讲解/实验入口，**本次需求**决定要不要实践。原W坐标不新增强制周次。
+
+| ID | 官方资料（准确入口） | 专业核心 / 阅读小节 | 参考的最小实验 |
+|---|---|---|---|
+| F08 | [官方文档](https://vuejs.org/guide/introduction) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Vue的Composition API、ref/reactive/watch/路由与前端状态 | Vue列表请求逆序、watch清理、键盘可用表单 |
+| F09 | [官方文档](https://learn.nuxt.com/en/concepts/rendering-modes) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Vue生态的全栈路由、SSR/CSR/Hybrid、数据与缓存边界 | 比较Nuxt服务端/浏览器HTML和hydration行为 |
+| F10 | [官方文档](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 离线缓存、浏览器生命周期、资源与业务数据缓存边界 | 断网后受控读缓存，登录切换时不泄露他人数据 |
+| F11 | [官方文档](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 区分HTTP轮询、SSE单向事件、WebSocket双向连接和断线策略 | 模拟断开重连、消息乱序和发送速度超过消费速度 |
+| B07 | [官方文档](https://docs.nestjs.com/first-steps) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Node运行时上的Controller/服务/依赖注入/API架构 | 做Nest/Express最小CRUD并验证400/401/500及进程重启 |
+| B08 | [官方文档](https://go.dev/learn/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Go编译/模块/interface/goroutine/context与HTTP服务 | 写最小HTTP服务并复现取消上下文/并发数据竞争 |
+| B09 | [官方文档](https://doc.rust-lang.org/stable/book/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 原生模块、内存与并发安全、推理/性能约束下的系统编程 | 独立原生小程序或Rust CLI；仅有目标瓶颈才做CUDA/C++对照 |
+| D05 | [官方文档](https://www.postgresql.org/docs/current/textsearch.html) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 文件、业务数据、全文检索与向量检索的不同存储责任 | 文件元数据与原始对象分离，比较文本与向量召回负例 |
+| E05 | [官方文档](https://vite.dev/guide/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | JS构建、Python依赖/虚拟环境、JVM JAR、Go/Rust二进制的区别 | 对比npm build、Python安装/启动、Maven打包与实际进程 |
+| M03 | [官方文档](https://www.electronjs.org/docs/latest/tutorial/process-model) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 桌面Web视图、系统API、主/渲染进程或Rust命令与安全边界 | 做本地文件对话框并拒绝未授权的任意文件路径访问 |
+| M04 | [官方文档](https://uniapp.dcloud.net.cn/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md) | 基于Vue的多端页面抽象与目标平台API/审核差异 | 同一受控页面在H5与小程序目标环境运行并对照行为 |
+| M05 | [官方文档](https://developer.android.com/jetpack/compose) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | Kotlin/Jetpack Compose或Swift/SwiftUI的设备与原生SDK能力 | Android原生权限负例或有授权设备的iOS构建演示 |
+| A02 | [官方文档](https://modelcontextprotocol.io/docs/learn/architecture) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | MCP工具/资源/提示的客户端服务端约定，区分REST和A2A | 最小MCP工具定义+非法参数/拒绝未授权调用 |
+
+特别注意：官网文档内容可能随版本变化；实现前固定相应运行时/框架版本，并在实际使用时复核完整章节。这里的入口已按官方站点和上游文件核验，但**没有在本地安装所有框架或运行全部扩展实验**。

@@ -1,7 +1,7 @@
 {
   "version": "4.0",
   "updated": "2026-11-14",
-  "semantics": "requires means minimum knowledge, not completion of earlier weeks",
+  "semantics": "requires = minimum concept only; optional ecosystem nodes never block unrelated project delivery",
   "nodes": [
     {
       "id": "P01",
@@ -17,6 +17,9 @@
       ],
       "official": [
         "https://docs.github.com/en/issues"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md"
       ]
     },
     {
@@ -106,6 +109,9 @@
       ],
       "official": [
         "https://react.dev/learn"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
       ]
     },
     {
@@ -199,6 +205,9 @@
       ],
       "official": [
         "https://fastapi.tiangolo.com/tutorial/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
       ]
     },
     {
@@ -217,6 +226,9 @@
       ],
       "official": [
         "https://dev.java/learn/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
       ]
     },
     {
@@ -235,6 +247,9 @@
       ],
       "official": [
         "https://docs.spring.io/spring-boot/reference/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
       ]
     },
     {
@@ -253,6 +268,9 @@
       ],
       "official": [
         "https://docs.spring.io/spring-security/reference/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
       ]
     },
     {
@@ -271,6 +289,9 @@
       ],
       "official": [
         "https://docs.celeryq.dev/en/stable/userguide/tasks.html"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
       ]
     },
     {
@@ -286,6 +307,9 @@
       ],
       "official": [
         "https://www.postgresql.org/docs/current/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md"
       ]
     },
     {
@@ -303,6 +327,9 @@
       ],
       "official": [
         "https://redis.io/docs/latest/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md"
       ]
     },
     {
@@ -351,6 +378,9 @@
       ],
       "official": [
         "https://docs.github.com/en/actions"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md"
       ]
     },
     {
@@ -391,6 +421,9 @@
       ],
       "official": [
         "https://owasp.org/API-Security/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB09.md"
       ]
     },
     {
@@ -467,6 +500,9 @@
       ],
       "official": [
         "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
       ]
     },
     {
@@ -483,6 +519,9 @@
       ],
       "official": [
         "https://docs.expo.dev/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
       ]
     },
     {
@@ -500,6 +539,9 @@
       ],
       "official": [
         "https://docs.langchain.com/oss/python/langgraph/overview"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
       ]
     },
     {
@@ -521,6 +563,306 @@
       "official": [
         "https://docs.stripe.com/payments"
       ]
+    },
+    {
+      "id": "F08",
+      "title": "Vue 3/响应式/状态",
+      "purpose": "Vue的Composition API、ref/reactive/watch/路由与前端状态",
+      "requires": [
+        "F02",
+        "F03"
+      ],
+      "coordinates": [
+        "W02",
+        "W16"
+      ],
+      "gates": [
+        "G01",
+        "G19"
+      ],
+      "official": [
+        "https://vuejs.org/guide/introduction"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "Vue列表请求逆序、watch清理、键盘可用表单",
+      "plain": "Vue是UI框架；与React是平行选型，不是React的前置步骤"
+    },
+    {
+      "id": "F09",
+      "title": "Nuxt/SSR与混合渲染",
+      "purpose": "Vue生态的全栈路由、SSR/CSR/Hybrid、数据与缓存边界",
+      "requires": [
+        "F08",
+        "F01"
+      ],
+      "coordinates": [
+        "W17"
+      ],
+      "gates": [
+        "G20"
+      ],
+      "official": [
+        "https://learn.nuxt.com/en/concepts/rendering-modes"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "比较Nuxt服务端/浏览器HTML和hydration行为",
+      "plain": "Nuxt是Vue全栈应用框架，不是Vite的替代版本"
+    },
+    {
+      "id": "F10",
+      "title": "PWA/Service Worker/浏览器存储",
+      "purpose": "离线缓存、浏览器生命周期、资源与业务数据缓存边界",
+      "requires": [
+        "F01",
+        "F03"
+      ],
+      "coordinates": [
+        "W14",
+        "W17"
+      ],
+      "gates": [
+        "G17",
+        "G20"
+      ],
+      "official": [
+        "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
+      ],
+      "lab": "断网后受控读缓存，登录切换时不泄露他人数据",
+      "plain": "Service Worker像离线接待员，并非永不下线的后台进程"
+    },
+    {
+      "id": "F11",
+      "title": "WebSocket/实时通信协议",
+      "purpose": "区分HTTP轮询、SSE单向事件、WebSocket双向连接和断线策略",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W06",
+        "W18"
+      ],
+      "gates": [
+        "G07",
+        "G20"
+      ],
+      "official": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+      ],
+      "lab": "模拟断开重连、消息乱序和发送速度超过消费速度",
+      "plain": "WebSocket是双向管道，但不是持久消息数据库"
+    },
+    {
+      "id": "B07",
+      "title": "Node后端/NestJS/Express",
+      "purpose": "Node运行时上的Controller/服务/依赖注入/API架构",
+      "requires": [
+        "F06",
+        "F01"
+      ],
+      "coordinates": [
+        "W18"
+      ],
+      "gates": [
+        "G20",
+        "G24"
+      ],
+      "official": [
+        "https://docs.nestjs.com/first-steps"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "做Nest/Express最小CRUD并验证400/401/500及进程重启",
+      "plain": "Node是运行时，Nest是框架，与FastAPI/Spring平行"
+    },
+    {
+      "id": "B08",
+      "title": "Go服务与并发",
+      "purpose": "Go编译/模块/interface/goroutine/context与HTTP服务",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://go.dev/learn/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "写最小HTTP服务并复现取消上下文/并发数据竞争",
+      "plain": "Go按已有Go系统或性能/部署限制触发，不是必修后端"
+    },
+    {
+      "id": "B09",
+      "title": "Rust/C++/CUDA原生能力",
+      "purpose": "原生模块、内存与并发安全、推理/性能约束下的系统编程",
+      "requires": [],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://doc.rust-lang.org/stable/book/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "独立原生小程序或Rust CLI；仅有目标瓶颈才做CUDA/C++对照",
+      "plain": "Rust/C++/CUDA是按需性能或平台分支，不是学习全栈必经门槛"
+    },
+    {
+      "id": "D05",
+      "title": "对象存储/全文搜索/向量数据库",
+      "purpose": "文件、业务数据、全文检索与向量检索的不同存储责任",
+      "requires": [
+        "B01"
+      ],
+      "coordinates": [
+        "W20",
+        "W24"
+      ],
+      "gates": [
+        "G21",
+        "G24"
+      ],
+      "official": [
+        "https://www.postgresql.org/docs/current/textsearch.html"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+      ],
+      "lab": "文件元数据与原始对象分离，比较文本与向量召回负例",
+      "plain": "数据库不是把所有文件塞一张表；向量检索不是业务权限系统"
+    },
+    {
+      "id": "E05",
+      "title": "编译/构建/打包/运行时",
+      "purpose": "JS构建、Python依赖/虚拟环境、JVM JAR、Go/Rust二进制的区别",
+      "requires": [],
+      "coordinates": [
+        "W07",
+        "W15",
+        "W22"
+      ],
+      "gates": [
+        "G10",
+        "G18",
+        "G23"
+      ],
+      "official": [
+        "https://vite.dev/guide/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
+      ],
+      "lab": "对比npm build、Python安装/启动、Maven打包与实际进程",
+      "plain": "源代码≠构建产物≠容器≠生产部署"
+    },
+    {
+      "id": "M03",
+      "title": "Electron/Tauri桌面应用",
+      "purpose": "桌面Web视图、系统API、主/渲染进程或Rust命令与安全边界",
+      "requires": [
+        "F02",
+        "F03"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G22",
+        "G24"
+      ],
+      "official": [
+        "https://www.electronjs.org/docs/latest/tutorial/process-model"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
+      ],
+      "lab": "做本地文件对话框并拒绝未授权的任意文件路径访问",
+      "plain": "桌面UI看起来像网页，但本地文件系统权限和安装签名不同"
+    },
+    {
+      "id": "M04",
+      "title": "uni-app/跨端小程序生态",
+      "purpose": "基于Vue的多端页面抽象与目标平台API/审核差异",
+      "requires": [
+        "F08"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://uniapp.dcloud.net.cn/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
+      ],
+      "lab": "同一受控页面在H5与小程序目标环境运行并对照行为",
+      "plain": "同一套语法可复用不代表各平台行为与审核完全一致"
+    },
+    {
+      "id": "M05",
+      "title": "Android/iOS原生开发",
+      "purpose": "Kotlin/Jetpack Compose或Swift/SwiftUI的设备与原生SDK能力",
+      "requires": [
+        "M02"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://developer.android.com/jetpack/compose"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
+      ],
+      "lab": "Android原生权限负例或有授权设备的iOS构建演示",
+      "plain": "原生功能/设备限制真正出现再选一个平台，不强行同时学"
+    },
+    {
+      "id": "A02",
+      "title": "MCP工具接口/Agent协议",
+      "purpose": "MCP工具/资源/提示的客户端服务端约定，区分REST和A2A",
+      "requires": [],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://modelcontextprotocol.io/docs/learn/architecture"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+      ],
+      "lab": "最小MCP工具定义+非法参数/拒绝未授权调用",
+      "plain": "MCP是AI上下文和工具互操作协议，不是REST或通用消息队列的替代品"
     }
-  ]
+  ],
+  "revision": "V4.1 upstream-integrated"
 }

@@ -1,30 +1,38 @@
-# V2.0 完整性与一致性对照（文档验收）
+# V3.0 全栈 Roadmap 覆盖与一致性核查
 
-> **DOCUMENTED / LEARNING_NOT_RUN**。本矩阵只核对用户 V2.0 要求是否在仓库有明确、唯一的责任文件；不代表实验、测试、部署或本人独立能力已经完成。
+> **DOCUMENTED / LEARNING_NOT_RUN**。文档索引检查不等于执行任何编程实验或个人独立通过。
 
-| V2.0 要求 | 权威落实文件 | 核对点 |
-|---|---|---|
-| 一、六项纠偏、8周参考期、避免宣称30%精确重叠 | [ROADMAP](../../ROADMAP.md) `0–2 | 一条主线与现有 FastAPI/RAG Skip&Focus |
-| 二、唯一主栈与选修后置 | ROADMAP `1–2；[ADR](../decisions/ADR-0001-stack-and-boundaries.md) | Vite/React/FastAPI，Next.js/Java 后置 |
-| W1 5/6/5/2h | ROADMAP W1 补充 | TS request、竞态、Network |
-| W2 7/4/4/3h | ROADMAP W2 补充 | React 状态/Query、Mock UI 负例 |
-| W3 先6h+余12h | ROADMAP W3 补充 | OpenAPI→Orval→TS/CI、鉴权 |
-| W4 5/8/3/2h | ROADMAP W4 补充 | 双连接、索引、缓存集中失效 |
-| W5 Request ID vs Trace | ROADMAP W5 补充 | 浏览器/API/DB/Worker 的关联边界 |
-| W6 6/6/4/2h | ROADMAP W6 补充 | Kill Worker/幂等/SSE 分块与回收 |
-| W7 Docker/测试/安全/部署 | ROADMAP W7 补充 | 空环境启动、HTTPS、备份恢复 |
-| W8 性能/OTel/答辩 | ROADMAP W8 补充 | P50/P95/P99、最小 Trace 必修 |
-| 四、贯穿项目完整结构与 MVP/P1/P2 | [PROJECT-BLUEPRINT](../project/PROJECT-BLUEPRINT.md) + ROADMAP `4 | 单个 ai-fullstack-workbench，目录仅设计态 |
-| 五、官方资料库 | ROADMAP `7、前后端 [专项字典](../learning/references/) | MDN/TS/React/FastAPI/Orval/PG/Redis/Celery/Docker/OTel |
-| 六、每周3/9/4/2h、L1–L3、AI 协同 | ROADMAP `5；[AI-CODING-POLICY](../learning/AI-CODING-POLICY.md) | 人独立/AI 协助明确分离 |
-| 七、12 项验收 | ROADMAP `6 + [ACCEPTANCE](../learning/ACCEPTANCE.md) | G01–G12 1:1、NOT_RUN |
-| 上游/下游关联及授权 | [REPOSITORY-INDEX](../REPOSITORY-INDEX.md) | 上游研究/评分，Workbench 工程方法，Utility-Sites 产品授权 |
+## 权威归属
 
-## 不变量
+- 学习唯一执行路线：[ROADMAP.md](../../ROADMAP.md)，W1–W24。
+- 学习唯一状态台账：[PROGRESS.md](../learning/PROGRESS.md)，初始 24 周均 NOT_RUN。
+- Java 必修与项目边界：[ADR-0002](../decisions/ADR-0002-v3-multistack-expansion.md)，覆盖历史 [ADR-0001](../decisions/ADR-0001-stack-and-boundaries.md) 对 Java 后置的决策。
+- 专题索引：[CAPABILITY-MATRIX](../learning/CAPABILITY-MATRIX.md)、[frontend](../learning/references/frontend.md)、[backend](../learning/references/backend.md)。
+- 最终考核：[ACCEPTANCE](../learning/ACCEPTANCE.md)，G01–G24。
+- 技术蓝图：[PROJECT-BLUEPRINT](../project/PROJECT-BLUEPRINT.md)，新目录属于设计态，非已实现业务代码。
 
-1. 只存在一个权威 `ROADMAP.md` 和一个 `docs/learning/PROGRESS.md`；专项字典不是独立第二套进度。
-2. W1–W8 各 18h；每周明细合计 18h；总计 144h。学时是参考预算。
-3. W8 最小 OTel Span/Trace 是 P1 必修；复杂观测平台才为 P2，不能在文档里互相矛盾。
-4. G01–G12 完全对应，当前所有验收与个人能力均未运行，不伪造通过结果。
-5. Monorepo 代码目录是未来目标设计，不能因为有蓝图而称应用已实现。
-6. 外部仓库索引不代表自动数据同步、产品研发授权或真实交付。
+## 用户提出的关键缺口 → 明确落盘与门槛
+
+| 需要补的能力 | 周次 | 必修机制/实验 | Gate |
+|---|---|---|---|
+| Java 基础、泛型/集合、Maven/JUnit、异常/Stream | W09–W10 | Java 领域模块和数据结构负例 | G13 |
+| Java 并发/JVM/GC/JFR/虚拟线程 | W11 | JMM 竞态/线程/IO 测试 | G14 |
+| Spring IoC/DI/AOP/MVC/Boot | W12 | 独立业务 Service、Bean/错误响应测试 | G15 |
+| Spring Data/JPA/MyBatis、事务/Security/Testcontainers | W13 | DB 事务、代理自调用、资源级授权负例 | G16 |
+| HTML/CSS/浏览器渲染/a11y/响应式 | W14 | DOM/键盘/移动布局负例 | G17 |
+| JS/TS 深层/前端构建工具 | W15 | 类型与打包/Code Splitting/ESM | G18 |
+| React 架构/状态/测试/性能 | W16 | Profiler、Mutation 回滚、RTL/E2E | G19 |
+| SPA vs SSR/Next、Node Runtime | W17–W18 | 最小独立对照实验，不替换主项目 | G20 |
+| 消息系统/Outbox 与 DB+缓存一致性 | W19–W20 | 重放/DLQ/SQL 差异与容量对照 | G21 |
+| OAuth2/OIDC/PKCE/多租户/OWASP | W21 | 服务端鉴权、跨用户/租户越权负例 | G22 |
+| Linux/Cloud/CI/性能/JFR/OTel | W22–W23 | 部署/恢复、Profile/Tracer/Web Vitals | G23 |
+| 跨 Java/Python 前后端系统设计与答辩 | W24 | 全链路实测+独立变化条件复测 | G24 |
+
+## 不可违反的一致性规则
+
+1. **路线一条**：W1–W8 144h 保留；W09–W24 288h；总 24×18=**432h** 参考预算，非保证期限。
+2. **Java/Spring 为必修**；Next.js SSR/Node 比较实验必修，**完整 Next 迁移**属于 P2；不能再把 Java 同时称为 P2。
+3. **仅一个贯穿应用** `ai-fullstack-workbench`；Java 服务独立业务边界与 DB 所有权，Next/Node 仅 Labs。
+4. G01–G12 不失效；G13–G24 新增，所有 Gate 不能因“计划编写”打 PASS。
+5. Dev-Workbench 11 个工程阶段仍为过程权威，Utility-Sites 未授权业务不能被学习项目擅自开发。
+6. 本轮只核实 GitHub 文档与相对链接；真实程序/容器/CI/性能/安全与独立答辩仍 `NOT_RUN`。

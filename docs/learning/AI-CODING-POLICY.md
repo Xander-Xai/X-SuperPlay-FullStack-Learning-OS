@@ -26,3 +26,11 @@
 - 上游 AI-Learning-OS 有独立 0–4 评分；Dev-Workbench 工程成熟度是另外的运行状态。不得把这些数值互换。
 
 记录模板：[EXPERIMENT-TEMPLATE](EXPERIMENT-TEMPLATE.md)。
+
+## V3.0：Java、Spring 与前端深入的 AI Coding 边界
+
+- **优先自己写 Java**：集合/泛型业务规则、竞态/Atomic/Lock、JMM/JFR 根因、Spring Bean/`@Transactional` 代理、自调用事务失效、资源级 Spring Security。
+- **优先自己写前端**：HTML/表单语义/键盘焦点、CSS 布局 bug、TS 边界、React 请求竞态/Query 回滚、SSR/Client Secret 与缓存、Node Stream 背压。
+- **必须亲自串联**：Java 与 Python 服务间身份、事件/请求幂等、数据所有权、OpenAPI/事件版本、Trace Context、恢复演练。
+- **AI 可协助生成初稿**：重复 CRUD、UI 组件、Spring 脚手架、数据样本、Maven 配置、Dockerfile/CI/测试框架，但不得用“AI 生成了”代表实际运行成功。
+- **评判**：每次提交 commit/版本/运行命令/失败注入/原始日志与闭卷独立解释；新 G13–G24 的个人状态同样全部从 NOT_RUN 开始。

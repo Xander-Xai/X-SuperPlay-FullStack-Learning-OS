@@ -208,7 +208,7 @@ FastAPI Router + Pydantic（接口权威）
 |---|---|---|
 | MVP（必须先完成） | 登录/登出、项目 CRUD、列表筛选分页、基础 RBAC、统一错误态 | 浏览器→API→DB 可见；403 越权负例 |
 | P1（核心工程） | 上传、业务任务状态、Worker/Redis、SSE 进度、OpenAPI 自动化、数据库迁移、CI/部署 | 断连重连、重复提交、数据一致性、干净环境复现 |
-| P2（可选扩展） | 真实 RAG 问答、高级 OpenTelemetry 仪表盘/深度追踪、额外性能专项、Next.js 或 Spring Boot | 真实业务/JD 触发，且不挤占必修验收 |
+| P2（可选扩展） | 真实 RAG 问答、高级 OTel 仪表盘、完整 Next.js 迁移、NestJS/Vue/K8s 集群和其他专项 | 有真实业务/JD 触发才投入，Java/Spring 在 W09–W13 已是必修 |
 | P1（W8 必修补充） | 最小 OpenTelemetry Trace/Span 跨边界实测 | 不可由 Request ID 的日志关联替代 |
 
 **不可提前将 Mock/API Stub/单次 CI 通过写作生产交付或个人独立能力达标。**
@@ -265,7 +265,7 @@ FastAPI Router + Pydantic（接口权威）
 - **参考字典**：[frontend](docs/learning/references/frontend.md) / [backend](docs/learning/references/backend.md) 按 Gap 查资料、做最小实验、回主线记录证据，不是第二/第三份进度计划。
 - **AI 边界**：重点跨端状态、刷新并发、数据库锁/幂等、SSE 解析、Worker 恢复本人先写；CRUD/UI/测试/CI 框架可 AI 辅助，所有生成代码仍需运行与审查。参见 [AI-CODING-POLICY](docs/learning/AI-CODING-POLICY.md)。
 - **L1/L2/L3**：L1 不看资料解释，L2 自己实现与测试，L3 故障注入/归因/修复/取舍；与上游 0–4 和 Dev-Workbench L0–L6 各自分离。
-- **内容验收映射**：[V2.0 落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md)；这是文档核对，不是个人技能通过。
+- **内容验收映射**：[V3.0 落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md)；这是文档核对，不是个人技能通过。
 
 ## 十、V3.0 升级：八周不是完整全栈的终点
 
@@ -279,7 +279,9 @@ FastAPI Router + Pydantic（接口权威）
 
 总参考：**24 周 / 432 小时**（每周 6 天，每天约 3h）。它是学习与验收预算，不是“保证 24 周成为资深架构师”。岗位面试可按真实 JD 使用同一任务台账进行 **Gap Jump**：重排例如 W9 Java 基础 / W12 Spring API 的具体实验，仍需补回对应 Gate，不产生第二套计划。
 
-### 十一、扩展后的技术能力地图（每个方向都有最小实测）
+### 十一、扩展后的技术能力地图
+
+> 可通过 [能力矩阵](docs/learning/CAPABILITY-MATRIX.md) 按知识点快速反查周次、Gate 与专题字典。（每个方向都有最小实测）
 
 | 能力域 | 必备知识（非仅会调用 SDK） | 学习周次 | 级别 |
 |---|---|---|---|

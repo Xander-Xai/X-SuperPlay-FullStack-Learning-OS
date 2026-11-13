@@ -9,7 +9,8 @@
 | 入口 | 作用 | 事实状态 |
 |---|---|---|
 | [ROADMAP.md](ROADMAP.md) | **V3.0 唯一 W1–W24 学习计划（含原 V2 基线）**：每周时间细分、重点实验、资料、门槛 | PLAN |
-| [学习进度](docs/learning/PROGRESS.md) | 当前周、Gap、证据与复盘 | NOT_RUN |
+| [学习进度](docs/learning/PROGRESS.md) | W1–W24 状态、Gap、证据与复盘 | NOT_RUN |
+| [能力地图](docs/learning/CAPABILITY-MATRIX.md) | Java/JVM/Spring/前端/系统设计的知识点→周次→Gate 索引 | REFERENCE |
 | [前端专项字典](docs/learning/references/frontend.md) | HTML/CSS/a11y、JS/TS、React、SSR/Next、Node、性能与测试 | REFERENCE |
 | [后端专项字典](docs/learning/references/backend.md) | Java/JVM/Spring/安全、FastAPI、SQL、消息、缓存按需深挖 | REFERENCE |
 | [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) | 复现、证据、失败与修复记录 | TEMPLATE |

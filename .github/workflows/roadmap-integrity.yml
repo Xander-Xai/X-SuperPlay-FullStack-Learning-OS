@@ -28,6 +28,12 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Node 24 for zero-dependency JS mechanism lab
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Run deterministic request-race learning experiment
+        run: node --test docs/learning/labs/request-race.test.mjs
       - name: Check canonical roadmap structure, gates, progress, links
         run: python docs/quality/check_roadmap.py
       - name: Validate knowledge graph and on-demand routing

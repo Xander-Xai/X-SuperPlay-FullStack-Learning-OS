@@ -35,6 +35,9 @@ def validate() -> dict:
 
     upstream_index = (LEARN / "UPSTREAM-ASSET-INDEX.md").read_text(encoding="utf-8")
     mental = (LEARN / "FULLSTACK-MENTAL-MODEL.md").read_text(encoding="utf-8")
+    lab_docs = (LEARN / "labs" / "README.md").read_text(encoding="utf-8")
+    if not (LEARN / "labs" / "request-race.test.mjs").is_file() or "node --test" not in lab_docs:
+        raise AssertionError("runnable JS negative-case lab not indexed")
     if upstream_index.count("X-SuperPlay-AI-Learning-OS/blob/main/") < 20:
         raise AssertionError("missing direct upstream links")
     if mental.count("~~~mermaid") < 3:

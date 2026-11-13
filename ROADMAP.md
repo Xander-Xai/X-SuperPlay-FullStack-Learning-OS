@@ -13,6 +13,7 @@
 - **[20份上游 AI-Learning-OS 前后端原资料](docs/learning/UPSTREAM-ASSET-INDEX.md)**：复用已有[编程语言全景图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)、Vue3+FastAPI案例、企业AI 18 Labs、Java专项、多端平台实训与评分规范。
 - **[生态外围备查：.NET/PHP/Rails/Angular/Svelte/GraphQL/gRPC](docs/learning/OPTIONAL-TECH-LANDSCAPE.md)**：只在岗位或真实代码要求时深入，不另起课程或虚增主地图节点。
 - **[官方资料逐节点索引](docs/learning/OFFICIAL-RESOURCES.md)**：MDN、Vue、Nuxt、React、Next、Node、Nest、FastAPI、Spring、PostgreSQL、Go/Rust、平台文档等；根据本次问题选择具体章节。
+- **[真实可跑的最小实验](docs/learning/labs/README.md)**：先用Node原生测试复现异步竞态，再回Vue/React真实项目；FastAPI合成API有原始API测试；Spring/SQL案例明确仍为待实操设计。
 - **[需求→知识→实验](docs/learning/DEMAND-ROUTER.md)**：项目需要Vue就查F08，需要Spring就查B04，需要MCP就查A02；不会的补最低先修，**不是必须花2–3个月从头按顺序学**。
 
 ### 前后端分层与技术选型的速记

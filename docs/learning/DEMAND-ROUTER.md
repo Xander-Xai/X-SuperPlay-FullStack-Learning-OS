@@ -23,6 +23,12 @@ python docs/learning/route_need.py --list
 
 程序读取[机器可读知识图](knowledge-map.json)，输出**专业定义、机制、大白话、理解边界、最低先修、官方专题章节、上游相关资料类型、实验与失败负例**；`--json` 可交给Coding Agent做定向学习计划，不能由它自动认定个人已会。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
 
+## 可运行的按需实验示例
+
+- **JavaScript异步竞态**：`node --test docs/learning/labs/request-race.test.mjs`；先看[最小Lab](labs/README.md)和F03/F08节点。
+- **现存FastAPI契约**：[最小Lab命令与官方资料](labs/README.md)（已有合成API测试；不代表权限/生产上线）。
+- **Spring资源授权 / PostgreSQL并发**：同一Lab文档有可复现步骤，但当前仍标 `NOT_RUN`，勿将说明变成实验PASS。
+
 ## 一、最短的学习循环（每次只解决一个真实 Gap）
 
 1. **需求**：本次要交付什么功能或修复什么故障？写一句用户结果与至少一个失败场景。

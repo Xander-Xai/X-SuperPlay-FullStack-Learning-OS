@@ -1,85 +1,84 @@
-# 全栈权威参考资料库：按问题找原始章节
+# 全栈官方学习资料｜42节点准确章节入口
 
-> **第一优先级：标准/官方原始文档；第二：官方教程和实际测试；第三：经复核的社区文章。** 官方文档是解释技术行为的证据源，但不代表读完后就掌握。资料可能随着版本变化，开始实验时应固定项目版本并核对相应版本文档。
->
-> 此资料库与 [知识图](KNOWLEDGE-GRAPH.md) 的节点ID对应，服务于 [按需学习](DEMAND-ROUTER.md)。一项任务通常只需要选1–3个节点的章节，而不是每天去看所有资源。
+> 使用方式：只在当前需求卡上打开1–3个相关章节；不仅收藏网址，还要用[节点学习卡](NODE-STUDY-CARDS.md)的实验检验。页面是否可打开及特定API版本需开始开发时再复核。部分官方教程有平台、版本、硬件/账号限制；**文档存在不等于代码实测**。
 
-## 一、Web / 前端 / 浏览器
+## 需求/系统设计
 
-| ID | 权威资料 | 建议进入的小节/概念 | 对应实战 |
-|---|---|---|---|
-| F01 | [MDN HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) · [MDN CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) | 请求/响应/状态码、缓存、预检与Cookie | Network复现401、CORS、断网、超时 |
-| F02 | [MDN Learn](https://developer.mozilla.org/en-US/docs/Learn_web_development) · [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) · [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) · [Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) | 语义表单、盒模型、Flex/Grid、焦点、响应式 | 390px布局、键盘可操作表单 |
-| F03 | [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) · [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/) | 闭包/事件循环/Promise、泛型、类型收窄、模块 | request<T>、AbortController、竞态 |
-| F04 | [React Learn](https://react.dev/learn) · [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview) · [React Router](https://reactrouter.com/) | State Snapshot、Render/Commit、Effects、Query/Mutation、路由 | 搜索/分页缓存和请求回滚 |
-| F05 | [Next.js App Router](https://nextjs.org/docs/app) | CSR/SSR/SSG、RSC、数据缓存、Client/Server组件 | 同内容SPA与SSR对照实验 |
-| F06 | [Node.js Learn](https://nodejs.org/en/learn) · [Stream API](https://nodejs.org/api/stream.html) | Event Loop、Buffer、Stream、backpressure、ESM/CJS | 流式处理大文件和取消 |
-| F07 | [Vite Guide](https://vite.dev/guide/) · [web.dev Performance](https://web.dev/learn/performance) · [React Profiler](https://react.dev/reference/react/Profiler) | 构建、分包、SourceMap、LCP/INP/CLS、Profiler | 前端慢页面定位、分包对比 |
-| U01 | [web.dev SEO](https://web.dev/learn/seo) · [MDN Learn](https://developer.mozilla.org/en-US/docs/Learn_web_development) | 静态站、可索引内容、用户体验 | 不带后端的浏览器工具 |
+| 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
+|---|---|---|---|---|
+| P01 业务需求/验收 | [官方精确小节](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues) | Issues / User story / Acceptance criteria | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md) | 需求被取消、无权限用户查看、弱网时也要有预期行为。 |
+| P02 架构与技术取舍 | [官方精确小节](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/) | Architecture styles / bounded contexts | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/ai-product-engineer-roadmap-20261028.md) | 一次跨模块事务失败时归谁回滚？ |
+| P03 生产发布/运营 | [官方精确小节](https://docs.github.com/en/actions) | GitHub Actions / deployments | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 错误迁移、资源用量异常、回滚后数据版本不兼容。 |
+| P04 支付/订阅 | [官方精确小节](https://docs.stripe.com/webhooks) | Stripe webhook signing / idempotency | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/labs/freelance-proof-20261025/README.md) | 伪造回调、重复通知、回调乱序/退款。 |
 
-## 二、API / Python / Java / 数据
+## Web/前端/工具站
 
-| ID | 权威资料 | 建议进入的小节/概念 | 对应实战 |
-|---|---|---|---|
-| B01 | [OpenAPI 规范](https://spec.openapis.org/oas/latest.html) · [Orval](https://orval.dev/docs/) | Paths/Schema/Error Response、客户端生成和契约漂移 | 改Schema→生成→TS/集成测试 |
-| B02 | [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/) · [Pydantic](https://docs.pydantic.dev/latest/) | Depends/Validation/Response Model、Pytest | 422/401/403、权限与边界校验 |
-| B03 | [Dev.java](https://dev.java/learn/) · [Java Virtual Threads](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html) | 泛型/集合/Stream、并发/JMM、JVM/JFR | JUnit + 线程/GC故障定位 |
-| B04 | [Spring Boot](https://docs.spring.io/spring-boot/reference/) · [Spring Framework](https://docs.spring.io/spring-framework/reference/) | IoC/Bean/AOP、Spring MVC、Validation | Bean装配/异常/API测试 |
-| B05 | [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/) · [Spring Security](https://docs.spring.io/spring-security/reference/) · [Testcontainers](https://java.testcontainers.org/) | 事务代理/自调用、JPA N+1、FilterChain、DB集成测试 | @Transactional和越权负例 |
-| B06 | [Celery Tasks](https://docs.celeryq.dev/en/stable/userguide/tasks.html) · [MDN SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) | ACK、重试、幂等、SSE事件分隔/重连 | Kill Worker和流任意chunk |
-| D01 | [PostgreSQL](https://www.postgresql.org/docs/current/) · [SQLAlchemy](https://docs.sqlalchemy.org/en/20/) | 事务隔离、锁、EXPLAIN、索引与迁移 | 双连接并发/索引性能 |
-| D02 | [Redis](https://redis.io/docs/latest/) | TTL、失效、数据结构、缓存一致性 | 集中过期的回源压测 |
-| D03 | [RabbitMQ](https://www.rabbitmq.com/docs) · [Kafka](https://kafka.apache.org/documentation/) | ACK/offset、重复投递、死信/Outbox | 重复消费无重复副作用；二选一 |
-| D04 | [MySQL Reference](https://dev.mysql.com/doc/) · [PostgreSQL](https://www.postgresql.org/docs/current/) | InnoDB与PG锁/隔离、索引、SQL差异 | 同一业务查询引擎对照 |
+| 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
+|---|---|---|---|---|
+| F01 Web/HTTP/浏览器 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) | HTTP overview / CORS / Fetch | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | 断网、超时、跨域预检失败与HTTP 500分别是什么？ |
+| F02 HTML/CSS/无障碍 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility) | HTML forms / CSS layout / Accessibility | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | 缩放到200%、Tab导航、无标签输入时会怎样？ |
+| F03 JavaScript/TypeScript | [官方精确小节](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) | JavaScript execution model / TypeScript narrowing | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 旧请求最后返回是否覆盖新数据？运行时类型不符怎么办？ |
+| F04 React/状态 | [官方精确小节](https://react.dev/learn/state-as-a-snapshot) | State as a snapshot / Effects | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | StrictMode重复effect、切换查询导致旧数据、401后的UI状态。 |
+| F05 Next.js/SSR | [官方精确小节](https://nextjs.org/docs/app/getting-started/server-and-client-components) | Server and Client Components | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 服务端读取浏览器API、缓存错配、用户私有页被公开缓存。 |
+| F06 Node.js/Streams | [官方精确小节](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) | Event loop / Streams | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 同步CPU循环时多个HTTP请求排队，断连后资源能否释放？ |
+| F07 构建与前端性能 | [官方精确小节](https://vite.dev/guide/build) | Build for production | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 大依赖引入后bundle暴涨、懒加载资源404时如何回退？ |
+| F08 Vue 3/响应式/状态 | [官方精确小节](https://vuejs.org/guide/essentials/watchers.html) | Vue Watchers / Cleanup | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md) | A请求慢于B，A最后响应但不能覆盖B的视图。 |
+| F09 Nuxt/SSR与混合渲染 | [官方精确小节](https://learn.nuxt.com/en/concepts/rendering-modes) | Nuxt rendering modes | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 服务端误用window、登录信息被缓存、hydration不一致。 |
+| F10 PWA/Service Worker/浏览器存储 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) | Offline and background operations | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md) | 离线更新陈旧、登录态切换、缓存占用。 |
+| F11 SSE/WebSocket/实时连接 | [官方精确小节](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) | Using server-sent events / WebSockets | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md) | 流被任意拆块、断线丢事件、慢接收端、代理缓冲。 |
+| U01 静态工具站/SEO | [官方精确小节](https://web.dev/learn/seo) | Learn SEO / metadata | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md) | 离线加载、恶意输入、robots误禁收录。 |
 
-## 三、生产、安全、应用形态、AI
+## 后端/数据
 
-| ID | 权威资料 | 建议进入的小节/概念 | 对应实战 |
-|---|---|---|---|
-| E01 | [GitHub Actions](https://docs.github.com/en/actions) · [Playwright](https://playwright.dev/docs/intro) | CI、Unit/Integration/E2E、PR/Review | 红灯阻断发布再修复 |
-| E02 | [Docker](https://docs.docker.com/get-started/) · [Nginx](https://nginx.org/en/docs/) | Dockerfile/Compose/Network、TLS/反代 | 冷部署、备份恢复/回滚 |
-| E03 | [OWASP API Security](https://owasp.org/API-Security/) · [Spring Security](https://docs.spring.io/spring-security/reference/) | AuthN/AuthZ、OAuth2/OIDC、RBAC/租户安全 | 跨租户读取、过期凭证拒绝 |
-| E04 | [OpenTelemetry](https://opentelemetry.io/docs/) · [web.dev](https://web.dev/learn/performance) | TraceContext、Metrics、日志关联、Web Vitals | 链路慢点定位与P95复测 |
-| P01 | [GitHub Issues](https://docs.github.com/en/issues) · [Dev-Workbench产品指南](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/blob/main/docs/learning/PRODUCT-GUIDES.md) | User Story、验收条件、负例/边界 | 真实需求AC可测 |
-| P02 | [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/) · [C4 Model](https://c4model.com/) | 组件边界、部署边界、ADR | 模块化单体与服务拆分取舍 |
-| P03 | [GitHub Actions/Deployments](https://docs.github.com/en/actions) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) | 发布审批、UAT、回滚、监控 | 授权环境部署恢复演练 |
-| M01 | [微信小程序官方开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/) | 组件/生命周期、真机、域名与审核 | 真机弱网与平台限制负例 |
-| M02 | [Expo](https://docs.expo.dev/) · [Flutter](https://docs.flutter.dev/) | 两种路线择一，设备权限/离线/商店发布 | 模拟器/真机启动与断网 |
-| A01 | [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) · [OpenAI Platform](https://platform.openai.com/docs/overview) | 状态/工具契约、评测/权限、人工介入/降级 | 实际业务工具失败/评测回归 |
-| P04 | [Stripe Payments](https://docs.stripe.com/payments) · [Stripe Webhooks](https://docs.stripe.com/webhooks) | 沙箱、签名、幂等回调/对账 | 重复Webhook/虚假金额拒绝 |
+| 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
+|---|---|---|---|---|
+| B01 REST/OpenAPI | [官方精确小节](https://spec.openapis.org/oas/latest.html) | OpenAPI specification / Schema | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md) | 后端删除字段，前端未重新生成仍能编译说明什么？ |
+| B02 Python/FastAPI | [官方精确小节](https://fastapi.tiangolo.com/tutorial/dependencies/) | Dependencies / Request body / Testing | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md) | 跨租户IDOR、非法JSON、依赖服务断线、阻塞调用。 |
+| B03 Java/JVM | [官方精确小节](https://dev.java/learn/) | Classes / Generics / Concurrency | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md) | 两个线程并发修改HashMap/共享计数器会怎样？ |
+| B04 Spring Boot/MVC | [官方精确小节](https://docs.spring.io/spring-boot/reference/web/servlet.html) | Servlet web applications / Spring MVC | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md) | Bean循环依赖、校验失败、没有权限的订单访问。 |
+| B05 Spring Data/Security | [官方精确小节](https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html) | Authorize HTTP requests / Method Security | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md) | 仅检查已登录但不检查资源拥有者，是否能跨用户读取？ |
+| B06 Celery/后台任务可靠性 | [官方精确小节](https://docs.celeryq.dev/en/stable/userguide/tasks.html) | Celery tasks / acks_late / worker lost | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md) | 重复提交、Worker崩溃和重放是否造成重复扣费？ |
+| B07 Node后端/NestJS/Express | [官方精确小节](https://docs.nestjs.com/controllers) | NestJS Controllers / Providers / Guards | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Pipe校验缺失、服务异常变500、请求上下文丢失。 |
+| B08 Go服务与并发 | [官方精确小节](https://go.dev/learn/) | Go official tutorials / context | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | context已取消但goroutine仍跑、数据竞争。 |
+| B09 Rust/C++/CUDA原生能力 | [官方精确小节](https://doc.rust-lang.org/stable/book/) | The Rust Book / NVIDIA CUDA programming guide | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 内存错误、并发悬挂、无GPU时不得宣称CUDA实测。 |
+| D01 PostgreSQL/SQL | [官方精确小节](https://www.postgresql.org/docs/current/transaction-iso.html) | Transaction isolation / EXPLAIN | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md) | 丢失更新、死锁、超扣和读已提交下的异常。 |
+| D02 Redis/缓存 | [官方精确小节](https://redis.io/docs/latest/) | Redis documentation / cache patterns | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md) | 缓存击穿、读到旧值、重建锁过期时如何避免覆盖？ |
+| D03 消息/Outbox | [官方精确小节](https://www.rabbitmq.com/docs/queues) | RabbitMQ queues / Publisher confirms | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 重复消息、消费者掉线、发布成功但ACK丢失。 |
+| D04 MySQL差异 | [官方精确小节](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html) | InnoDB transaction isolation levels | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 幻读/间隙锁、死锁回滚、索引失效。 |
+| D05 对象存储/全文搜索/向量数据库 | [官方精确小节](https://www.postgresql.org/docs/current/textsearch.html) | PostgreSQL Full Text Search / S3 / Milvus | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB03.md) | 删除后仍可检索、未授权用户能读对象、索引更新滞后。 |
 
-**注意**：Stripe是供应商文档示例，不代表国内支付平台的操作规范；微信/Apple/Google审核与具体监管要求需要按目标市场、平台和上线时有效规则另行核对。上游私人知识仓不应复制全文到本公开仓。
+## 工程/安全/运营
 
-## 四、将“看资料”变成“学会”的最小规范
+| 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
+|---|---|---|---|---|
+| E01 Git/测试/CI | [官方精确小节](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions) | Workflow syntax / Actions | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md) | 测试仅覆盖快乐路径、依赖未锁、并行污染。 |
+| E02 Docker/Linux/部署 | [官方精确小节](https://docs.docker.com/compose/) | Docker Compose overview | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md) | 丢环境变量/数据卷、HTTPS证书过期、反代超时。 |
+| E03 身份/权限/多租户 | [官方精确小节](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) | Authorization cheat sheet / Broken object-level authorization | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB09.md) | 横向越权、CSRF、过期会话、泄露私有资源。 |
+| E04 Trace/性能/排障 | [官方精确小节](https://www.w3.org/TR/trace-context/) | W3C Trace Context specification | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB07.md) | span未传播、时钟/采样设置不匹配、错误率被平均值掩盖。 |
+| E05 编译/构建/打包/运行时 | [官方精确小节](https://maven.apache.org/guides/getting-started/index.html) | Maven Getting Started / Vite build | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 依赖未锁、目标系统架构不匹配、发布后环境变量缺失。 |
 
-每一知识点都填写 [Gap学习会话卡](GAP-SESSION-TEMPLATE.md)：
-```text
-需求 → 缺口节点 → 为什么要用这项技术 → 与邻接节点关系
-→ 官方某一章节 + 版本/阅读小节 → 自己实现/测试
-→ 一项失败注入 → 解释根因/取舍 → 回到项目交付
-```
+## 跨端/AI
 
-阅读官方文档的目的不是收藏数量，而是能回答：它负责哪一层、与上下层怎样交互、什么时候不该用、怎样用失败测试证明理解。
+| 节点 | 官方资料直达 | 本次应关注的专业章节 | 上游材料 | 正负例实验 |
+|---|---|---|---|---|
+| M01 微信小程序 | [官方精确小节](https://developers.weixin.qq.com/miniprogram/dev/framework/) | Mini Program framework | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md) | 未配置域名、授权失败、后台切换导致状态丢失。 |
+| M02 移动App | [官方精确小节](https://docs.expo.dev/) | Expo documentation / Flutter | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-multiplatform-rubric.md) | 手机锁屏/断网、缓存泄漏、Android/iOS行为差异。 |
+| M03 Electron/Tauri桌面应用 | [官方精确小节](https://www.electronjs.org/docs/latest/tutorial/process-model) | Electron process model | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 渲染进程任意调用文件API、跨目录路径遍历。 |
+| M04 uni-app/跨端小程序生态 | [官方精确小节](https://uniapp.dcloud.net.cn/) | uni-app official tutorial | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md) | 不支持的组件/插件、登录或支付SDK差异。 |
+| M05 Android/iOS原生开发 | [官方精确小节](https://developer.android.com/jetpack/compose) | Android Jetpack Compose / Apple SwiftUI | [现有参考资料](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 权限拒绝、应用被系统回收、离线回放。 |
+| A01 AI/RAG/Agent | [官方精确小节](https://docs.langchain.com/oss/python/langgraph/overview) | LangGraph overview / tool calling | [现有Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 提示注入、工具重复调用、幻觉引用与成本超标。 |
+| A02 MCP工具接口/Agent协议 | [官方精确小节](https://modelcontextprotocol.io/specification/2026-07-28/architecture) | MCP 2026-07-28 architecture | [现有LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB06.md) | 工具声明与实际权限不一致、无害请求被赋予写权限。 |
 
+## 混合节点的权威资料分工
 
-## V4.1：上游补充的前后端、跨端与其他语言官方直达资源
+- **B05** Spring Data [数据存取/事务](https://docs.spring.io/spring-data/jpa/reference/) 与 Spring Security [权限判断](https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html)各看对应部分，不能将ORM和AuthN/AuthZ视为同一层。
+- **B09** Rust [官方书](https://doc.rust-lang.org/stable/book/)、C++ [标准/社区参考](https://en.cppreference.com/w/)、CUDA [NVIDIA编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)分别学习，不把C++参考站误称C++标准官方原始标准。
+- **D05** 对象存储 [Amazon S3官方指南](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)、全文检索 [PostgreSQL](https://www.postgresql.org/docs/current/textsearch.html)、向量检索 [Milvus](https://milvus.io/docs/overview.md)分别学习；权限须回到API/ACL边界。
+- **M05** Android [Google Compose](https://developer.android.com/jetpack/compose) 与 iOS [Apple SwiftUI](https://developer.apple.com/tutorials/swiftui)各是独立SDK方向，不要求先学Expo。
+- **F11** SSE [MDN Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) 与 WebSocket [MDN WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)分别确认重连、方向与可靠性。
+- **A02** MCP应固定规范版本。本轮阅读[2026-07-28架构](https://modelcontextprotocol.io/specification/2026-07-28/architecture)，不能直接套用旧版有状态会话假设。
 
-> 节点编号与[知识图JSON](knowledge-map.json)一一对应。**官方原理**负责定义，**上游资料**负责已有讲解/实验入口，**本次需求**决定要不要实践。原W坐标不新增强制周次。
+## 可核对的来源边界
 
-| ID | 官方资料（准确入口） | 专业核心 / 阅读小节 | 参考的最小实验 |
-|---|---|---|---|
-| F08 | [官方文档](https://vuejs.org/guide/introduction) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Vue的Composition API、ref/reactive/watch/路由与前端状态 | Vue列表请求逆序、watch清理、键盘可用表单 |
-| F09 | [官方文档](https://learn.nuxt.com/en/concepts/rendering-modes) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Vue生态的全栈路由、SSR/CSR/Hybrid、数据与缓存边界 | 比较Nuxt服务端/浏览器HTML和hydration行为 |
-| F10 | [官方文档](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 离线缓存、浏览器生命周期、资源与业务数据缓存边界 | 断网后受控读缓存，登录切换时不泄露他人数据 |
-| F11 | [官方文档](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 区分HTTP轮询、SSE单向事件、WebSocket双向连接和断线策略 | 模拟断开重连、消息乱序和发送速度超过消费速度 |
-| B07 | [官方文档](https://docs.nestjs.com/first-steps) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Node运行时上的Controller/服务/依赖注入/API架构 | 做Nest/Express最小CRUD并验证400/401/500及进程重启 |
-| B08 | [官方文档](https://go.dev/learn/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | Go编译/模块/interface/goroutine/context与HTTP服务 | 写最小HTTP服务并复现取消上下文/并发数据竞争 |
-| B09 | [官方文档](https://doc.rust-lang.org/stable/book/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | 原生模块、内存与并发安全、推理/性能约束下的系统编程 | 独立原生小程序或Rust CLI；仅有目标瓶颈才做CUDA/C++对照 |
-| D05 | [官方文档](https://www.postgresql.org/docs/current/textsearch.html) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | 文件、业务数据、全文检索与向量检索的不同存储责任 | 文件元数据与原始对象分离，比较文本与向量召回负例 |
-| E05 | [官方文档](https://vite.dev/guide/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md) | JS构建、Python依赖/虚拟环境、JVM JAR、Go/Rust二进制的区别 | 对比npm build、Python安装/启动、Maven打包与实际进程 |
-| M03 | [官方文档](https://www.electronjs.org/docs/latest/tutorial/process-model) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | 桌面Web视图、系统API、主/渲染进程或Rust命令与安全边界 | 做本地文件对话框并拒绝未授权的任意文件路径访问 |
-| M04 | [官方文档](https://uniapp.dcloud.net.cn/) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md) | 基于Vue的多端页面抽象与目标平台API/审核差异 | 同一受控页面在H5与小程序目标环境运行并对照行为 |
-| M05 | [官方文档](https://developer.android.com/jetpack/compose) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md) | Kotlin/Jetpack Compose或Swift/SwiftUI的设备与原生SDK能力 | Android原生权限负例或有授权设备的iOS构建演示 |
-| A02 | [官方文档](https://modelcontextprotocol.io/docs/learn/architecture) · [上游相关讲解](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md) | MCP工具/资源/提示的客户端服务端约定，区分REST和A2A | 最小MCP工具定义+非法参数/拒绝未授权调用 |
+官方页优先；[上游20+资料汇总](UPSTREAM-ASSET-INDEX.md)是学习导航，不是全都可运行的课程。直达链接的**语义有效性**还要在当前项目选技术时确认其版本、平台与目标章节；CI离线只能做静态结构检查，不能保证第三方站点永远可访问。
 
-特别注意：官网文档内容可能随版本变化；实现前固定相应运行时/框架版本，并在实际使用时复核完整章节。这里的入口已按官方站点和上游文件核验，但**没有在本地安装所有框架或运行全部扩展实验**。

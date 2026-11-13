@@ -49,3 +49,7 @@
 - **GitHub 仓库页面元数据**：Description 已更新为 24-week。Topics 仍缺 `java`、`spring-boot`、`jvm` 等搜索标签；这不影响学习路线与 CI，但建议在 GitHub About 中补充。
 
 **本次结论**：文档完整性及可执行性模板 **PASS**；实际能力与工程系统运行 **NOT_RUN**。两者必须分别对外表述。
+
+## 新阶段状态：学习仓已拥有真实合成业务代码
+
+此前报告所记的“没有应用代码”是当时的事实；现已由 React/Vite + FastAPI 代码与真正的 GitHub Actions 单元/API/前端测试和 build 取代。见 [训练源码](../../ai-fullstack-workbench/README.md) 与 [产品驱动映射](../learning/PRODUCT-DRIVEN-EXECUTION.md)。**S0 合成程序可构建 ≠ 独立课程考核 PASS ≠ Utility-Sites 商业产品可上线**。仍须完成 OpenAPI 代码生成、PostgreSQL、权限、安全 CSV、幂等任务、SSE/Java/事件、真实部署及 [上线门禁](../project/DOWNSTREAM-RELEASE-GATES.md)。

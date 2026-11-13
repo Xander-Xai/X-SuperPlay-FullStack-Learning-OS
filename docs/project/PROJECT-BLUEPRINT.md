@@ -1,12 +1,18 @@
 # ai-fullstack-workbench：单项目全栈蓝图
 
-> **DESIGN_ONLY / NO_APP_CODE / NOT_RUN**。这是唯一 ROADMAP 的项目设计附件，不是新的执行路线。本仓尚未生成下面的实际应用代码。所有测试只允许合成或明确获授权的数据。
+> **PARTIALLY_IMPLEMENTED / SYNTHETIC_ONLY / NOT_PRODUCTION_READY**。已有 React/FastAPI 合成核对纵切代码；数据库、异步、Java 服务、正式上线仍未实现。本文件剩余结构是设计态。所有测试只允许合成或明确获授权的数据。
+
+## 当前可运行代码与设计态差异
+
+- [已实现：ReconLab React/FastAPI S0 合成核对](../../ai-fullstack-workbench/README.md)：含真实业务规则、异常负例测试和 CI 构建。
+- [后续实战里程碑](../learning/PRODUCT-DRIVEN-EXECUTION.md)：S1 受控 CSV/PG/权限，S2 Worker/SSE，S3 Java 审计/可靠事件，S4 授权上线。
+- 下面目录中尚未创建的文件不代表已存在或已部署；具体以 GitHub 文件列表与测试日志为准。
 
 ## 项目目标
 
 企业 AI 工作台纵切闭环：登录→项目管理/分页→文档上传→后端业务与权限→数据库→Celery 异步→SSE 进度→错误重试→部署/追踪与恢复。先普通 Web MVP，再强化可靠性；W9–W24 在**同一个产品**中添加 Java Spring 的独立审计/通知业务边界，并做前端深入与体系化排障；RAG 用 Mock/已有适配器。不要为学两门后端语言而重复构建同一套业务。
 
-## 目标目录（未来实现路径，不代表当前已经存在）
+## 目标目录（部分已存在；完整项目结构仍是未来计划）
 
 ```text
 X-SuperPlay-FullStack-Learning-OS/
@@ -61,7 +67,7 @@ X-SuperPlay-FullStack-Learning-OS/
 
 实际完整路径示例（方便检索）：`ai-fullstack-workbench/apps/web`、`ai-fullstack-workbench/apps/api`、`ai-fullstack-workbench/contracts/openapi.json`、`ai-fullstack-workbench/infra/`、`ai-fullstack-workbench/e2e/`。
 
-**注意**：用户示意图中 `docs/learning/roadmap.md` / `progress.md` 与本仓已存在的根目录 `ROADMAP.md` / `docs/learning/PROGRESS.md` 只取一份。这里以现存根目录 Roadmap、学习目录进度为权威，不复制第二套文件。
+**注意**：仅 S0 的 `apps/web` 与 `apps/api` 主要代码存在，其他图示路径是规划。用户示意图中 `docs/learning/roadmap.md` / `progress.md` 与本仓已存在的根目录 `ROADMAP.md` / `docs/learning/PROGRESS.md` 只取一份。这里以现存根目录 Roadmap、学习目录进度为权威，不复制第二套文件。
 
 ## 端到端数据流
 
@@ -113,7 +119,7 @@ Service → Repository → PostgreSQL（任务状态唯一权威）
 
 ## 最终交付必须有真实证据
 
-完整架构图、ER 图、接口 Schema、部署手册、E2E/安全负例、Worker 失败恢复、数据库并发、备份回滚、性能与 Trace、独立答辩。具体按照 [G01–G12](../learning/ACCEPTANCE.md) 逐项验收。不把本蓝图或学习项目自动当成 Utility-Sites 产品开工授权。
+完整架构图、ER 图、接口 Schema、部署手册、E2E/安全负例、Worker 失败恢复、数据库并发、备份回滚、性能与 Trace、独立答辩。具体按照 [G01–G24](../learning/ACCEPTANCE.md) 逐项验收。不把本蓝图或学习项目自动当成 Utility-Sites 产品开工授权。
 
 ## V3.0 扩展：Java/前端/跨运行时集成边界
 
@@ -123,4 +129,4 @@ Service → Repository → PostgreSQL（任务状态唯一权威）
 - 一次完整集成：React → Python API → 消息/Java 独立职责 → DB 状态更新 → 前端查询；必须包含双方鉴权、超时、幂等与 Trace/日志关联。Kafka/RabbitMQ **选择一种**作为高级消息实验，不要求重复引入两种。
 - 配置：Java 服务通过可选 Compose profile 启停。W8 基线不需要 Java 运行才能启动；W24 多栈答辩则需要有实测 Java 服务。
 - 数据：同一数据库服务器可以用**独立 schema / ownership** 学习；不要让两个服务在没有所有权规则下同时更新同一业务表。
-- 目标项目目录是**规划**，不是已经实现。所有新实验仍状态 `NOT_RUN`。
+- 完整目标项目目录仍为**规划**；S0 已有 CI 通过的合成示例，后续高级实验仍状态 `NOT_RUN`。

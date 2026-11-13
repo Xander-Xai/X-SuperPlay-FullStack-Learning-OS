@@ -4,6 +4,13 @@
 
 从已有 Python/FastAPI/RAG/Agent 项目经验出发，系统补齐**Java Core/JVM/Spring Boot**、完整 Web/前端工程（HTML/CSS/a11y/React/Next.js SSR/Node.js）、数据库与消息中间件、API 契约/安全、性能和生产交付，在唯一项目 `ai-fullstack-workbench` 中按阶段验证。**W1–W8 为基础，W9–W24 为深入；不是开三条平行路线。**
 
+## 从真实下游产品倒推全栈技能
+
+- **[可运行的 ReconLab 业务纵切源码](ai-fullstack-workbench/README.md)**：React/TypeScript + FastAPI/Decimal，合成账单核对；已有代码与 CI，但尚不是 ReconCheck 产品或完成学习。
+- **[产品驱动 W1–W24 理论＋实战映射](docs/learning/PRODUCT-DRIVEN-EXECUTION.md)**：每周一个产品功能、一个故障实验和一个 Gate，不再只背知识清单。
+- **[S0 合成用例与独立练习](docs/project/RECON-LAB-CASE.md)**：真实修改代码/运行测试；AI 生成基线不等于本人学会。
+- **[下游正式上线门禁](docs/project/DOWNSTREAM-RELEASE-GATES.md)**：Utility-Sites 冻结、商业验证、隐私安全、授权部署的独立条件。
+
 ## 从这里开始
 
 | 入口 | 作用 | 事实状态 |

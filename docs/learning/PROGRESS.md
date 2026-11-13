@@ -38,6 +38,18 @@
 
 > 学习可因具体 JD 提前做 W9 Java 或 W12 Spring 最小实验，但原周 Gate 不得跳过、进度不倒填。
 
+## 产品驱动代码基线（不是本人课程得分）
+
+| 里程碑 | 代码与测试状态 | 学习者独立考核 | 生产/下游状态 |
+|---|---|---|---|
+| S0 ReconLab 合成核对预览 | API/Web 代码已生成；GitHub CI 通过 | **NOT_RUN** | TRAINING_ONLY / NO_AUTHORIZATION |
+| S1 CSV/PG/AuthZ | NOT_RUN | NOT_RUN | NOT_READY |
+| S2 Celery/SSE | NOT_RUN | NOT_RUN | NOT_READY |
+| S3 Java Audit/Outbox | NOT_RUN | NOT_RUN | NOT_READY |
+| S4 真实上线审核 | BLOCKED | NOT_RUN | Utility-Sites DEVELOPMENT_ON_HOLD |
+
+课程和产品分别进度，严禁把“AI 编码 + CI 通过”自动转化为 L3 或已上线。每周从 [产品驱动实战表](PRODUCT-DRIVEN-EXECUTION.md) 领取功能/故障任务，再按 [S0 独立改动题](../project/RECON-LAB-CASE.md) 留下证据。
+
 ## 当前执行焦点
 
 - **唯一下一项**：W1 — 画出浏览器请求链路，手写 `request<T>()`（超时、取消、错误归一化、请求关联 ID）。

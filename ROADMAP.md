@@ -3,6 +3,14 @@
 > 状态：**PLAN / NOT_RUN / UNASSESSED**（初始建库，未代表已学完、代码已跑通或生产已部署）。
 > 版本：2026-11-14；**W1–W8 = 144h 基础阶段；W9–W24 = 288h 拓展；24 周累计 432h 参考预算**。不按日历毕业，真实岗位可依据 Gap 跳学，证据验收仍不可跳过。
 
+## 核心执行转向：先做产品，再补原理（不新增第二条进度表）
+
+**本仓现已包含可运行的业务代码**：[ReconLab 合成核对纵切](ai-fullstack-workbench/README.md)。按照 [产品驱动 W1–W24 映射](docs/learning/PRODUCT-DRIVEN-EXECUTION.md)，每周从结算核对的实际功能、故障与可交付标准倒推理论，完成自己的代码修改和测试，而不只是收藏教程。已有代码是 AI-assisted starter，不代表本人独立掌握。
+
+- 结算核对业务来源：下游 Utility-Sites 的公开产品方向；仅在本仓以合成样本做学习沙箱。
+- Dev-Workbench 的真实运行时与 11 阶段用作工程方法/交付 Dogfood；不在此重做其工具，也不未经授权修改其运行时代码。
+- 完成课程≠自动取得 ReconCheck 生产开发/发布授权。产品迁移必须经过 [下游真实上线门禁](docs/project/DOWNSTREAM-RELEASE-GATES.md)。
+
 ## 0. 一句话决策
 
 **只执行这一条全栈路线（W1–W24）**。前端、后端既有路线降为专项知识字典，遇到真实 Gap 再查阅和补实验，不分别推进第二套 8 周进度。上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 保留岗位驱动六周专题作为*参考与紧急 Gap 训练*，与本仓 **W1–W24** 统一执行主线不是相互竞争的进度表。
@@ -11,7 +19,7 @@
 
 - 目标：掌握 **需求→设计→数据模型→API 契约→前端→后端→异步→测试→部署→观测→排障→复盘** 全链路；独立维护并解释一个 AI Web 工作台。
 - 已有 Python/FastAPI/RAG/Agent 经验可快速诊断、跳过重复入门，但必须完成实际考核；不存在“做过项目=掌握”的自动豁免。
-- 项目：`ai-fullstack-workbench`（本学习仓内工作目录，按项目规模逐步扩展；无需立刻创建独立远程仓）。
+- 项目：`ai-fullstack-workbench`（本学习仓内已有第一段可运行合成核对纵切；后续增加 CSV/DB/权限/消息/Java 独立审计服务，不自动迁移到下游产品仓）。
 - 核心栈：React + TypeScript + Vite/React Router + TanStack Query/Tailwind/shadcn/ui；Python FastAPI/Pydantic/SQLAlchemy；**Java 核心/JVM/Spring Boot/Spring MVC/Spring Security/Spring Data**；PostgreSQL/Redis/Celery；OpenAPI/Orval；Docker/Nginx/CI/E2E。W9–W24 增加 Java/JVM、前端进阶、Node/SSR 原理和分布式可靠性。
 - **Java/Spring Boot 已升级为 W9–W13 必修**；Next.js SSR 核心比较与 Node 运行时基础安排 W17–W18，深度框架迁移、Kubernetes 真机集群、复杂微服务与重复构建完整 RAG 平台仍是 P2。岗位 MUST 可触发优先级重排并记录原因。
 - 资源优先官方文档；不追求工具数量。无客户授权时只用合成/许可数据；不产生真实业务/生产部署宣称。

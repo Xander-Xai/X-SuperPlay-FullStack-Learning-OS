@@ -19,7 +19,7 @@ ALIASES = {
     "F08": ["vue", "vue3", "vue 3", "composition api", "vue后台", "vue组件", "响应式watch"],
     "F09": ["nuxt", "nuxtjs", "nuxt.js", "vue ssr", "vue服务端渲染"],
     "F10": ["pwa", "service worker", "serviceworker", "离线缓存", "离线网页"],
-    "F11": ["websocket", "web socket", "实时双向", "实时通信", "长连接"],
+    "F11": ["websocket", "web socket", "sse", "eventsource", "server-sent events", "实时双向", "实时通信", "长连接", "断流"],
     "B07": ["nestjs", "nest.js", "express", "node后端", "node api", "node服务端"],
     "B08": ["golang", "go语言", "go后端", "go服务", "goroutine"],
     "B09": ["rust", "c++", "cuda", "cpp", "原生性能"],
@@ -34,7 +34,7 @@ ALIASES = {
     "B03": ["java", "jvm", "jfr", "并发", "集合", "泛型"],
     "B04": ["spring", "spring boot", "spring mvc", "java接口", "java api"],
     "B05": ["jpa", "mybatis", "spring security", "事务代理", "hibernate"],
-    "B06": ["celery", "sse", "后台任务", "任务可靠性"],
+    "B06": ["celery", "worker", "任务队列", "后台任务", "任务可靠性", "重试幂等"],
     "D01": ["postgres", "postgresql", "sql", "数据库", "死锁", "索引", "事务"],
     "D02": ["redis", "缓存", "cache"],
     "D03": ["rabbitmq", "kafka", "outbox", "消息队列"],
@@ -81,33 +81,63 @@ def find(query: str, catalog: dict) -> list[dict]:
 
 
 def minimum_prerequisites(node: dict, catalog: dict) -> list[dict]:
-    seen = set()
-    def collect(item: dict) -> None:
-        for id_ in item["requires"]:
-            if id_ not in seen:
-                seen.add(id_)
-                collect(catalog[id_])
-    collect(node)
-    return [catalog[id_] for id_ in sorted(seen)]
+    """Topological prerequisite concepts; not an obligation to pass all previous weeks."""
+    visited: set[str] = set()
+    ordered: list[dict] = []
+
+    def walk(item: dict) -> None:
+        for dep_id in item["requires"]:
+            if dep_id not in visited:
+                visited.add(dep_id)
+                walk(catalog[dep_id])
+                ordered.append(catalog[dep_id])
+
+    walk(node)
+    return ordered
+
+
+def to_dict(node: dict, catalog: dict) -> dict:
+    """Versioned, machine-readable learning plan; no claim of learner mastery."""
+    return {
+        "id": node["id"],
+        "title": node["title"],
+        "definition": node["definition"],
+        "mechanism": node["mechanism"],
+        "analogy": node["analogy"],
+        "boundary": node["boundary"],
+        "requires": node["requires"],
+        "minimum_concepts": [{"id": n["id"], "title": n["title"]}
+                             for n in minimum_prerequisites(node, catalog)],
+        "read_first": node["read_first"],
+        "study_url": node["study_url"],
+        "upstream": node.get("upstream", []),
+        "upstream_role": node["upstream_role"],
+        "lab": node["lab"],
+        "failure": node["failure"],
+        "coordinates": node["coordinates"],
+        "gates": node["gates"],
+        "state": "UNASSESSED",
+    }
 
 
 def describe(node: dict, catalog: dict) -> str:
-    prerequisites = minimum_prerequisites(node, catalog)
-    source = node["official"][0]
-    url = source["url"] if isinstance(source, dict) else source
+    p = to_dict(node, catalog)
     return "\n".join([
-        f"{node['id']} · {node['title']}",
-        f"作用：{node['purpose']}",
-        "最小先修：" + ("；".join(f"{p['id']} {p['title']}" for p in prerequisites) or "无"),
-        "旧知识坐标：" + ", ".join(node["coordinates"]) + "（不是执行顺序）",
-        "能力验收：" + ", ".join(node["gates"]),
-        "官方资料：" + url,
-        "上游对应学习资料：" + ("；".join(node.get("upstream", [])) or "暂无直接对应资料"),
-        "专业与大白话：" + node.get("plain", "本知识点需结合当前需求、相邻关系与专业原理理解"),
-        "最小实战：" + node.get("lab", "回到实际项目，设计负例并独立复测"),
-        "执行：读相关小节 → 真实代码/实验 → 失败注入 → 独立解释与复测",
+        f"{p['id']} · {p['title']}",
+        "专业定义：" + p["definition"],
+        "核心机制：" + p["mechanism"],
+        "大白话：" + p["analogy"],
+        "理解边界：" + p["boundary"],
+        "最低先修：" + ("；".join(x["id"] + " " + x["title"] for x in p["minimum_concepts"]) or "无"),
+        "旧知识坐标：" + ", ".join(p["coordinates"]) + "（不是执行顺序）",
+        "相关验收：" + ", ".join(p["gates"]),
+        "官方阅读章节：" + p["study_url"],
+        "应读内容：" + p["read_first"],
+        "上游资料（" + p["upstream_role"] + "）：" + ("；".join(p["upstream"]) or "暂无"),
+        "最小实验：" + p["lab"],
+        "错误注入：" + p["failure"],
+        "学习完成状态：UNASSESSED；需要本人运行及独立复测证据",
     ])
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Demand-first full-stack skill lookup")
@@ -115,9 +145,13 @@ def main() -> None:
     group.add_argument("--query", help='natural task text, e.g. "Spring API"')
     group.add_argument("--node", help="knowledge node ID, e.g. B04")
     group.add_argument("--list", action="store_true", help="list available capability IDs")
+    parser.add_argument("--json", action="store_true", help="emit structured skill cards for coding agents")
     args = parser.parse_args()
     catalog = load()
     if args.list:
+        if args.json:
+            print(json.dumps([{"id": x["id"], "title": x["title"]} for x in catalog.values()], ensure_ascii=False, indent=2))
+            return
         for n in catalog.values():
             print(f"{n['id']} · {n['title']}")
         return
@@ -125,14 +159,20 @@ def main() -> None:
         target = catalog.get(args.node.upper())
         if target is None:
             parser.error(f"Unknown node {args.node}; use --list")
-        print(describe(target, catalog))
+        if args.json:
+            print(json.dumps(to_dict(target, catalog), ensure_ascii=False, indent=2))
+        else:
+            print(describe(target, catalog))
         return
     matches = find(args.query, catalog)
     if not matches:
         parser.error("No confident match; use --list and select a node directly")
-    for n in matches:
-        print(describe(n, catalog))
-        print()
+    if args.json:
+        print(json.dumps([to_dict(n, catalog) for n in matches], ensure_ascii=False, indent=2))
+    else:
+        for n in matches:
+            print(describe(n, catalog))
+            print()
 
 
 if __name__ == "__main__":

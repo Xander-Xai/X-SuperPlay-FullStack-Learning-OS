@@ -37,3 +37,15 @@
 - Spring Boot 当前兼容要求：[Spring Boot System Requirements](https://docs.spring.io/spring-boot/system-requirements.html)
 - Node 支持线：[Node.js Release Schedule](https://nodejs.org/en/about/previous-releases)
 
+
+## 真实 CI 验收与剩余缺口（最终复核）
+
+- **通过记录**：[Roadmap document integrity run #43471143052](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/actions/runs/43471143052)；对提交 `8b2f0aaa48653630315f1b833c47c1c1c9608bd9` 的 `roadmap-docs` 作业结论为 **SUCCESS**。
+- **原始 CI 摘要**：`ROADMAP DOCS PASS: 24 weeks; 24 gates; 16x6 daily tasks; 81 relative links checked; actual training remains NOT_RUN.`
+- **两次真实失败与修复**：最初的断言错误地要求 ADR-0002 含固定短语、又要求 Java 必修文本精确包含特定 W09 字样；修复为核对明确语义，并改用 Node24 运行时的 actions/checkout@v5 与 actions/setup-python@v6。失败记录保留在 Actions 历史中，不宣称“第一次就通过”。
+- **审计覆盖边界**：Python 静态检查核对相对链接**文件路径**，不核对 GitHub 生成的标题锚点、所有外部 URL 的存活，也不执行 Java/React/FastAPI 程序。
+- **尚未完成的实际教学验收**：24 周全部 `NOT_RUN`、24 Gate 尚无独立人类证据；应用源码、自动化应用测试、部署/恢复和真实多语言集成均尚未执行。
+- **仍需改进的非阻塞项**：432h 是参考预算，某些深层模块如 JVM/Spring/消息/架构可能需要延长，不能压缩负例；实际岗位优先时采用 Gap Jump 并记录遗漏；外部文档版本与链接需在开学时复核。
+- **GitHub 仓库页面元数据**：Description 已更新为 24-week。Topics 仍缺 `java`、`spring-boot`、`jvm` 等搜索标签；这不影响学习路线与 CI，但建议在 GitHub About 中补充。
+
+**本次结论**：文档完整性及可执行性模板 **PASS**；实际能力与工程系统运行 **NOT_RUN**。两者必须分别对外表述。

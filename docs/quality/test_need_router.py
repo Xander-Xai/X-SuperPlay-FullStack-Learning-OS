@@ -81,6 +81,14 @@ class TestDemandRouter(unittest.TestCase):
         self.assertIn("definition", card)
         self.assertEqual("UNASSESSED", card["state"])
 
+    def test_language_name_does_not_pollute_unrelated_routes(self):
+        js_matches = [n["id"] for n in route_need.find("JavaScript asynchronous", self.nodes)]
+        self.assertIn("F03", js_matches)
+        self.assertNotIn("B03", js_matches)
+        nest_matches = [n["id"] for n in route_need.find("NestJS controller", self.nodes)]
+        self.assertIn("B07", nest_matches)
+        self.assertNotIn("F03", nest_matches)
+
     def test_topological_minimal_prerequisites(self):
         deps = [n["id"] for n in route_need.minimum_prerequisites(self.nodes["F05"], self.nodes)]
         self.assertEqual(["F02", "F03", "F04"], deps)

@@ -1,0 +1,526 @@
+{
+  "version": "4.0",
+  "updated": "2026-11-14",
+  "semantics": "requires means minimum knowledge, not completion of earlier weeks",
+  "nodes": [
+    {
+      "id": "P01",
+      "title": "业务需求/验收",
+      "purpose": "解决什么问题、什么算成功",
+      "requires": [],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G12",
+        "G24"
+      ],
+      "official": [
+        "https://docs.github.com/en/issues"
+      ]
+    },
+    {
+      "id": "P02",
+      "title": "架构与技术取舍",
+      "purpose": "模块边界、数据归属、技术选型",
+      "requires": [
+        "P01"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G12",
+        "G24"
+      ],
+      "official": [
+        "https://learn.microsoft.com/en-us/azure/architecture/"
+      ]
+    },
+    {
+      "id": "F01",
+      "title": "Web/HTTP/浏览器",
+      "purpose": "请求、Cookie、状态码、CORS、TLS",
+      "requires": [],
+      "coordinates": [
+        "W01",
+        "W05"
+      ],
+      "gates": [
+        "G01",
+        "G08"
+      ],
+      "official": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "HTML/CSS/无障碍",
+      "purpose": "布局、语义表单、响应式与键盘操作",
+      "requires": [],
+      "coordinates": [
+        "W02",
+        "W14"
+      ],
+      "gates": [
+        "G01",
+        "G17"
+      ],
+      "official": [
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development"
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "JavaScript/TypeScript",
+      "purpose": "事件循环、异步取消、泛型、模块",
+      "requires": [],
+      "coordinates": [
+        "W01",
+        "W15"
+      ],
+      "gates": [
+        "G01",
+        "G18"
+      ],
+      "official": [
+        "https://www.typescriptlang.org/docs/handbook/"
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "React/状态",
+      "purpose": "组件、路由、服务端数据与交互",
+      "requires": [
+        "F02",
+        "F03"
+      ],
+      "coordinates": [
+        "W02",
+        "W16"
+      ],
+      "gates": [
+        "G01",
+        "G19"
+      ],
+      "official": [
+        "https://react.dev/learn"
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "Next.js/SSR",
+      "purpose": "按SEO、缓存、服务端边界选择渲染",
+      "requires": [
+        "F02",
+        "F03"
+      ],
+      "coordinates": [
+        "W17"
+      ],
+      "gates": [
+        "G20"
+      ],
+      "official": [
+        "https://nextjs.org/docs/app"
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "Node.js/Streams",
+      "purpose": "服务端JS、BFF和流背压",
+      "requires": [
+        "F03"
+      ],
+      "coordinates": [
+        "W18"
+      ],
+      "gates": [
+        "G20"
+      ],
+      "official": [
+        "https://nodejs.org/en/learn"
+      ]
+    },
+    {
+      "id": "F07",
+      "title": "构建与前端性能",
+      "purpose": "ESM、Vite、分包、Profiler",
+      "requires": [
+        "F03"
+      ],
+      "coordinates": [
+        "W15",
+        "W16",
+        "W23"
+      ],
+      "gates": [
+        "G18",
+        "G19",
+        "G23"
+      ],
+      "official": [
+        "https://vite.dev/guide/"
+      ]
+    },
+    {
+      "id": "B01",
+      "title": "REST/OpenAPI",
+      "purpose": "定义前后端契约、类型与错误",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W03"
+      ],
+      "gates": [
+        "G02",
+        "G03"
+      ],
+      "official": [
+        "https://spec.openapis.org/oas/latest.html"
+      ]
+    },
+    {
+      "id": "B02",
+      "title": "Python/FastAPI",
+      "purpose": "请求校验、业务逻辑、分层与测试",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W03",
+        "W05"
+      ],
+      "gates": [
+        "G02",
+        "G03"
+      ],
+      "official": [
+        "https://fastapi.tiangolo.com/tutorial/"
+      ]
+    },
+    {
+      "id": "B03",
+      "title": "Java/JVM",
+      "purpose": "集合/泛型、JMM、线程、GC/JFR",
+      "requires": [],
+      "coordinates": [
+        "W09",
+        "W10",
+        "W11"
+      ],
+      "gates": [
+        "G13",
+        "G14"
+      ],
+      "official": [
+        "https://dev.java/learn/"
+      ]
+    },
+    {
+      "id": "B04",
+      "title": "Spring Boot/MVC",
+      "purpose": "Bean/IoC、Web服务、异常映射",
+      "requires": [
+        "B03",
+        "F01"
+      ],
+      "coordinates": [
+        "W12"
+      ],
+      "gates": [
+        "G15"
+      ],
+      "official": [
+        "https://docs.spring.io/spring-boot/reference/"
+      ]
+    },
+    {
+      "id": "B05",
+      "title": "Spring Data/Security",
+      "purpose": "数据库事务、ORM、服务端权限",
+      "requires": [
+        "B04",
+        "D01"
+      ],
+      "coordinates": [
+        "W13"
+      ],
+      "gates": [
+        "G16"
+      ],
+      "official": [
+        "https://docs.spring.io/spring-security/reference/"
+      ]
+    },
+    {
+      "id": "B06",
+      "title": "Celery/SSE",
+      "purpose": "后台状态、幂等、流式进度与恢复",
+      "requires": [
+        "B02"
+      ],
+      "coordinates": [
+        "W06"
+      ],
+      "gates": [
+        "G06",
+        "G07"
+      ],
+      "official": [
+        "https://docs.celeryq.dev/en/stable/userguide/tasks.html"
+      ]
+    },
+    {
+      "id": "D01",
+      "title": "PostgreSQL/SQL",
+      "purpose": "持久化、MVCC、事务、索引",
+      "requires": [],
+      "coordinates": [
+        "W04"
+      ],
+      "gates": [
+        "G04"
+      ],
+      "official": [
+        "https://www.postgresql.org/docs/current/"
+      ]
+    },
+    {
+      "id": "D02",
+      "title": "Redis/缓存",
+      "purpose": "TTL、缓存击穿、失效与一致性",
+      "requires": [],
+      "coordinates": [
+        "W04",
+        "W20"
+      ],
+      "gates": [
+        "G05",
+        "G21"
+      ],
+      "official": [
+        "https://redis.io/docs/latest/"
+      ]
+    },
+    {
+      "id": "D03",
+      "title": "消息/Outbox",
+      "purpose": "跨服务事件的可靠交付和幂等",
+      "requires": [
+        "D01"
+      ],
+      "coordinates": [
+        "W19",
+        "W20"
+      ],
+      "gates": [
+        "G21"
+      ],
+      "official": [
+        "https://www.rabbitmq.com/docs"
+      ]
+    },
+    {
+      "id": "D04",
+      "title": "MySQL差异",
+      "purpose": "比较InnoDB与PG事务和索引",
+      "requires": [],
+      "coordinates": [
+        "W20"
+      ],
+      "gates": [
+        "G21"
+      ],
+      "official": [
+        "https://dev.mysql.com/doc/"
+      ]
+    },
+    {
+      "id": "E01",
+      "title": "Git/测试/CI",
+      "purpose": "回归、审查、自动验证",
+      "requires": [],
+      "coordinates": [
+        "W07"
+      ],
+      "gates": [
+        "G10"
+      ],
+      "official": [
+        "https://docs.github.com/en/actions"
+      ]
+    },
+    {
+      "id": "E02",
+      "title": "Docker/Linux/部署",
+      "purpose": "运行环境、HTTPS、备份与回滚",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W07",
+        "W22"
+      ],
+      "gates": [
+        "G09",
+        "G11",
+        "G23"
+      ],
+      "official": [
+        "https://docs.docker.com/get-started/"
+      ]
+    },
+    {
+      "id": "E03",
+      "title": "身份/权限/多租户",
+      "purpose": "Cookie、OAuth/OIDC、资源级授权",
+      "requires": [
+        "F01"
+      ],
+      "coordinates": [
+        "W05",
+        "W21"
+      ],
+      "gates": [
+        "G02",
+        "G16",
+        "G22"
+      ],
+      "official": [
+        "https://owasp.org/API-Security/"
+      ]
+    },
+    {
+      "id": "E04",
+      "title": "Trace/性能/排障",
+      "purpose": "日志、OpenTelemetry、P95、JFR",
+      "requires": [],
+      "coordinates": [
+        "W08",
+        "W23"
+      ],
+      "gates": [
+        "G08",
+        "G23"
+      ],
+      "official": [
+        "https://opentelemetry.io/docs/"
+      ]
+    },
+    {
+      "id": "P03",
+      "title": "生产发布/运营",
+      "purpose": "UAT、监控、成本、恢复责任",
+      "requires": [
+        "P01",
+        "E01"
+      ],
+      "coordinates": [
+        "W22",
+        "W24"
+      ],
+      "gates": [
+        "G11",
+        "G23",
+        "G24"
+      ],
+      "official": [
+        "https://docs.github.com/en/actions"
+      ]
+    },
+    {
+      "id": "U01",
+      "title": "静态工具站/SEO",
+      "purpose": "纯浏览器工具与静态发布",
+      "requires": [
+        "F02",
+        "F03"
+      ],
+      "coordinates": [
+        "W14",
+        "W17"
+      ],
+      "gates": [
+        "G17",
+        "G20"
+      ],
+      "official": [
+        "https://web.dev/learn/seo"
+      ]
+    },
+    {
+      "id": "M01",
+      "title": "微信小程序",
+      "purpose": "平台生命周期、真机与审核",
+      "requires": [
+        "F03"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G10",
+        "G24"
+      ],
+      "official": [
+        "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+      ]
+    },
+    {
+      "id": "M02",
+      "title": "移动App",
+      "purpose": "设备权限、离线、签名与应用商店",
+      "requires": [],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G10",
+        "G24"
+      ],
+      "official": [
+        "https://docs.expo.dev/"
+      ]
+    },
+    {
+      "id": "A01",
+      "title": "AI/RAG/Agent",
+      "purpose": "模型/工具契约、评测和安全降级",
+      "requires": [
+        "B01"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G24"
+      ],
+      "official": [
+        "https://docs.langchain.com/oss/python/langgraph/overview"
+      ]
+    },
+    {
+      "id": "P04",
+      "title": "支付/订阅",
+      "purpose": "沙箱回调、验签、幂等与对账",
+      "requires": [
+        "B01",
+        "E03"
+      ],
+      "coordinates": [
+        "W24"
+      ],
+      "gates": [
+        "G21",
+        "G22",
+        "G24"
+      ],
+      "official": [
+        "https://docs.stripe.com/payments"
+      ]
+    }
+  ]
+}

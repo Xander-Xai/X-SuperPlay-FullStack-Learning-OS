@@ -8,11 +8,15 @@
 
 | 入口 | 作用 | 事实状态 |
 |---|---|---|
-| [ROADMAP.md](ROADMAP.md) | 唯一 W1–W8 学习计划、专项实验和完成门槛 | PLAN |
+| [ROADMAP.md](ROADMAP.md) | **完整 V2.0 唯一学习计划**：每周时间细分、重点实验、资料、门槛 | PLAN |
 | [学习进度](docs/learning/PROGRESS.md) | 当前周、Gap、证据与复盘 | NOT_RUN |
 | [前端专项字典](docs/learning/references/frontend.md) | JS/TS、React、请求状态、SSE 按需深挖 | REFERENCE |
 | [后端专项字典](docs/learning/references/backend.md) | FastAPI、SQL、锁、Celery、缓存按需深挖 | REFERENCE |
 | [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) | 复现、证据、失败与修复记录 | TEMPLATE |
+| [项目蓝图](docs/project/PROJECT-BLUEPRINT.md) | 目标 Monorepo 目录、数据流、API 草案；**尚未生成应用代码** | DESIGN_ONLY |
+| [12 项验收](docs/learning/ACCEPTANCE.md) | G01–G12 的负例、状态和独立证据 | NOT_RUN |
+| [AI Coding 边界](docs/learning/AI-CODING-POLICY.md) | 本人先写与 AI 可辅助范围、L1–L3 标准 | REFERENCE |
+| [落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md) | V2.0 各部分核验与不变量 | DOCUMENTED |
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
 | [架构与选型决策](docs/decisions/ADR-0001-stack-and-boundaries.md) | 主栈、Next.js/Java 取舍 | PROPOSED |
 

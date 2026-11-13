@@ -1,7 +1,7 @@
 {
-  "version": "4.1",
+  "version": "4.2",
   "updated": "2026-11-14",
-  "semantics": "requires = minimum concept only; optional ecosystem nodes never block unrelated project delivery",
+  "semantics": "requires is a minimum concept prerequisite, not a fixed week or product implementation prerequisite; official URLs reference official vendors, upstream sources have evidence scope",
   "nodes": [
     {
       "id": "P01",
@@ -21,7 +21,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md"
-      ]
+      ],
+      "definition": "把用户问题转换为可验证功能、非功能约束和验收条件的需求工程。",
+      "mechanism": "用户故事→输入/输出→边界/反例→可运行验收，而不是直接指定框架。",
+      "analogy": "先写清楚要修哪条路、为什么，才知道买什么工具。",
+      "boundary": "需求假设不等于真实用户证据；AI写出的PRD未经用户认可不算真实需求。",
+      "lab": "写一个已有工单列表的3条AC和2条异常场景，并以测试或手工UAT执行。",
+      "failure": "需求被取消、无权限用户查看、弱网时也要有预期行为。",
+      "read_first": "Issues / User story / Acceptance criteria",
+      "study_url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/about-issues",
+      "upstream_role": "learning_method"
     },
     {
       "id": "P02",
@@ -42,7 +51,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/ai-product-engineer-roadmap-20261028.md"
-      ]
+      ],
+      "definition": "按业务能力和变化频率划分模块、边界、数据所有权与技术选型的系统设计。",
+      "mechanism": "需求/质量属性→模块边界→API/数据流→ADR→验证假设。",
+      "analogy": "给厨房分工，不是每种设备都买一遍。",
+      "boundary": "架构图不等于部署事实，微服务也不是默认更先进。",
+      "lab": "给同一工单需求画模块化单体和双服务图并用变更成本对比。",
+      "failure": "一次跨模块事务失败时归谁回滚？",
+      "read_first": "Architecture styles / bounded contexts",
+      "study_url": "https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F01",
@@ -62,7 +80,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
-      ]
+      ],
+      "definition": "浏览器与服务端通过HTTP等协议交换表示，并受同源、缓存、Cookie等Web平台约束。",
+      "mechanism": "URL→DNS/TLS→请求/响应→状态码与缓存→CORS/凭证/重试。",
+      "analogy": "外卖订单从地址、保密运输到收件回执的一套规矩。",
+      "boundary": "CORS是浏览器策略而非服务端鉴权；请求ID不是Trace。",
+      "lab": "DevTools观察GET/POST、401、缓存和跨域预检，并手写取消请求。",
+      "failure": "断网、超时、跨域预检失败与HTTP 500分别是什么？",
+      "read_first": "HTTP overview / CORS / Fetch",
+      "study_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "F02",
@@ -82,7 +109,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
-      ]
+      ],
+      "definition": "HTML语义结构、CSS盒模型/布局与可访问性共同决定Web页面的结构、显示和可操作性。",
+      "mechanism": "DOM语义→CSS流式布局/Flex/Grid→响应式→键盘焦点与语义。",
+      "analogy": "骨架、装修和让所有人都能找到门把手的设计。",
+      "boundary": "只看桌面截图不能证明移动端、键盘和读屏可用。",
+      "lab": "做可用键盘导航的登录表单和响应式表格，使用浏览器a11y检查。",
+      "failure": "缩放到200%、Tab导航、无标签输入时会怎样？",
+      "read_first": "HTML forms / CSS layout / Accessibility",
+      "study_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "F03",
@@ -102,7 +138,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
-      ]
+      ],
+      "definition": "JS执行模型和TS静态类型系统共同支撑浏览器与Node程序编写。",
+      "mechanism": "词法作用域/闭包→Event Loop/Promise→TS类型收窄/泛型→构建期检查。",
+      "analogy": "JS安排每件事什么时候做，TS在开工前帮你核对参数清单。",
+      "boundary": "TS类型检查不验证未知HTTP JSON，也不保证异步执行顺序。",
+      "lab": "手写带AbortController和错误归一化的请求函数；模拟A/B逆序返回。",
+      "failure": "旧请求最后返回是否覆盖新数据？运行时类型不符怎么办？",
+      "read_first": "JavaScript execution model / TypeScript narrowing",
+      "study_url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F04",
@@ -125,15 +170,23 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
-      ]
+      ],
+      "definition": "React声明式组件树依托状态快照、渲染/提交过程与Hooks管理UI。",
+      "mechanism": "state snapshot→render/commit→effect cleanup→Query缓存/Mutation状态。",
+      "analogy": "组件是可复用的柜台部件，状态决定现在应该显示什么。",
+      "boundary": "useEffect不是所有网络请求的最佳容器；缓存失效需要显式治理。",
+      "lab": "实现React项目搜索、分页、删除，写竞态与缓存失效测试。",
+      "failure": "StrictMode重复effect、切换查询导致旧数据、401后的UI状态。",
+      "read_first": "State as a snapshot / Effects",
+      "study_url": "https://react.dev/learn/state-as-a-snapshot",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "F05",
       "title": "Next.js/SSR",
       "purpose": "按SEO、缓存、服务端边界选择渲染",
       "requires": [
-        "F02",
-        "F03"
+        "F04"
       ],
       "coordinates": [
         "W17"
@@ -146,7 +199,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
-      ]
+      ],
+      "definition": "Next.js基于React提供路由、服务器/客户端组件和服务端功能等应用级约定。",
+      "mechanism": "React组件→Server/Client边界→数据获取/缓存→SSR或预渲染。",
+      "analogy": "React负责家具，Next帮你安排房子布局及哪些工作在仓库完成。",
+      "boundary": "Server Components不是天然安全授权层；SSR不必然更快且增加运维约束。",
+      "lab": "对比同一列表的Vite SPA和Next服务渲染，记录首包HTML与缓存行为。",
+      "failure": "服务端读取浏览器API、缓存错配、用户私有页被公开缓存。",
+      "read_first": "Server and Client Components",
+      "study_url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F06",
@@ -166,7 +228,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
-      ]
+      ],
+      "definition": "Node.js是运行JS程序的服务器运行时，具有事件循环、Streams和系统API。",
+      "mechanism": "JS执行→libuv/事件循环→流背压→网络/文件IO与错误处理。",
+      "analogy": "让同一种语言从网页柜台走进服务器后厨。",
+      "boundary": "Node不等于Nest；CPU密集型同步阻塞会影响事件循环。",
+      "lab": "编写Node流式读取文件/API并使用背压处理；注入慢消费者。",
+      "failure": "同步CPU循环时多个HTTP请求排队，断连后资源能否释放？",
+      "read_first": "Event loop / Streams",
+      "study_url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F07",
@@ -190,7 +261,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
-      ]
+      ],
+      "definition": "前端构建通过模块依赖处理、优化和产物输出实现可部署资源。",
+      "mechanism": "ESM/import→Vite构建→代码拆分/静态资源→测量页面性能。",
+      "analogy": "将开发零件打包成可交付安装箱，不等于箱子能在每台机器上跑。",
+      "boundary": "一次构建成功不能证明真实Web Vitals、可访问性与安全。",
+      "lab": "将页面按路由拆包，测构建体积/首屏加载并解释tradeoff。",
+      "failure": "大依赖引入后bundle暴涨、懒加载资源404时如何回退？",
+      "read_first": "Build for production",
+      "study_url": "https://vite.dev/guide/build",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "B01",
@@ -211,7 +291,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
-      ]
+      ],
+      "definition": "REST描述资源交互风格，OpenAPI用机器可读Schema描述HTTP接口契约。",
+      "mechanism": "请求/响应Schema→版本化OpenAPI→客户端生成→契约/集成测试。",
+      "analogy": "前后端使用同一份菜单：菜名、规格、错误码必须一致。",
+      "boundary": "生成类型不保证服务端真实语义；变更字段要重新导出生成检查。",
+      "lab": "FastAPI导出OpenAPI并用Orval生成TS；改字段验证编译/集成失败。",
+      "failure": "后端删除字段，前端未重新生成仍能编译说明什么？",
+      "read_first": "OpenAPI specification / Schema",
+      "study_url": "https://spec.openapis.org/oas/latest.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B02",
@@ -233,7 +322,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
-      ]
+      ],
+      "definition": "FastAPI基于ASGI、Python类型提示、Pydantic及依赖系统提供Web API。",
+      "mechanism": "请求路由→依赖注入/验证→业务service→数据库/外部调用→响应。",
+      "analogy": "后厨里的Python接单流水线，检验订单和权限后才办事。",
+      "boundary": "async函数里同步阻塞会损害并发；路由成功不代表鉴权正确。",
+      "lab": "实现资源级权限API+pytest正负例，模拟外部服务超时。",
+      "failure": "跨租户IDOR、非法JSON、依赖服务断线、阻塞调用。",
+      "read_first": "Dependencies / Request body / Testing",
+      "study_url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B03",
@@ -254,7 +352,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
-      ]
+      ],
+      "definition": "Java是JVM生态常用的静态类型语言，涉及类/接口、集合、泛型、内存和并发。",
+      "mechanism": "源码→javac字节码→JVM类加载/JIT/GC；线程和内存模型。",
+      "analogy": "同一道业务流程可用Java在另一套后厨运转，JVM负责运行环境。",
+      "boundary": "只会Spring注解不等于理解Java线程安全与异常传播。",
+      "lab": "Java独立实现幂等键映射、单元测试，复现共享可变状态竞态。",
+      "failure": "两个线程并发修改HashMap/共享计数器会怎样？",
+      "read_first": "Classes / Generics / Concurrency",
+      "study_url": "https://dev.java/learn/",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B04",
@@ -275,15 +382,23 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
-      ]
+      ],
+      "definition": "Spring Boot整合Spring容器、配置与Web MVC/Servlet等进行Java应用开发。",
+      "mechanism": "Bean/DI→MVC DispatcherServlet→Controller→Service→错误/测试。",
+      "analogy": "容器帮你把业务部件装配好，HTTP请求沿着流水线走。",
+      "boundary": "Spring Boot不是Java语言本身；DTO验证不能代替权限。",
+      "lab": "Spring Boot做GET/POST API与MockMvc测试，覆盖422/400/403。",
+      "failure": "Bean循环依赖、校验失败、没有权限的订单访问。",
+      "read_first": "Servlet web applications / Spring MVC",
+      "study_url": "https://docs.spring.io/spring-boot/reference/web/servlet.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B05",
       "title": "Spring Data/Security",
       "purpose": "数据库事务、ORM、服务端权限",
       "requires": [
-        "B04",
-        "D01"
+        "B04"
       ],
       "coordinates": [
         "W13"
@@ -296,12 +411,21 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md"
-      ]
+      ],
+      "definition": "Spring Data、事务代理与Spring Security是不同职责的生态模块。",
+      "mechanism": "Repository/事务代理→SQL一致性；FilterChain/方法级授权→拒绝无权访问。",
+      "analogy": "账本保管员与门禁保安合作，但不是同一个角色。",
+      "boundary": "Spring Security不依赖PostgreSQL；事务边界和鉴权机制应独立验证。",
+      "lab": "独立实现用户A/B资源级访问限制，事务失败回滚测试。",
+      "failure": "仅检查已登录但不检查资源拥有者，是否能跨用户读取？",
+      "read_first": "Authorize HTTP requests / Method Security",
+      "study_url": "https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B06",
-      "title": "Celery/SSE",
-      "purpose": "后台状态、幂等、流式进度与恢复",
+      "title": "Celery/后台任务可靠性",
+      "purpose": "任务确认/重试/幂等与业务状态，而不是SSE解析",
       "requires": [
         "B02"
       ],
@@ -317,7 +441,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
-      ]
+      ],
+      "definition": "Celery任务队列用于把耗时工作分派给Worker，业务状态和幂等需额外设计。",
+      "mechanism": "Broker→任务确认/重试→业务数据库状态机→幂等副作用与恢复。",
+      "analogy": "前台先开受理单，后厨排队处理，窗口关了订单仍可查询。",
+      "boundary": "acks_late也不保证杀子进程后一定重投；不要把Celery内部状态当业务状态。",
+      "lab": "Worker处理耗时任务，杀Worker并重启，核对业务幂等与状态一致。",
+      "failure": "重复提交、Worker崩溃和重放是否造成重复扣费？",
+      "read_first": "Celery tasks / acks_late / worker lost",
+      "study_url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "D01",
@@ -335,7 +468,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md"
-      ]
+      ],
+      "definition": "SQL关系数据库通过约束、事务、MVCC、索引等维护持久数据和并发正确性。",
+      "mechanism": "Schema→约束→隔离/行锁→执行计划→备份恢复。",
+      "analogy": "正式账本有规则和并发记账机制，不能靠缓存当账本。",
+      "boundary": "READ COMMITTED不能自动避免所有业务竞态；索引也有写入成本。",
+      "lab": "两个连接同时扣余额，比较无锁/条件更新/行锁并记录执行计划。",
+      "failure": "丢失更新、死锁、超扣和读已提交下的异常。",
+      "read_first": "Transaction isolation / EXPLAIN",
+      "study_url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "D02",
@@ -355,7 +497,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md"
-      ]
+      ],
+      "definition": "Redis是支持多种数据结构的内存数据平台，常用于缓存、限流和短期协调。",
+      "mechanism": "key/value与TTL→缓存模式→失效/回源→并发更新。",
+      "analogy": "热数据速取柜，提升取用速度但不默认代替正式账本。",
+      "boundary": "缓存不是数据库事务的替身；分布式锁要考虑故障和有效期。",
+      "lab": "模拟热点TTL同时失效，统计数据库回源并发并实现请求合并。",
+      "failure": "缓存击穿、读到旧值、重建锁过期时如何避免覆盖？",
+      "read_first": "Redis documentation / cache patterns",
+      "study_url": "https://redis.io/docs/latest/",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "D03",
@@ -376,7 +527,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
-      ]
+      ],
+      "definition": "消息系统通过队列/主题传递异步事件，Outbox处理业务事务与发布之间的一致性缺口。",
+      "mechanism": "业务事务写入Outbox→发布→消费者去重/重试/死信。",
+      "analogy": "订单签收同时留下派送指令，防止业务成功但通知没发出。",
+      "boundary": "MQ默认不保证业务恰好执行一次；Kafka/RabbitMQ角色与语义不同。",
+      "lab": "在DB提交后人为阻断发布，使用Outbox+幂等消费者恢复。",
+      "failure": "重复消息、消费者掉线、发布成功但ACK丢失。",
+      "read_first": "RabbitMQ queues / Publisher confirms",
+      "study_url": "https://www.rabbitmq.com/docs/queues",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "D04",
@@ -394,7 +554,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
-      ]
+      ],
+      "definition": "MySQL/InnoDB是关系数据库引擎，其隔离/索引/锁行为须按版本与PostgreSQL比较。",
+      "mechanism": "InnoDB MVCC、索引、间隙锁及事务隔离；比较实现差异。",
+      "analogy": "同样是账本，不同品牌对并发冲突有不同操作规程。",
+      "boundary": "不能把PostgreSQL的可重复读行为直接迁移成MySQL规则。",
+      "lab": "同一并发更新测试分别跑MySQL和PG并比较结果。",
+      "failure": "幻读/间隙锁、死锁回滚、索引失效。",
+      "read_first": "InnoDB transaction isolation levels",
+      "study_url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "E01",
@@ -414,15 +583,22 @@
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-fullstack-rubric.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-fullstack-research-20261028.md"
-      ]
+      ],
+      "definition": "Git、测试金字塔和CI将可重复验证与代码审查嵌入变更流程。",
+      "mechanism": "分支/PR→lint/type→unit/integration/e2e→构建→失败阻断。",
+      "analogy": "每次改装配线，先让自动质检抽查正常和坏件。",
+      "boundary": "CI绿不能证明没漏测试，更不能等同个人闭卷掌握。",
+      "lab": "故意破坏接口字段/权限测试，看CI红灯并恢复。",
+      "failure": "测试仅覆盖快乐路径、依赖未锁、并行污染。",
+      "read_first": "Workflow syntax / Actions",
+      "study_url": "https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "E02",
       "title": "Docker/Linux/部署",
       "purpose": "运行环境、HTTPS、备份与回滚",
-      "requires": [
-        "F01"
-      ],
+      "requires": [],
       "coordinates": [
         "W07",
         "W22"
@@ -437,7 +613,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md"
-      ]
+      ],
+      "definition": "Linux/容器/反代/HTTPS组合实现服务进程隔离、网络入口与可重复部署。",
+      "mechanism": "镜像/容器→Compose网络/卷→Nginx/TLS→发布和恢复。",
+      "analogy": "包装、运输、站点入口和灾备机制，不等于业务自动上线。",
+      "boundary": "容器重启≠数据恢复；单机Compose≠HA/Kubernetes。",
+      "lab": "全新环境启动API+DB+前端，执行备份/恢复、回滚演练。",
+      "failure": "丢环境变量/数据卷、HTTPS证书过期、反代超时。",
+      "read_first": "Docker Compose overview",
+      "study_url": "https://docs.docker.com/compose/",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "E03",
@@ -460,7 +645,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB09.md"
-      ]
+      ],
+      "definition": "认证确认身份，授权确认某身份能否操作特定资源，审计记录决策。",
+      "mechanism": "Cookie/Session/OIDC→服务器授权检查→租户/资源级限制→审计。",
+      "analogy": "认识来访者不是让他有所有钥匙，具体房间还要查权限。",
+      "boundary": "前端隐藏按钮不构成授权；SameSite不替代完整CSRF威胁分析。",
+      "lab": "设计A/B用户同一API资源，验证401/403或隐匿404策略及Cookie安全。",
+      "failure": "横向越权、CSRF、过期会话、泄露私有资源。",
+      "read_first": "Authorization cheat sheet / Broken object-level authorization",
+      "study_url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "E04",
@@ -480,7 +674,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB07.md"
-      ]
+      ],
+      "definition": "可观测性通过日志、指标、分布式追踪关联服务行为与性能瓶颈。",
+      "mechanism": "日志RequestID→Span/traceparent→Metrics P95→定位慢路径。",
+      "analogy": "物流查询单记录经过各站所耗时间，而不只说包裹慢。",
+      "boundary": "X-Request-ID用于日志关联，不自动等于跨进程Trace；测试条件影响P95。",
+      "lab": "注入DB慢查询，沿HTTP→API→DB查看trace与耗时，前后比较。",
+      "failure": "span未传播、时钟/采样设置不匹配、错误率被平均值掩盖。",
+      "read_first": "W3C Trace Context specification",
+      "study_url": "https://www.w3.org/TR/trace-context/",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "P03",
@@ -504,7 +707,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
-      ]
+      ],
+      "definition": "生产发布包括用户验收、变更审批、健康监控、回滚、成本与灾备责任。",
+      "mechanism": "需求验收→风险评估→staging→发布→监控→恢复/撤销。",
+      "analogy": "不是把饭菜送出厨房就完事，还要知道能否服务顾客和出现投诉如何处理。",
+      "boundary": "学习仓CI绿不等于生产发布授权或客户验收。",
+      "lab": "在隔离环境执行部署、打回滚版本、恢复数据库并记录RTO。",
+      "failure": "错误迁移、资源用量异常、回滚后数据版本不兼容。",
+      "read_first": "GitHub Actions / deployments",
+      "study_url": "https://docs.github.com/en/actions",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "U01",
@@ -527,7 +739,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md"
-      ]
+      ],
+      "definition": "静态站只需构建发布HTML/CSS/JS资源，SEO涉及可索引HTML和语义。",
+      "mechanism": "需求→页面与元信息→静态构建→CDN/HTTPS→搜索与性能检查。",
+      "analogy": "无需后厨也能运营只在浏览器计算的小工具店。",
+      "boundary": "静态站仍需关注XSS/依赖安全；无需账号时不必引入DB。",
+      "lab": "实现一个本地文本转换工具并静态发布，验证无服务端通信。",
+      "failure": "离线加载、恶意输入、robots误禁收录。",
+      "read_first": "Learn SEO / metadata",
+      "study_url": "https://web.dev/learn/seo",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "M01",
@@ -548,7 +769,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
-      ]
+      ],
+      "definition": "微信小程序是微信容器内运行的组件/生命周期/平台API程序。",
+      "mechanism": "页面生命周期→平台请求/登录→合法域名→真机审核。",
+      "analogy": "在微信商场里开店，要遵守商场门禁和运行规则。",
+      "boundary": "浏览器H5通过不代表小程序合法域名/真机/审核通过。",
+      "lab": "做简单页面调用Mock API，模拟弱网并核查真机/基础库行为。",
+      "failure": "未配置域名、授权失败、后台切换导致状态丢失。",
+      "read_first": "Mini Program framework",
+      "study_url": "https://developers.weixin.qq.com/miniprogram/dev/framework/",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "M02",
@@ -567,7 +797,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-multiplatform-rubric.md"
-      ]
+      ],
+      "definition": "移动跨平台框架通过共享UI/逻辑调用Android/iOS能力，设备权限与分发各自独立。",
+      "mechanism": "RN/Expo或Flutter二选一→设备生命周期/存储→构建/签名。",
+      "analogy": "一份图纸尽量盖两家不同规范的店，仍要分别验收。",
+      "boundary": "跨平台不等于原生能力完全相同；Expo不是Swift/Kotlin先修。",
+      "lab": "用RN/Expo或Flutter完成离线表单，拒绝权限再恢复。",
+      "failure": "手机锁屏/断网、缓存泄漏、Android/iOS行为差异。",
+      "read_first": "Expo documentation / Flutter",
+      "study_url": "https://docs.expo.dev/",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "A01",
@@ -587,7 +826,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
-      ]
+      ],
+      "definition": "RAG/Agent将模型/检索/工具与业务API组合，通过评测和权限限制不确定性。",
+      "mechanism": "检索或模型推理→证据/工具Schema→策略审批→业务写入/评测。",
+      "analogy": "模型像会提出建议的助手，但不能直接拿全部仓库钥匙。",
+      "boundary": "LLM生成文本不是可信数据库写入命令；模型准确率不能代替权限。",
+      "lab": "合成文档问答与受限工具调用，记录无证据拒答/越权拒写。",
+      "failure": "提示注入、工具重复调用、幻觉引用与成本超标。",
+      "read_first": "LangGraph overview / tool calling",
+      "study_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "P04",
@@ -610,7 +858,16 @@
       ],
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/labs/freelance-proof-20261025/README.md"
-      ]
+      ],
+      "definition": "支付/订阅是资金状态与异步回调的持久业务流程，须验签和幂等对账。",
+      "mechanism": "建单→平台支付→签名Webhook→幂等状态更新→退款/对账。",
+      "analogy": "账本确认到账才能发货，不能凭页面说支付成功。",
+      "boundary": "Stripe只是供应商示例，国内平台需按实际支付服务商规则实现。",
+      "lab": "沙箱重复Webhook与恶意金额测试，验证不重复开通。",
+      "failure": "伪造回调、重复通知、回调乱序/退款。",
+      "read_first": "Stripe webhook signing / idempotency",
+      "study_url": "https://docs.stripe.com/webhooks",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F08",
@@ -635,8 +892,16 @@
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "Vue列表请求逆序、watch清理、键盘可用表单",
-      "plain": "Vue是UI框架；与React是平行选型，不是React的前置步骤"
+      "lab": "Vue搜索页watch发请求，模拟逆序返回并加入取消/序列保护。",
+      "plain": "Vue是UI框架；与React是平行选型，不是React的前置步骤",
+      "definition": "Vue3响应式系统通过ref/reactive、computed和watch驱动组件更新。",
+      "mechanism": "响应式依赖→组件更新→watch副作用清理与异步取消。",
+      "analogy": "柜台屏幕跟着库存自动变，旧订单回执应作废。",
+      "boundary": "watch/onWatcherCleanup受Vue版本与同步注册规则限制；旧响应仍需防污染。",
+      "failure": "A请求慢于B，A最后响应但不能覆盖B的视图。",
+      "read_first": "Vue Watchers / Cleanup",
+      "study_url": "https://vuejs.org/guide/essentials/watchers.html",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "F09",
@@ -658,8 +923,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "比较Nuxt服务端/浏览器HTML和hydration行为",
-      "plain": "Nuxt是Vue全栈应用框架，不是Vite的替代版本"
+      "lab": "同一页面做SSR/CSR切换，比较响应HTML和缓存行为。",
+      "plain": "Nuxt是Vue全栈应用框架，不是Vite的替代版本",
+      "definition": "Nuxt在Vue生态整合文件路由、服务端渲染和按路由配置的混合缓存。",
+      "mechanism": "universal/client渲染→hydration→routeRules→缓存/SEO安全。",
+      "analogy": "既可以先在后厨做好页面，也可以让顾客自己拼装页面。",
+      "boundary": "服务端有私有会话时不得把个性化HTML共享缓存。",
+      "failure": "服务端误用window、登录信息被缓存、hydration不一致。",
+      "read_first": "Nuxt rendering modes",
+      "study_url": "https://learn.nuxt.com/en/concepts/rendering-modes",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F10",
@@ -683,13 +956,21 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md"
       ],
-      "lab": "断网后受控读缓存，登录切换时不泄露他人数据",
-      "plain": "Service Worker像离线接待员，并非永不下线的后台进程"
+      "lab": "离线读取公开资源、切换账号并验证旧用户缓存不可见。",
+      "plain": "Service Worker像离线接待员，并非永不下线的后台进程",
+      "definition": "PWA使用Service Worker等浏览器能力实现可安装与受控离线体验。",
+      "mechanism": "Service Worker生命周期→Cache Storage→更新和清除策略。",
+      "analogy": "浏览器内有值班的离线服务员，但会被系统暂停。",
+      "boundary": "Service Worker并非长驻后台，也不适合缓存敏感用户响应。",
+      "failure": "离线更新陈旧、登录态切换、缓存占用。",
+      "read_first": "Offline and background operations",
+      "study_url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "F11",
-      "title": "WebSocket/实时通信协议",
-      "purpose": "区分HTTP轮询、SSE单向事件、WebSocket双向连接和断线策略",
+      "title": "SSE/WebSocket/实时连接",
+      "purpose": "单向事件流与双向实时协议、断线重连和背压",
       "requires": [
         "F01"
       ],
@@ -707,8 +988,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
       ],
-      "lab": "模拟断开重连、消息乱序和发送速度超过消费速度",
-      "plain": "WebSocket是双向管道，但不是持久消息数据库"
+      "lab": "对SSE任意分块解析并重连；对WS验证双向和断线状态。",
+      "plain": "WebSocket是双向管道，但不是持久消息数据库",
+      "definition": "SSE是单向服务器到浏览器事件流，WebSocket支持建立连接后的双向帧通信。",
+      "mechanism": "HTTP text/event-stream / WebSocket升级→断线/重连/顺序/背压。",
+      "analogy": "SSE像单向广播电台，WebSocket像双向对讲机。",
+      "boundary": "二者都不是持久任务队列；EventSource不能随意设置自定义请求头。",
+      "failure": "流被任意拆块、断线丢事件、慢接收端、代理缓冲。",
+      "read_first": "Using server-sent events / WebSockets",
+      "study_url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "B07",
@@ -731,8 +1020,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "做Nest/Express最小CRUD并验证400/401/500及进程重启",
-      "plain": "Node是运行时，Nest是框架，与FastAPI/Spring平行"
+      "lab": "建Nest最小CRUD+HTTP状态正负例，用测试核查越权。",
+      "plain": "Node是运行时，Nest是框架，与FastAPI/Spring平行",
+      "definition": "Node生态后端框架NestJS/Express负责HTTP路由、依赖组织和服务端业务。",
+      "mechanism": "Node事件循环→Controller/Provider→Validation/Guard→DB/外部API。",
+      "analogy": "同一个JS语言在服务器也能处理真正的业务订单。",
+      "boundary": "NestJS是框架、Node是运行时；同步阻塞和权限边界仍需考虑。",
+      "failure": "Pipe校验缺失、服务异常变500、请求上下文丢失。",
+      "read_first": "NestJS Controllers / Providers / Guards",
+      "study_url": "https://docs.nestjs.com/controllers",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "B08",
@@ -753,8 +1050,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "写最小HTTP服务并复现取消上下文/并发数据竞争",
-      "plain": "Go按已有Go系统或性能/部署限制触发，不是必修后端"
+      "lab": "写带超时/取消的Go HTTP handler，通过-race发现共享变量竞态。",
+      "plain": "Go按已有Go系统或性能/部署限制触发，不是必修后端",
+      "definition": "Go通过模块、接口、goroutine和context组织编译型网络/并发服务。",
+      "mechanism": "go mod→HTTP handler→goroutine/channel/context cancellation→测试。",
+      "analogy": "用轻量服务员同时接很多单，但仍要安排取消和共享状态。",
+      "boundary": "goroutine并发不等于无数据竞态；按需使用不用全面转Go。",
+      "failure": "context已取消但goroutine仍跑、数据竞争。",
+      "read_first": "Go official tutorials / context",
+      "study_url": "https://go.dev/learn/",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "B09",
@@ -773,16 +1078,22 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "独立原生小程序或Rust CLI；仅有目标瓶颈才做CUDA/C++对照",
-      "plain": "Rust/C++/CUDA是按需性能或平台分支，不是学习全栈必经门槛"
+      "lab": "选择一个真实的原生瓶颈：Rust CLI或C++解析或CUDA kernel做受控基准。",
+      "plain": "Rust/C++/CUDA是按需性能或平台分支，不是学习全栈必经门槛",
+      "definition": "Rust/C++/CUDA分别服务于安全系统程序、原生性能代码及GPU计算，适用场景不同。",
+      "mechanism": "Rust所有权/借用或C++生命周期/RAII；CUDA host/device执行模型。",
+      "analogy": "把性能瓶颈从普通后厨移到更精密的机器，不是每道菜都要用。",
+      "boundary": "一份Rust官方书不能代表C++和CUDA三门都覆盖；不能因可能性能优化就提前学习。",
+      "failure": "内存错误、并发悬挂、无GPU时不得宣称CUDA实测。",
+      "read_first": "The Rust Book / NVIDIA CUDA programming guide",
+      "study_url": "https://doc.rust-lang.org/stable/book/",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "D05",
       "title": "对象存储/全文搜索/向量数据库",
       "purpose": "文件、业务数据、全文检索与向量检索的不同存储责任",
-      "requires": [
-        "B01"
-      ],
+      "requires": [],
       "coordinates": [
         "W20",
         "W24"
@@ -798,8 +1109,16 @@
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB03.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB04.md"
       ],
-      "lab": "文件元数据与原始对象分离，比较文本与向量召回负例",
-      "plain": "数据库不是把所有文件塞一张表；向量检索不是业务权限系统"
+      "lab": "上传合成文件、维护元数据和ACL；比较词项/向量查询误召回。",
+      "plain": "数据库不是把所有文件塞一张表；向量检索不是业务权限系统",
+      "definition": "对象存储、全文检索和向量数据库分别承担二进制对象、词项索引和相似度检索。",
+      "mechanism": "对象键/元数据→全文倒排索引→向量近邻检索→授权过滤。",
+      "analogy": "仓库存文件、目录按词找、相似照片按特征找，是三种不同功能。",
+      "boundary": "PostgreSQL全文搜索文档不能替代S3/Milvus的官方定义；检索不是鉴权。",
+      "failure": "删除后仍可检索、未授权用户能读对象、索引更新滞后。",
+      "read_first": "PostgreSQL Full Text Search / S3 / Milvus",
+      "study_url": "https://www.postgresql.org/docs/current/textsearch.html",
+      "upstream_role": "direct_lab"
     },
     {
       "id": "E05",
@@ -822,8 +1141,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
-      "lab": "对比npm build、Python安装/启动、Maven打包与实际进程",
-      "plain": "源代码≠构建产物≠容器≠生产部署"
+      "lab": "比较JS npm build、Java mvn package、Python安装/启动的产物差异。",
+      "plain": "源代码≠构建产物≠容器≠生产部署",
+      "definition": "构建系统将源码、依赖与编译转换为可分发产物，运行环境和发布独立。",
+      "mechanism": "Vite/tsc→浏览器bundle；Maven/Gradle→JAR；Python环境→启动；Go/Rust→binary。",
+      "analogy": "食材、包装成品、运输容器、上架运行是不同环节。",
+      "boundary": "Python打包不等于原生可执行程序；Docker镜像不自动管理数据库。",
+      "failure": "依赖未锁、目标系统架构不匹配、发布后环境变量缺失。",
+      "read_first": "Maven Getting Started / Vite build",
+      "study_url": "https://maven.apache.org/guides/getting-started/index.html",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "M03",
@@ -846,8 +1173,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
       ],
-      "lab": "做本地文件对话框并拒绝未授权的任意文件路径访问",
-      "plain": "桌面UI看起来像网页，但本地文件系统权限和安装签名不同"
+      "lab": "仅允许用户选定目录文件读取，测试恶意路径被拒绝。",
+      "plain": "桌面UI看起来像网页，但本地文件系统权限和安装签名不同",
+      "definition": "Electron/Tauri通过Web界面加桌面宿主访问本机能力，需严格限制IPC和系统权限。",
+      "mechanism": "UI渲染进程→主进程/命令桥接→OS文件权限→签名更新。",
+      "analogy": "网页柜台进入本地电脑后能摸到文件和设备，必须加隔离门。",
+      "boundary": "默认开启危险Node集成/宽松IPC会扩大攻击面；Tauri不是纯前端框架。",
+      "failure": "渲染进程任意调用文件API、跨目录路径遍历。",
+      "read_first": "Electron process model",
+      "study_url": "https://www.electronjs.org/docs/latest/tutorial/process-model",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "M04",
@@ -868,16 +1203,22 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
       ],
-      "lab": "同一受控页面在H5与小程序目标环境运行并对照行为",
-      "plain": "同一套语法可复用不代表各平台行为与审核完全一致"
+      "lab": "同页H5/微信端运行对照，记录系统API差异。",
+      "plain": "同一套语法可复用不代表各平台行为与审核完全一致",
+      "definition": "uni-app在Vue风格开发体验上面向多端编译/运行，但各平台API和构建限制不同。",
+      "mechanism": "Vue页面→跨端组件编译→微信/其他端API→真机检查。",
+      "analogy": "一份柜台装修图分发不同商场，每家仍有单独验收。",
+      "boundary": "一份代码不能保证平台交互、性能和审核完全一致。",
+      "failure": "不支持的组件/插件、登录或支付SDK差异。",
+      "read_first": "uni-app official tutorial",
+      "study_url": "https://uniapp.dcloud.net.cn/",
+      "upstream_role": "track_or_course"
     },
     {
       "id": "M05",
       "title": "Android/iOS原生开发",
       "purpose": "Kotlin/Jetpack Compose或Swift/SwiftUI的设备与原生SDK能力",
-      "requires": [
-        "M02"
-      ],
+      "requires": [],
       "coordinates": [
         "W24"
       ],
@@ -890,8 +1231,16 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
       ],
-      "lab": "Android原生权限负例或有授权设备的iOS构建演示",
-      "plain": "原生功能/设备限制真正出现再选一个平台，不强行同时学"
+      "lab": "选择一个真实平台，做权限拒绝与离线恢复，记录设备/构建条件。",
+      "plain": "原生功能/设备限制真正出现再选一个平台，不强行同时学",
+      "definition": "Android Kotlin/Compose与iOS Swift/SwiftUI是两套原生UI/平台SDK体系。",
+      "mechanism": "设备权限→UI生命周期→本地存储→构建/签名/商店。",
+      "analogy": "分别掌握安卓和苹果原厂工具，不能用一个跨端教程代替。",
+      "boundary": "原生开发不以先学Expo为必要条件；iOS构建通常需符合Xcode/macOS约束。",
+      "failure": "权限拒绝、应用被系统回收、离线回放。",
+      "read_first": "Android Jetpack Compose / Apple SwiftUI",
+      "study_url": "https://developer.android.com/jetpack/compose",
+      "upstream_role": "overview_or_reference"
     },
     {
       "id": "A02",
@@ -910,9 +1259,17 @@
       "upstream": [
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB06.md"
       ],
-      "lab": "最小MCP工具定义+非法参数/拒绝未授权调用",
-      "plain": "MCP是AI上下文和工具互操作协议，不是REST或通用消息队列的替代品"
+      "lab": "最小MCP工具返回合成数据，非法参数与无权限调用必须失败。",
+      "plain": "MCP是AI上下文和工具互操作协议，不是REST或通用消息队列的替代品",
+      "definition": "MCP规范AI宿主/客户端/服务器之间的工具和上下文交换，基于JSON-RPC。",
+      "mechanism": "Host→Client→Server工具/资源声明→受限调用和授权/协议版本协商。",
+      "analogy": "给AI助理统一的工具插座，同时限定每个插座有权做什么。",
+      "boundary": "MCP不是通用REST替代也不是Agent与Agent通信的全部标准；依规范版本区分有状态/无状态语义。",
+      "failure": "工具声明与实际权限不一致、无害请求被赋予写权限。",
+      "read_first": "MCP 2026-07-28 architecture",
+      "study_url": "https://modelcontextprotocol.io/specification/2026-07-28/architecture",
+      "upstream_role": "direct_lab"
     }
   ],
-  "revision": "V4.1 upstream-integrated"
+  "revision": "V4.2 depth-first node learning cards and semantic prerequisites"
 }

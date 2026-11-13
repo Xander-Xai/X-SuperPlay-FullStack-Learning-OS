@@ -1,6 +1,14 @@
-# 前端专项深挖字典 V3.0（按需查阅，不是第二条进度表）
+# 前端专项深挖字典 V4.1（按需查阅，不是第二条进度表）
 
 > **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。原W1–W24只作为[ROADMAP](../../../ROADMAP.md)覆盖坐标；当需求触发界面/SSR/性能才从相应节点入手，学习证据记[PROGRESS](../PROGRESS.md)，无需按周学习或对每个项目强加SSR。
+
+## 本次上游补充：Vue、Nuxt与前端的完整关系
+
+1. [专业定义/大白话/关系图](../FULLSTACK-MENTAL-MODEL.md)先理解HTML/CSS/JS、Vue/React、Vite、Nuxt/Next、SSR/SPA的区别。
+2. [上游编程语言技术栈地图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)可看Vue+Vite、Vue+Nuxt、React+Vite、React+Next之间的比较与构建/运行案例。
+3. [上游Vue3+FastAPI实训](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md)作为已有工程问题切入，不需执行完六周。
+4. **新增节点**：F08 Vue3与watch响应式；F09 Nuxt混合渲染；F10 PWA离线；F11 WebSocket/SSE协议；M03 Electron/Tauri；M04 uni-app。节点的最小先修、官方原文、实验见[知识图](../KNOWLEDGE-GRAPH.md)与[权威资料](../OFFICIAL-RESOURCES.md)。
+5. **选择原则**：已有Vue项目优先Vue而非为学习迁移React；SEO/服务端渲染需求才考虑Nuxt/Next；静态前端/管理后台不自动强制SSR。
 
 ## 一、HTML / CSS / Web 平台：不能被组件库替代
 

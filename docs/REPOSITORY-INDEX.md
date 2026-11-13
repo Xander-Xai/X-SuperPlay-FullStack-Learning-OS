@@ -24,6 +24,12 @@
 3. 新实验的代码、命令、失败证据放本仓（或有权的项目仓）并在 `PROGRESS.md` 附稳定 commit 链接；敏感/真实客户数据不得公开。
 4. 若需要对其它仓库实际修改，请遵循对应仓库权限、PR 与 Gate；此索引本身仅建立知识联系。
 
+## 2026-11-14 上游前后端资产接入
+
+- 只读审阅了上游AI-Learning-OS的[语言技术栈总图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)、Vue3/FastAPI训练Track、18项企业AI Lab、多端工程路线、BDL/ANL与独立量表。
+- 本仓入口：[20份资料直达](learning/UPSTREAM-ASSET-INDEX.md)、[专业与大白话三张图](learning/FULLSTACK-MENTAL-MODEL.md)、[扩展知识图谱](learning/KNOWLEDGE-GRAPH.md)、[官方资料](learning/OFFICIAL-RESOURCES.md)。
+- 多语言/多终端新增能力作为**按需选修**，而非强制24周新增日历；上游文件版本和实验结果由上游仓或实际执行者负责。
+
 ## 相关导航
 
 - [主 Roadmap](../ROADMAP.md)

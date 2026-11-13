@@ -4,14 +4,24 @@
 >
 > **完整覆盖与执行顺序分离**：保留 W1–W24、G01–G24 的系统性知识地图，原432小时只是全部覆盖时的参考预算。**不要求从W1顺序学到W24**，也不要求所有下游应用同时采用Python、Java、React和Next.js。
 
+## 先看清楚技术全景，再按当前问题跳学
+
+**[前后端脑内全景图：专业定义 + 大白话 + 3张关系图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：用一个点击提交的流程理解浏览器、Vue/React、HTTP、FastAPI/Spring/Nest、数据库、任务、交付与监控如何协作。
+
+**[上游 AI-Learning-OS 20份资料直达索引](docs/learning/UPSTREAM-ASSET-INDEX.md)**：技术语言图、Vue3/FastAPI实训、Java专项、18个企业AI LAB、多端产品、BDL/ANL教练与独立评分，打开链接即可读到原文。
+
+**[42节点知识图 + 官方原文](docs/learning/KNOWLEDGE-GRAPH.md)**：补足Vue/Nuxt、Node/NestJS、桌面Electron/Tauri、Go/Rust/C++、MCP/实时协议、PWA等；覆盖广不等于每个项目都要用。
+
 ## 第一入口：我当前要做什么？
 
 1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。
-2. **[全栈知识关系图（29个节点）](docs/learning/KNOWLEDGE-GRAPH.md)**：看每个技术在哪一层、解决什么问题、如何与其他技术连接，以及最低先修依赖。
+2. **[全栈知识关系图（42个节点）](docs/learning/KNOWLEDGE-GRAPH.md)**：看每个技术在哪一层、解决什么问题、如何与其他技术连接，以及最低先修依赖。
 3. **[权威官方学习资料](docs/learning/OFFICIAL-RESOURCES.md)**：对应具体知识点和章节学习，不刷完整文档目录。
 4. **[下游能力覆盖表](docs/learning/REQUIREMENTS-COVERAGE.md)**：静态工具/SaaS/企业Web/Java/CLI/微信小程序/移动App/AI应用等。
 5. **[需求学习会话模板](docs/learning/GAP-SESSION-TEMPLATE.md)**：原理→亲手改代码→错误注入→独立验收→继续项目。
 6. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
+
+**还可用**：Vue3列表状态 → F08；Nuxt SSR → F09；NestJS API → B07；Electron/Tauri → M03；MCP Server → A02；已有上游LAB可按节点直达，**不必再创建一个练习项目**。
 
 **学习问题示例**：现在要写 Spring API → 先查 B04，补最低 Java B03 → 阅读官方 Spring MVC → 做接口+错误测试；遇到数据库问题才补 D01/B05。无须先把 React、Next、Celery 学完。
 
@@ -28,11 +38,11 @@
 |---|---|---|
 | [ROADMAP.md](ROADMAP.md) | V4.0 全面知识覆盖坐标；原24周可选引导式学习，不强制先后顺序 | REFERENCE + OPTIONAL_PLAN |
 | [学习进度](docs/learning/PROGRESS.md) | **以真实需求会话为先**；W坐标/Gate只做能力覆盖与证据索引 | NOT_RUN |
-| [能力地图](docs/learning/CAPABILITY-MATRIX.md) | Java/JVM/Spring/前端/系统设计的知识点→周次→Gate 索引 | REFERENCE |
+| [能力地图](docs/learning/CAPABILITY-MATRIX.md) | 旧24模块和Gate对照，新42节点以知识图为准 | REFERENCE |
 | [W09–W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md) | 可选系统补基础的D1–D6任务样例，非必修日历 | OPTIONAL_SPRINT_TEMPLATE |
 | [版本选择约束](docs/learning/STACK-VERSION-POLICY.md) | JDK/Boot/Node 稳定版本、兼容矩阵、许可证与锁定机制 | REFERENCE |
-| [前端专项字典](docs/learning/references/frontend.md) | HTML/CSS/a11y、JS/TS、React、SSR/Next、Node、性能与测试 | REFERENCE |
-| [后端专项字典](docs/learning/references/backend.md) | Java/JVM/Spring/安全、FastAPI、SQL、消息、缓存按需深挖 | REFERENCE |
+| [前端专项字典](docs/learning/references/frontend.md) | Vue/React、Nuxt/Next、HTML/CSS、状态、实时、PWA、性能和测试 | REFERENCE |
+| [后端专项字典](docs/learning/references/backend.md) | FastAPI/Spring/Nest/Go、Node运行时、数据/搜索、MCP及可靠性 | REFERENCE |
 | [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) | 复现、证据、失败与修复记录 | TEMPLATE |
 | [项目蓝图](docs/project/PROJECT-BLUEPRINT.md) | 已有 React/FastAPI S0 合成核对，数据库/异步/Java/上线仍为设计态 | PARTIALLY_IMPLEMENTED |
 | [24 项验收](docs/learning/ACCEPTANCE.md) | G01–G24 的负例、状态和本人独立证据 | LEARNER_NOT_RUN |

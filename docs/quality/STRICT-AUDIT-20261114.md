@@ -69,3 +69,10 @@
 - 目前可从[DEMAND-ROUTER](../learning/DEMAND-ROUTER.md)→[知识图](../learning/KNOWLEDGE-GRAPH.md)→[官方资料](../learning/OFFICIAL-RESOURCES.md)→真实业务/独立故障实验，知识坐标与学习顺序不再混用。
 - [下游能力覆盖](../learning/REQUIREMENTS-COVERAGE.md)包含静态Web、SaaS、企业Web、微信小程序、移动App、AI/Agent、Node CLI、Java/Spring与电商结算案例；未覆盖全部平台特殊细节，应用边界仍以真实需求与授权为准。
 - 新增`route_need.py`按NodeID或关键词打印作用、最低先修、官方资料；GitHub Actions静态验证知识图关系无环、覆盖W01–W24及G01–G24、资料索引，并运行CLI单测。**静态工具和文档CI通过不等于用户已经学会任何模块。**
+
+## V4.1 上游资料合并与全栈心智模型（2026-11-14）
+
+- 核对上游源代码目录/既有文档共840个仓库文件，重点阅读语言/框架关系图、Vue3/FastAPI实训、企业AI18Labs、多端路线、独立评分；汇合20个具体入口至[上游索引](../learning/UPSTREAM-ASSET-INDEX.md)，保留上游原文和固定提交快照。
+- 新增[三张Mermaid图及专业定义/大白话类比](../learning/FULLSTACK-MENTAL-MODEL.md)，说明系统分层、语言框架分类、一次HTTP请求的完整旅程；避免将Vite/Node/Next、SQL/PostgreSQL、MCP/REST混淆。
+- 新增13个按需分支，知识节点从29扩至42，最低先修40条；[官方资料](../learning/OFFICIAL-RESOURCES.md)与每一节点一一对应，课程仍不要求按周学习。
+- 实际技术实验、各上游GitHub课程的安装与学员独立验收**没有因为文档合并而自动完成**。

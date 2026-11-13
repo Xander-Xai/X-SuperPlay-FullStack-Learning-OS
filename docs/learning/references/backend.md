@@ -1,6 +1,13 @@
-# 后端专项深挖字典 V3.0：Java/JVM/Spring + Python + 数据/架构
+# 后端专项深挖字典 V4.1：Java/JVM/Spring + Python + 数据/架构
 
 > **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。本页按[知识地图](../../../ROADMAP.md)检索；Java Core/JVM/Spring属于全面覆盖的重要专题，但只有当前需求/岗位使用Java时才需优先学，不是每个下游产品的强制栈。语言熟悉程度不由历史项目自动推断。
+
+## 本次上游补充：多后端语言与跨端协作
+
+- [上游语言与框架全景](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)：Python、Node、Java、Go、Rust/C++是语言/运行时/工程路线，FastAPI、Spring、NestJS是后端框架，不必同一服务全部使用。
+- [企业AI 18项可选LAB](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md)：按当前问题直接看[LAB02 API/SSE](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md)、[LAB08 SQL缓存](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB08.md)、[LAB09多租户](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB09.md)、[LAB11部署](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md)、[LAB14 Java](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB14.md)。
+- **新增节点**：B07 Node/NestJS、B08 Go、B09 Rust/C++/CUDA、D05对象存储/全文/向量检索、E05构建/打包、A02 MCP工具协议。入口：[知识图](../KNOWLEDGE-GRAPH.md)→[权威学习资料](../OFFICIAL-RESOURCES.md)。
+- **关系辨析**：语言不是框架，SQL不是PostgreSQL，MCP不是REST替代品，SSE/WebSocket不是可靠消息队列；技术选型依据团队、协议、错误风险、实际交付要求。详见[专业+大白话全景图](../FULLSTACK-MENTAL-MODEL.md)。
 
 ## 一、Java 语言与 JVM（W09–W11）
 

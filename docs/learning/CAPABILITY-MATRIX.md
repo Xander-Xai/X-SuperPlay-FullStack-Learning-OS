@@ -1,4 +1,4 @@
-# V4.0 全栈能力坐标对照表
+# V4.1 全栈能力坐标对照表
 
 > 本表是旧W坐标/知识/验收编号的对照；优先从[需求路由](DEMAND-ROUTER.md)→[知识依赖图](KNOWLEDGE-GRAPH.md)→[权威资料](OFFICIAL-RESOURCES.md)进入。W1–W24不是时间轴或固定完成顺序，证据只在[PROGRESS](PROGRESS.md)登记。
 
@@ -16,6 +16,13 @@
 | 鉴权/安全 | Session/OAuth2/OIDC/PKCE、RBAC/ABAC、多租户、OWASP API | W3/W13/W21 | G02/G16/G22 | [Backend](references/backend.md) |
 | 交付与观测 | Docker/Nginx/Linux/CI/E2E、JVM/JFR、Web Vitals、OTel、SLO | W7/W8/W22/W23 | G08–G11/G23 | 双字典 |
 | 多语言架构 | 单一领域归属、服务间接口/事件契约、跨语言鉴权/Trace、故障恢复 | W24 | G24 | [蓝图](../project/PROJECT-BLUEPRINT.md) |
+
+## 新增分支与知识关系
+
+- 旧W坐标对照表仍用于已有课程的归档，不用它来判断Vue/Nuxt/桌面等新增选修节点不存在；实际完整知识节点在[42节点机器图](knowledge-map.json)与[人类关系图](KNOWLEDGE-GRAPH.md)。
+- 补充：**F08 Vue3、F09 Nuxt、F10 PWA、F11 WebSocket；B07 Nest、B08 Go、B09 Rust/C++；D05存储/检索；E05跨语言构建；M03桌面、M04 uni-app、M05原生；A02 MCP。**
+- 旧G01–G24可按当前需求归档对应证据，不要求所有技术在一个项目里实作。
+- 多来源资料见[上游汇合索引](UPSTREAM-ASSET-INDEX.md)；专业与大白话贯通见[全景图](FULLSTACK-MENTAL-MODEL.md)。
 
 ## 能力证据由 Gate 决定，而不是勾选技术名词
 

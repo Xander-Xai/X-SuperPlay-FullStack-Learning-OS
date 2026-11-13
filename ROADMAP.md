@@ -1,10 +1,32 @@
-# 全栈知识 Roadmap V4.0｜知识逻辑完整，按需求自由跳学
+# 全栈知识 Roadmap V4.1（整合上游资料）｜知识逻辑完整，按需求自由跳学
 
 > **统一能力地图，不是按周通关日历。** 旧W1–W24保留知识覆盖坐标和可选引导式任务；原24周/432小时只是完整补基础的历史参考预算，**你实际学习什么、先学哪个模块，都由项目/JD/故障需求决定**。
 >
 > **先用[需求驱动入口](docs/learning/DEMAND-ROUTER.md)选择目标** → [知识依赖关系图](docs/learning/KNOWLEDGE-GRAPH.md)看技术作用与最小先修 → [权威资料](docs/learning/OFFICIAL-RESOURCES.md)查具体章节 → [模板](docs/learning/GAP-SESSION-TEMPLATE.md)真正编码/测试/复盘。下游覆盖见[能力覆盖矩阵](docs/learning/REQUIREMENTS-COVERAGE.md)。
 >
 > **实战载体不限定单个项目**：有权限的当前下游项目、隔离Labs、以及[ReconLab可选合成演示](ai-fullstack-workbench/README.md)均可。该演示CI通过不等于学习者独立掌握或ReconCheck获授权上线。
+
+## 先在脑中建立技术的整体关系（不要求同时实作所有方向）
+
+- **[一张全栈链路图 + 一张语言/框架树 + 一张请求时序图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：解释客户端、网络与API、后端、数据、异步、安全、CI与运维各自负责什么。
+- **[42节点知识图](docs/learning/KNOWLEDGE-GRAPH.md)**：含最低先修、官方原始资料、平行技术路线和具体上游讲解；不仅有React、FastAPI、Java，现已加入**Vue3/Nuxt、Node/NestJS、WebSocket、PWA、桌面Electron/Tauri、uni-app、Go/Rust/C++、MCP**等可选分支。
+- **[20份上游 AI-Learning-OS 前后端原资料](docs/learning/UPSTREAM-ASSET-INDEX.md)**：复用已有[编程语言全景图](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md)、Vue3+FastAPI案例、企业AI 18 Labs、Java专项、多端平台实训与评分规范。
+- **[官方资料逐节点索引](docs/learning/OFFICIAL-RESOURCES.md)**：MDN、Vue、Nuxt、React、Next、Node、Nest、FastAPI、Spring、PostgreSQL、Go/Rust、平台文档等；根据本次问题选择具体章节。
+- **[需求→知识→实验](docs/learning/DEMAND-ROUTER.md)**：项目需要Vue就查F08，需要Spring就查B04，需要MCP就查A02；不会的补最低先修，**不是必须花2–3个月从头按顺序学**。
+
+### 前后端分层与技术选型的速记
+
+| 层 | 它解决什么问题 | 常见技术分支 | 什么时候才需要研究 |
+|---|---|---|---|
+| 浏览器/UI | 用户看到、输入、交互和响应式 | HTML/CSS、JS/TS、Vue或React | 有Web页面时 |
+| 应用渲染 | 页面在哪里生成、数据如何缓存 | Vue+Vite、React+Vite、Nuxt、Next | 需要SEO/SSR/混合渲染时按需 |
+| 传输协议 | 组件与服务间怎么请求/推送数据 | HTTP/REST/OpenAPI、SSE、WebSocket、MCP(用于AI工具) | 依据同步、实时、双向/工具能力 |
+| 业务后端 | 校验身份/业务、执行权限/规则 | Python/FastAPI、Java/Spring、Node/Nest、Go | 有服务端逻辑时按项目栈选 |
+| 数据与异步 | 持久、缓存、检索、可靠事件 | PostgreSQL/MySQL、Redis、对象存储、向量检索、MQ、Worker | 真正需要数据/长任务/跨服务时 |
+| 生产交付 | 质量/安全/部署/回滚与观测 | Git/CI、Docker/Linux、测试、OTel | 需要稳定维护/正式上线时 |
+| 其他终端 | 桌面/小程序/移动/原生设备能力 | Electron/Tauri、uni-app、RN/Flutter、Kotlin/Swift | 终端或商店/本地系统能力要求触发 |
+
+**技术定义**不能只靠比喻；**学习顺序**也不能由框架清单机械安排。每次先确定当前需求→专业原理和关系→官方资料→最小代码+负例→独立修复→回到业务。
 
 ## 0. 执行原则
 

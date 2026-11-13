@@ -1,6 +1,6 @@
-# 全栈项目最终 12 项 Gate（G01–G12）
+# 全栈项目分阶段验收：基础 G01–G12 + 扩展 G13–G24
 
-> 初始状态：全部 **NOT_RUN / UNASSESSED**。文档通过、CI 通过与本人独立通过是不同概念。对应 [唯一 ROADMAP](../../ROADMAP.md) 的 G01–G12，不另建进度表。
+> 初始状态：**G01–G24 全部 NOT_RUN / UNASSESSED**。文档通过、CI 通过与本人独立通过是不同概念。对应 [唯一 ROADMAP](../../ROADMAP.md) 的 G01–G24，不另建进度表。
 
 | Gate | 要求 | 应保留的独立实验证据 | 必测反例 |
 |---|---|---|---|
@@ -29,3 +29,31 @@
 L1=关文档能解释；L2=独立编码测试；L3=故障注入/定位/修复与取舍说明。与上游 AI-Learning-OS 的 0–4 独立量表，以及 Dev-Workbench 的工程成熟度等级各自独立。
 
 每次记录可复制 [实验模板](EXPERIMENT-TEMPLATE.md)；学习状态只更新 [PROGRESS.md](PROGRESS.md)。
+
+## V3.0 扩展 Gate：Java/Spring、前端深度、多栈工程
+
+> 原 G01–G12 为阶段 A；下表 G13–G24 属新增必修 Gate。**本仓仅计划文档，不代表这些实验已运行。**
+
+| Gate | 能力域 | 对应周次 | 必须留下的独立证据 | 反例/故障 |
+|---|---|---|---|---|
+| G13 | Java 语法/泛型/集合/构建 | W09–W10 | JUnit 对领域规则、泛型/Collection 进行实际测试 | equals/hashCode、Map 重复、Stream 副作用 |
+| G14 | JVM/JMM/并发/JFR | W11 | 共享变量竞态修复、JFR 与虚拟线程 I/O 对照 | 可见性失效、连接池瓶颈 |
+| G15 | Spring IoC/MVC/Boot | W12 | Java 独立业务域 Controller→Service→Repository 测试 | 错误 Bean、无效参数、统一异常 |
+| G16 | Spring Data/Security/事务 | W13 | PostgreSQL Testcontainers、权限、事务、JPA/JDBC 测试 | @Transactional 代理失效、N+1、跨租户越权 |
+| G17 | HTML/CSS/a11y/响应式 | W14 | 390px/1280px 布局、语义表单与键盘操作实测 | 溢出、无法聚焦、无 label |
+| G18 | JavaScript/TypeScript/构建 | W15 | TS strict、ESM、Bundle 分析和懒加载对照 | unsafe any、错误打包或 Source Map |
+| G19 | React 深层/表单/性能 | W16 | Profiler/Query 回滚/RTL+E2E 测试 | 旧状态覆盖、乐观更新回滚失败 |
+| G20 | SSR/Next.js 与 Node Runtime | W17–W18 | SPA/SSR/SSG 比较 + Node Stream/BFF 最小实验 | Hydration、缓存泄密、Backpressure |
+| G21 | 消息/数据库/Outbox | W19–W20 | RabbitMQ/Kafka 二选一、消费去重/延迟回放与 SQL 对照 | 消息重复/乱序、跨服务表所有权冲突 |
+| G22 | OIDC/OAuth/租户安全 | W21 | PKCE/OIDC 认知、服务端授权与多租户 API 负例 | 凭证过期、B 用户越权访问 A |
+| G23 | Linux/部署/性能/监控 | W22–W23 | Compose/恢复、JFR/Web Vitals/OTel Span 性能对照 | 慢前端、慢 SQL、服务中断/回滚失败 |
+| G24 | 跨语言集成与系统答辩 | W24 | React→FastAPI→Java 业务域→DB→UI 可观测业务纵切 | 重复事件、Java 服务失败、无鉴权调用、无法独立排障 |
+
+## 不同阶段的完成定义
+
+- **阶段 A（W1–W8）**：G01–G12 均 PASS_WITH_EVIDENCE，只能说明 React+FastAPI 基础纵切达到本项目标准。
+- **阶段 B（W9–W16）**：G13–G19 均有独立测试通过（Java Core/JVM/Spring 必修，HTML/CSS/TS/React 深化必修）。
+- **阶段 C（W17–W24）**：G20–G24 全部真实执行；G01–G19 未回归失败，独立对陌生业务变更完成修复/复测，才能称路线毕业。
+- **Next.js**：必须完成 SSR/SPA 对比实验，但主产品仍使用 Vite SPA；完全改造为 Next 是按需求选修。**Java/Spring 是必修，不可再标 P2**。
+- **证据**：`gate_id / repo@commit / tool_versions / commands / observed / negative_case / fix / AI_ASSISTED / INDEPENDENT / retest_date / state`。
+- **硬失败**：越权、泄密、未经授权发布/跨仓修改、把模拟数据和 AI 生成代码当作真实客户或个人独立通过的证据。

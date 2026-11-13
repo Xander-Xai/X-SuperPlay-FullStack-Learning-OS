@@ -1,18 +1,66 @@
-# 后端专项深挖字典（按需检索，非独立进度表）
+# 后端专项深挖字典 V3.0：Java/JVM/Spring + Python + 数据/架构
 
-> 基础经验可跳过讲解，不能跳过独立故障实验。对照 [唯一主线](../../../ROADMAP.md)。
+> **REFERENCE / NOT_RUN**。本页按 [唯一主线 W1–W24](../../../ROADMAP.md) 检索；Java Core/JVM/Spring **W09–W13 正式必修**，不再是 P2。语言熟悉程度不由历史项目自动推断。
 
-| 主线阶段 | 专题 | 必做实验 / 失败路径 | 资料 |
-|---|---|---|---|
-| W3 | FastAPI Router/Service/Repo、异常、Depends | AuthN/AuthZ、资源级 403、统一错误返回 | [FastAPI](https://fastapi.tiangolo.com/tutorial/) |
-| W3 | OpenAPI→Orval→TS/CI | 改后端响应字段、重新生成、前端类型与契约测试 | [Orval](https://orval.dev/docs/) |
-| W4 | ACID/MVCC/锁/隔离 | 双连接扣款、乐观锁 vs `FOR UPDATE`，死锁对照 | [PostgreSQL](https://www.postgresql.org/docs/current/) |
-| W4 | Index/EXPLAIN/ORM | 查询计划、索引维护、N+1、Session 回收 | [SQLAlchemy](https://docs.sqlalchemy.org/) |
-| W4 | Redis TTL/缓存失效 | 多请求回源与 single-flight/TTL jitter 对照 | [Redis](https://redis.io/docs/latest/) |
-| W5 | Token/Cookie/CSRF/权限 | 不同租户访问、过期会话、刷新竞争 | [OWASP API Security](https://owasp.org/API-Security/) |
-| W5/W8 | Request ID、OTel Trace Context | 统一结构化日志与 traceparent 串联，区别关联日志和真实 Span | [OpenTelemetry](https://opentelemetry.io/docs/) |
-| W6 | Celery ACK、任务幂等、重试 | 隔离环境杀 Worker、重复入队、状态恢复、去重 | [Celery](https://docs.celeryq.dev/en/stable/userguide/tasks.html) |
-| W6 | SSE 服务端回收 | 取消请求后释放 generator/资源；断流对任务运行的影响 | [MDN SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) |
-| W7 | Compose、部署、回滚 | 从新环境启动，备份恢复，模拟 DB 故障 | [Docker](https://docs.docker.com/get-started/) |
+## 一、Java 语言与 JVM（W09–W11）
 
-**不宣称** `acks_late` 单独保证重投递；任务重试必须以幂等和可观测状态机为基础。
+| 知识 | 最低必须掌握 | 实验 |
+|---|---|---|
+| Java 核心 | primitive/reference、OOP/接口/抽象、多态、泛型/类型擦除、异常、record/enum、日期、IO/NIO、Maven/Gradle | 纯 Java 任务领域模型+JUnit |
+| 集合/Stream | List/Set/Map/HashMap、equals/hashCode、Comparator、Lambda、Stream/Optional、复杂度、不可变对象 | 去重/排序、重复键/空值负例 |
+| 并发/JMM | Thread/Executor、Future/CompletableFuture、volatile、synchronized、Lock、Atomic、ThreadLocal 风险 | 共享计数竞态与锁修复 |
+| JVM | 类加载、内存、堆/栈、GC、jcmd/JFR、线程 dump、OOM 排查、基础性能分析 | GC/JFR 证据和故障根因 |
+| 虚拟线程 | Platform vs Virtual Thread、I/O 适合而非 CPU 适合、Pinning、连接池限制 | 虚拟线程/平台线程 I/O 对照 |
+
+官方：[Dev.java](https://dev.java/learn/)、[Java Virtual Threads](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)。实际项目选择与 Spring 兼容的受支持 JDK LTS 并固定版本，不盲用旧 JDK8 教程当现代最佳实践。
+
+## 二、Spring / Spring Boot（W12–W13）
+
+| 模块 | 必学内容 | 反例与验收 |
+|---|---|---|
+| IoC/DI/AOP | Bean Scope/生命周期、自动配置/Conditional、代理、循环依赖、配置 Profiles | 能解释 Spring 从注解到运行时 Bean 的路径 |
+| MVC | DispatcherServlet、Filter/Interceptor、Controller→Service→Repository、校验/异常映射 | 400/401/403/500 与错误结构 |
+| 数据访问 | JDBC/JdbcTemplate、Spring Data JPA/Hibernate、MyBatis 原理/比较、连接池、N+1 | JPA 或 MyBatis 主路径一条深入，不重复实现全部 ORM |
+| 事务 | @Transactional 传播/隔离、代理自调用失效、锁与死锁、失败回滚 | 可复现自调用与回滚实验 |
+| 安全 | Spring Security FilterChain、Session、JWT/OIDC、资源级 AuthZ | 用户 A/B/租户权限负例 |
+| 测试 | JUnit 5、Mockito、MockMvc/REST Assured、Testcontainers PostgreSQL | 不用单纯 H2 代替实际数据库隔离/锁行为 |
+| 运维 | Actuator/Micrometer、健康检查、配置外置、优雅退出、JVM/JFR/Trace | 可观察 Java 服务调用链 |
+| 选修 | WebFlux、Spring Cloud、复杂微服务框架 | JD 或真实业务需要时再学 |
+
+官方：[Spring Boot](https://docs.spring.io/spring-boot/reference/)、[Spring Framework](https://docs.spring.io/spring-framework/reference/)、[Spring Security](https://docs.spring.io/spring-security/reference/)、[Spring Data](https://docs.spring.io/spring-data/jpa/reference/)、[Testcontainers](https://testcontainers.com/guides/testing-spring-boot-rest-api-using-testcontainers/)。
+
+## 三、Python API 与统一契约（阶段 A）
+
+- FastAPI/Pydantic/Depends、Router→Service→Repository、async vs sync、SQLAlchemy/Alembic、Pytest；
+- Session/Cookie/Refresh Token、RBAC/资源级授权、文件上传安全、REST/OpenAPI/Orval 一致性；
+- Redis/Celery ACK/Retry/Worker Kill、业务幂等与 PostgreSQL 权威状态；
+- SSE chunk/event 边界、EventSource vs fetch-stream、取消及任务解耦。
+
+官方：[FastAPI](https://fastapi.tiangolo.com/tutorial/)、[Orval](https://orval.dev/docs/)、[Celery](https://docs.celeryq.dev/en/stable/userguide/tasks.html)。
+
+## 四、数据库、消息和最终一致性（W4、W19–W20）
+
+| 方向 | 核心能力 | 失败实验 |
+|---|---|---|
+| PostgreSQL | SQL/CTE/Window、MVCC/隔离/锁、联合索引、EXPLAIN、连接池、迁移 | 双连接丢失更新和死锁 |
+| MySQL/InnoDB | 常见 SQL/索引、隔离和 PG 差异，对比数据类型/事务语义 | W20 SQL/索引选择和迁移差异 |
+| Redis | String/Hash/Set/ZSet、TTL/淘汰、Cache Aside、击穿/穿透/雪崩、缓存一致性 | 集中过期/并发回源测量 |
+| 消息队列 | RabbitMQ 或 Kafka 二选一深入；ACK/Offset、重投递、重试、DLQ、版本契约 | 断线/重复/乱序后不破坏业务 |
+| 事件一致性 | Transactional Outbox、幂等消费者、服务所有权、最终一致性与补偿 | DB 成功/消息发送失败、重放 |
+| P2 | MongoDB、ES/OpenSearch、复杂分库分表与多区域复制 | 真实业务触发 |
+
+资料：[PostgreSQL](https://www.postgresql.org/docs/current/)、[MySQL](https://dev.mysql.com/doc/)、[Redis](https://redis.io/docs/latest/)、[RabbitMQ](https://www.rabbitmq.com/docs)、[Kafka](https://kafka.apache.org/documentation/)。
+
+## 五、安全、系统设计与生产交付（W21–W24）
+
+- **认证鉴权**：OAuth2/OIDC/Authorization Code+PKCE、Session/Token、CSRF/XSS/SSRF、RBAC/ABAC、租户隔离、服务间身份与密钥轮换。
+- **运维**：Linux/进程/端口/权限、Nginx、Docker/Compose/Profiles、CI/CD、HTTPS、备份/恢复/回滚；K8s 核心对象可认知，真机集群 P2。
+- **观测**：日志、Metrics、Trace、SLI/SLO、JVM JFR/GC、SQL/Redis/HTTP P95/P99、前端 LCP/INP/CLS。W8 最小 OTel 仍必修，W23 跨 Java/Python 深挖。
+- **系统设计**：单体分层、领域边界、API/事件契约、消息幂等、缓存一致性、容量/成本、微服务拆分触发条件、威胁建模、ADR。
+- **同项目集成**：React+FastAPI 主业务不变，Java Spring 拥有独立审计/通知业务域；不得两个服务无所有权边界写同一业务表。
+
+官方：[OWASP API Top10](https://owasp.org/API-Security/)、[Spring Observability](https://docs.spring.io/spring-boot/reference/actuator/observability.html)、[OpenTelemetry](https://opentelemetry.io/docs/)。
+
+## 六、执行原则
+
+本字典不设独立进度；遇到后端缺口 → 找到 W9–W24 对应任务与 G13–G24 → 阅读官方知识 → **本人先实现** → 注入故障与复测 → 记录到 [PROGRESS](../PROGRESS.md)。任何静态文档、Mock 或 AI 自动执行都不能当个人 L3。

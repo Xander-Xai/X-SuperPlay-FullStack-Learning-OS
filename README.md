@@ -60,6 +60,10 @@
 | [仓库关系索引](docs/REPOSITORY-INDEX.md) | 上游/下游的职责与权威边界 | INDEX |
 | [学习治理决策](docs/decisions/ADR-0003-demand-driven-learning.md) | V4.0需求驱动、知识依赖图、下游多场景覆盖 | ACCEPTED_FOR_PLAN |
 
+## 最终验收记录与限制
+
+[严格对抗验收 V4.2](docs/quality/AUDIT-V4.2-20261114.md)列出旧问题、修复、真实CI证据及仍未实操的能力。自动检查证明的是仓库文档和机制级实验，不是个人技术熟练度或下游上线。
+
 ## 文档结构自动验收
 
 GitHub Actions 的 [Roadmap document integrity](.github/workflows/roadmap-integrity.yml) 在相关文档提交/PR 时检查24个知识坐标、24项Gate、96个可选D1–D6任务、可合法更新的学习状态、知识图先修无环、官方来源索引、路由器测试与内部相对链接。**只保证文档结构自洽，不等于学员通过或应用测试通过。**

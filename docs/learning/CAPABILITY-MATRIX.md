@@ -1,4 +1,4 @@
-# V4.1 全栈能力坐标对照表
+# V4.2 全栈能力坐标对照表
 
 > 本表是旧W坐标/知识/验收编号的对照；优先从[需求路由](DEMAND-ROUTER.md)→[知识依赖图](KNOWLEDGE-GRAPH.md)→[权威资料](OFFICIAL-RESOURCES.md)进入。W1–W24不是时间轴或固定完成顺序，证据只在[PROGRESS](PROGRESS.md)登记。
 
@@ -16,6 +16,11 @@
 | 鉴权/安全 | Session/OAuth2/OIDC/PKCE、RBAC/ABAC、多租户、OWASP API | W3/W13/W21 | G02/G16/G22 | [Backend](references/backend.md) |
 | 交付与观测 | Docker/Nginx/Linux/CI/E2E、JVM/JFR、Web Vitals、OTel、SLO | W7/W8/W22/W23 | G08–G11/G23 | 双字典 |
 | 多语言架构 | 单一领域归属、服务间接口/事件契约、跨语言鉴权/Trace、故障恢复 | W24 | G24 | [蓝图](../project/PROJECT-BLUEPRINT.md) |
+
+## 正式学习卡入口
+
+- [42个知识点的专业/大白话卡片](NODE-STUDY-CARDS.md)：每个含机制、边界、官方具体章节、上游来源性质及可复现负例；不是另建进度表。
+- [实际可运行的部分实验](labs/README.md)：Node请求竞态是机制级已纳入CI，其他实验按真实环境执行后才可记录本人结果。
 
 ## 新增分支与知识关系
 

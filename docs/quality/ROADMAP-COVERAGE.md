@@ -1,4 +1,4 @@
-# V4.0 全栈知识地图与按需学习一致性核查
+# V4.2 全栈知识地图与按需学习一致性核查
 
 > **KNOWLEDGE_GRAPH_VERIFIED / OPTIONAL_S0_DEMO_CI_VERIFIED / LEARNER_NOT_RUN**。本仓覆盖下游多种产品，不再要求按W1–W24日历或只做ReconLab。静态知识图验证与学生技能、商业产品上线仍严格分离。
 
@@ -40,7 +40,7 @@
 
 ## V4.0 新增硬验收
 
-- [知识图 JSON](../learning/knowledge-map.json) 42个独立知识节点、40条最小先修边、24坐标/24Gate覆盖，不允许先修环路或悬空节点。
+- [知识图 JSON](../learning/knowledge-map.json) 42个独立知识节点、35条最小先修边、24坐标/24Gate覆盖，不允许先修环路或悬空节点。
 - [官方原始资料库](../learning/OFFICIAL-RESOURCES.md) 每个节点可追溯到标准/官方文档及专题学习内容；外部网页存活与具体版本仍需使用时复核。
 - [需求路由器](../learning/route_need.py) 支持自然语言关键词和NodeID直接查最小先修/资料；不把关键词匹配当全部业务理解。
 - [场景覆盖](../learning/REQUIREMENTS-COVERAGE.md) 对静态站/SaaS/企业Web/小程序/移动App/AI工具/Java/Node/结算案例进行取舍；不宣布所有产品同时可以直接上线。
@@ -49,7 +49,16 @@
 ## V4.1 上游知识资产与新分支覆盖检查
 
 - 上游已核对并链接20份文件：[前后端资产索引](../learning/UPSTREAM-ASSET-INDEX.md)；专业解释与大白话贯通：[全栈脑内地图](../learning/FULLSTACK-MENTAL-MODEL.md)。
-- 机器知识图42节点/40条最低先修，包含Vue/Nuxt、Node/NestJS、Go/Rust/C++、桌面Electron/Tauri、小程序跨端、MCP、存储/搜索。
+- 机器知识图42节点/35条最低先修，包含Vue/Nuxt、Node/NestJS、Go/Rust/C++、桌面Electron/Tauri、小程序跨端、MCP、存储/搜索。
 - 这些新增节点属**覆盖资产**而非学员学习PASS；旧24坐标和24Gate保持不变，学习顺序以真实需求为准。
 
 - [AI原生按需学习协议](../learning/AI-NATIVE-LEARNING-PROTOCOL.md) 约定业务目标→当前Gap→官方资料→AI脚手架辅助→本人故障实测→独立变式复测；无需按W编号机械训练。
+
+## V4.2 对抗验收（本报告旧节仍保留历史快照）
+
+- 原42节点仅13个有细化Lab/类比，其余29个内容深度不足：已在[42节点学习卡](../learning/NODE-STUDY-CARDS.md)补齐42/42的专业定义、机制、类比限制、官方专题、最小实作与负例。
+- 修复Spring Security→PostgreSQL、原生Android/iOS→Expo、Docker/Linux→HTTP等错误硬先修；硬依赖从40降至35；B06任务与F11实时通信已区分。
+- [需求路由器](../learning/route_need.py)增加结构化JSON和JavaScript/Java、NestJS/JS歧义回归。
+- [小型实测](../learning/labs/README.md)引入3个Node内置测试；Spring和PostgreSQL实际部署实验仍NOT_RUN。
+- 原V3必须完成Java/Spring的CI断言已移除；V4需求排序以[ADR-0003](../decisions/ADR-0003-demand-driven-learning.md)为准。
+- 严格结果记录另见[最新验收报告](AUDIT-V4.2-20261114.md)，静态检查/CI与本人独立学习不能混淆。

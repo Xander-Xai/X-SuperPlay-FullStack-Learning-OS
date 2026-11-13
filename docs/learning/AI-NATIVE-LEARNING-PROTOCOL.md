@@ -11,7 +11,7 @@
 | 只知道“我要做一个网站/小程序/企业AI功能”，不知学什么 | 参考上游[BDL-P01](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md) | 业务需求→用户/目标→模块→技能Gap，先确定当前最小交付 |
 | 知道“我要学Spring事务/调试Vue状态”，不知怎么学 | 参考上游[ANL-P01](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md) | 指定技能节点→最低先修→官方章节→实战负例→独立验收 |
 
-无论哪一个入口，都回到本仓的[需求路由](DEMAND-ROUTER.md)、[42节点知识图](KNOWLEDGE-GRAPH.md)、[权威资料](OFFICIAL-RESOURCES.md)和[会话卡](GAP-SESSION-TEMPLATE.md)。不要让上游六周 Track 和本仓原24周表同时驱动第二套日程。
+无论哪一个入口，都回到本仓的[需求路由](DEMAND-ROUTER.md)、[42节点知识图](KNOWLEDGE-GRAPH.md)、[42张学习卡](NODE-STUDY-CARDS.md)、[权威资料](OFFICIAL-RESOURCES.md)和[会话卡](GAP-SESSION-TEMPLATE.md)。不要让上游六周 Track 和本仓原24周表同时驱动第二套日程。
 
 ## 2. 每次只针对当前阻断的一个 Gap
 
@@ -43,8 +43,8 @@ flowchart LR
 
 请遵守我的 FullStack Learning OS：
 - 优先查阅 docs/learning/DEMAND-ROUTER.md、knowledge-map.json、
-  FULLSTACK-MENTAL-MODEL.md、OFFICIAL-RESOURCES.md 和
-  UPSTREAM-ASSET-INDEX.md，沿用现有知识节点ID，不重新建立时间课表。
+  FULLSTACK-MENTAL-MODEL.md、NODE-STUDY-CARDS.md、
+  OFFICIAL-RESOURCES.md 和 UPSTREAM-ASSET-INDEX.md，沿用现有知识节点ID，不重新建立时间课表。
 - 不要假定我必须先学完W1–W24。先基于当前需求判断必要能力，
   并区分“已独立会/有了解未验证/当前不会/当前不用”。
 - 先给出本次业务链路：前端→HTTP/协议→API→业务→数据/异步→安全→部署，
@@ -62,6 +62,8 @@ flowchart LR
 - 如果没有可靠官方材料或没有读取到仓库，不要虚构链接或源码。
   未经授权不操作真实账户/客户数据、付费API或生产服务。
 
+可用命令 python docs/learning/route_need.py --node <节点ID> --json 取得结构化卡片；
+也可以读取 docs/learning/labs/README.md 的已存在实践脚本；不要创造虚假的运行回执。
 先输出本次【目标能力节点→最低先修→专业解释→通俗解释→官方资料→最小实验】；
 如果当前需求非常明确，直接开始，不要机械要求补充大量表单或重排长期课程。
 ~~~

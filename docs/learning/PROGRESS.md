@@ -42,7 +42,7 @@
 
 | 里程碑 | 代码与测试状态 | 学习者独立考核 | 生产/下游状态 |
 |---|---|---|---|
-| S0 ReconLab 合成核对预览 | API/Web 代码已生成；GitHub CI 通过 | **NOT_RUN** | TRAINING_ONLY / NO_AUTHORIZATION |
+| S0 ReconLab 合成核对预览 | API/Web 代码、npm lockfile 已提交；GitHub Python/React CI 通过（仅工程基线） | **NOT_RUN** | TRAINING_ONLY / NO_AUTHORIZATION |
 | S1 CSV/PG/AuthZ | NOT_RUN | NOT_RUN | NOT_READY |
 | S2 Celery/SSE | NOT_RUN | NOT_RUN | NOT_READY |
 | S3 Java Audit/Outbox | NOT_RUN | NOT_RUN | NOT_READY |

@@ -80,7 +80,7 @@ export default function App() {
         <section className="stats">
           <div><span>订单数</span><strong>{summary.order_count}</strong></div>
           <div><span>预计结算金额</span><strong>¥ {summary.expected_payout_total}</strong></div>
-          <div><span>已匹配订单的实际打款</span><strong>¥ {summary.known_order_paid_total}</strong></div>
+          <div><span>已识别订单的实际打款</span><strong>¥ {summary.known_order_paid_total}</strong></div>
           <div><span>示意毛利</span><strong>¥ {summary.indicative_margin_before_other_costs}</strong></div>
         </section>
         <section className="panel">

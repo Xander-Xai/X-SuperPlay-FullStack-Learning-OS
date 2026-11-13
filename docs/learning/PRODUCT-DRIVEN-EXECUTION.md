@@ -82,3 +82,13 @@
 - **独立改动题 B**：新增一种非法输入（重复或无效金额/超范围），让 API 明确拒绝并添加前端错误态。
 - **独立改动题 C**：模拟 200ms/2s 请求、触发两次点击，修复任何可能出现的陈旧数据覆盖。
 - 本次已有源码与 CI 是 **AI-assisted baseline**，**不代替你自己完成上面三题**。只有提供新 commit + 实测故障日志才能把 W1/W2 的状态从 `NOT_RUN` 改为真实学习进展。
+
+## 6. 当前 S0–S4 的可执行 GitHub Issues
+
+- [#1 S0 独立修改与故障复现](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/1)（现在开始；不能因基线 CI 成功自动关闭）
+- [#2 S1 CSV + PostgreSQL + AuthZ](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/2)
+- [#3 S2 Celery + SSE 可靠核对](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/3)
+- [#4 S3 Java/Spring + Outbox](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/4)
+- [#5 S4 真实业务与发布授权 Gate](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/5)
+
+当前基线 [已验证的前后端 CI](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/actions/runs/43475808749) 包含 npm lockfile 的 `npm ci`、前端测试/构建与后端测试，**不等于浏览器 E2E 或独立人类学习验收**。

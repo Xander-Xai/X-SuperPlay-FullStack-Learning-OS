@@ -11,6 +11,16 @@
 - **[S0 合成用例与独立练习](docs/project/RECON-LAB-CASE.md)**：真实修改代码/运行测试；AI 生成基线不等于本人学会。
 - **[下游正式上线门禁](docs/project/DOWNSTREAM-RELEASE-GATES.md)**：Utility-Sites 冻结、商业验证、隐私安全、授权部署的独立条件。
 
+## 现在可领取的产品实战任务
+
+| 里程碑 | GitHub Issue | 目标 |
+|---|---|---|
+| **S0 从现在开始** | [#1 独立改造合成核对](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/1) | 理论/代码修改/故障复现与本人考核 |
+| S1 数据和权限 | [#2 CSV + PostgreSQL + AuthZ](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/2) | 受控数据导入和用户隔离 |
+| S2 后台可靠性 | [#3 Celery + SSE](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/3) | 异步核对与恢复 |
+| S3 Java 多栈 | [#4 Spring + Outbox](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/4) | 独立审计业务与最终一致性 |
+| S4 真正上线 | [#5 产品开发与发布 Gate](https://github.com/Xander-Xai/X-SuperPlay-FullStack-Learning-OS/issues/5) | 需要真实市场验证、授权和发布验收 |
+
 ## 从这里开始
 
 | 入口 | 作用 | 事实状态 |

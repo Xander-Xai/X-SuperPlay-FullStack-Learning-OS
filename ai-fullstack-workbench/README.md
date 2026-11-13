@@ -8,7 +8,7 @@
 
 - **后端**：FastAPI + Python `Decimal` 结算预览算法，检查精确金额、重复订单、无对应打款和参数异常。
 - **前端**：React + TypeScript + Vite 页面，展示核对结果，点击按钮切换 `DEMO-102` 金额并重新请求后端。
-- **自动化 CI**：pytest 单元/API 测试、Vitest 前端测试、TypeScript 类型检查和 Vite 构建。见 [工作流](../.github/workflows/reconlab-slice.yml)。
+- **自动化 CI**：pytest 单元/API 测试、Vitest 前端测试、TypeScript 类型检查和 Vite 构建；已提交 npm lockfile 并由 `npm ci` 验证。见 [工作流](../.github/workflows/reconlab-slice.yml)。
 - **不存在**：真实平台接入、商户账户/真实 CSV、数据库、身份认证、正式分账算法、Docker 部署和生产级安全策略。
 
 ## 本地启动（两个终端）
@@ -30,7 +30,7 @@ python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 ```bash
 cd ai-fullstack-workbench/apps/web
-npm install
+npm ci
 npm run dev
 ```
 
@@ -43,7 +43,7 @@ cd ai-fullstack-workbench/apps/api
 python -m pytest -q
 
 cd ../web
-npm install
+npm ci
 npm run test
 npm run build
 ```

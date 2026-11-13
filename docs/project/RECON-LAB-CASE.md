@@ -32,7 +32,7 @@
 - Python 单元测试和 API 测试拒绝重复/非法输入；前端有 React 页面、合成差异切换与状态标签。
 - CI 验收证明安装依赖后测试和 build 成功；**没有完成浏览器 Playwright E2E、正式数据权限、外部用户验收或发布**。
 - 前端 `types.ts` / `api.ts` 仍是手写的 **W1/W2 学习阶段**；必须在 W3 换成 OpenAPI→Orval 并增加契约 CI。
-- 当前前端没有提交 npm lockfile；正式发布前必须补 lockfile 并将 CI 从 `npm install` 切为 `npm ci`，否则可复现性不足。
+- 前端已提交 `package-lock.json` 并在 CI 中使用 `npm ci`，可按锁定依赖复现前端测试与构建；但仍缺生产鉴权、数据库、HTTPS/部署、浏览器 E2E 等关键门槛，不能因此认定可发布。
 
 ## 本人应该亲手完成的三题
 

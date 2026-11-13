@@ -25,3 +25,13 @@ test-results/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Java / Maven / Gradle
+*.class
+*.log
+**/target/
+**/.gradle/
+**/build/
+**/.settings/
+.classpath
+.project

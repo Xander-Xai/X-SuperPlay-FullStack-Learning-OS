@@ -11,6 +11,8 @@
 | [ROADMAP.md](ROADMAP.md) | **V3.0 唯一 W1–W24 学习计划（含原 V2 基线）**：每周时间细分、重点实验、资料、门槛 | PLAN |
 | [学习进度](docs/learning/PROGRESS.md) | W1–W24 状态、Gap、证据与复盘 | NOT_RUN |
 | [能力地图](docs/learning/CAPABILITY-MATRIX.md) | Java/JVM/Spring/前端/系统设计的知识点→周次→Gate 索引 | REFERENCE |
+| [W09–W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md) | 每周 D1–D6 任务、先修检查、故障实验与完成条件 | PLAN |
+| [版本选择约束](docs/learning/STACK-VERSION-POLICY.md) | JDK/Boot/Node 稳定版本、兼容矩阵、许可证与锁定机制 | REFERENCE |
 | [前端专项字典](docs/learning/references/frontend.md) | HTML/CSS/a11y、JS/TS、React、SSR/Next、Node、性能与测试 | REFERENCE |
 | [后端专项字典](docs/learning/references/backend.md) | Java/JVM/Spring/安全、FastAPI、SQL、消息、缓存按需深挖 | REFERENCE |
 | [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) | 复现、证据、失败与修复记录 | TEMPLATE |

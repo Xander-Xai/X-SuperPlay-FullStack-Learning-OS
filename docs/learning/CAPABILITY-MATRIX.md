@@ -1,6 +1,6 @@
 # V3.0 全栈能力地图与检索入口
 
-> 这是知识索引，**不是第二套进度表**。唯一时间轴为 [ROADMAP W1–W24](../../ROADMAP.md)，唯一实际状态台账为 [PROGRESS](PROGRESS.md)。所有能力目前 **UNASSESSED / NOT_RUN**。
+> 这是知识索引，**不是第二套进度表**。W09–W24 的任务操作入口见 [扩展执行手册](W09-W24-EXECUTION-PLAYBOOK.md)。唯一时间轴为 [ROADMAP W1–W24](../../ROADMAP.md)，唯一实际状态台账为 [PROGRESS](PROGRESS.md)。所有能力目前 **UNASSESSED / NOT_RUN**。
 
 | 能力层 | 必备技能 | 周次 | 验收 Gate | 详情 |
 |---|---|---|---|---|

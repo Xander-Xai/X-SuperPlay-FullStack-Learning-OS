@@ -84,7 +84,7 @@ def main() -> None:
     assert "432h" in roadmap or "432 小时" in roadmap, "24-week budget missing"
     assert "SUPERSEDED IN PART" in adr1, "ADR-0001 outdated without supersession"
     assert "Java" in adr2 and ("W9–W13 必修" in adr2 or "W09–W13 必修" in adr2), "ADR-0002 must record Java mandatory W9-W13"
-    assert "W09–W13 必修" in roadmap, "Java/Spring mandatory status missing"
+    assert re.search(r"Java/Spring Boot[^\n]*W0?9–W13[^\n]*必修", roadmap), "Java/Spring mandatory status missing"
     assert "W09-W24-EXECUTION-PLAYBOOK.md" in readme, "README playbook entry missing"
     assert "STACK-VERSION-POLICY.md" in readme, "README versions entry missing"
 

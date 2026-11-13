@@ -19,6 +19,7 @@
         "https://docs.github.com/en/issues"
       ],
       "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/market-to-lab-loop.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md"
       ]
     },
@@ -38,6 +39,9 @@
       ],
       "official": [
         "https://learn.microsoft.com/en-us/azure/architecture/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/ai-product-engineer-roadmap-20261028.md"
       ]
     },
     {
@@ -55,6 +59,9 @@
       ],
       "official": [
         "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
       ]
     },
     {
@@ -72,6 +79,9 @@
       ],
       "official": [
         "https://developer.mozilla.org/en-US/docs/Learn_web_development"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md"
       ]
     },
     {
@@ -89,6 +99,9 @@
       ],
       "official": [
         "https://www.typescriptlang.org/docs/handbook/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ]
     },
     {
@@ -130,6 +143,9 @@
       ],
       "official": [
         "https://nextjs.org/docs/app"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ]
     },
     {
@@ -147,6 +163,9 @@
       ],
       "official": [
         "https://nodejs.org/en/learn"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ]
     },
     {
@@ -168,6 +187,9 @@
       ],
       "official": [
         "https://vite.dev/guide/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ]
     },
     {
@@ -186,6 +208,9 @@
       ],
       "official": [
         "https://spec.openapis.org/oas/latest.html"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
       ]
     },
     {
@@ -348,6 +373,9 @@
       ],
       "official": [
         "https://www.rabbitmq.com/docs"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
       ]
     },
     {
@@ -363,6 +391,9 @@
       ],
       "official": [
         "https://dev.mysql.com/doc/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ]
     },
     {
@@ -380,7 +411,9 @@
         "https://docs.github.com/en/actions"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md",
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-fullstack-rubric.md",
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-fullstack-research-20261028.md"
       ]
     },
     {
@@ -401,6 +434,9 @@
       ],
       "official": [
         "https://docs.docker.com/get-started/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB11.md"
       ]
     },
     {
@@ -441,6 +477,9 @@
       ],
       "official": [
         "https://opentelemetry.io/docs/"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB07.md"
       ]
     },
     {
@@ -462,6 +501,9 @@
       ],
       "official": [
         "https://docs.github.com/en/actions"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
       ]
     },
     {
@@ -482,6 +524,9 @@
       ],
       "official": [
         "https://web.dev/learn/seo"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md"
       ]
     },
     {
@@ -521,7 +566,7 @@
         "https://docs.expo.dev/"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-multiplatform-track.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/assessments/ai-native-multiplatform-rubric.md"
       ]
     },
     {
@@ -562,6 +607,9 @@
       ],
       "official": [
         "https://docs.stripe.com/payments"
+      ],
+      "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/labs/freelance-proof-20261025/README.md"
       ]
     },
     {
@@ -584,6 +632,7 @@
         "https://vuejs.org/guide/introduction"
       ],
       "upstream": [
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/ai-native-fullstack-track.md",
         "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/knowledge/software-engineering/programming-language-stack-map.md"
       ],
       "lab": "Vue列表请求逆序、watch清理、键盘可用表单",
@@ -632,7 +681,7 @@
         "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/career/opc-multiplatform-product-engineer-roadmap-20261028.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/sources/ai-native-multiplatform-research-20261028.md"
       ],
       "lab": "断网后受控读缓存，登录切换时不泄露他人数据",
       "plain": "Service Worker像离线接待员，并非永不下线的后台进程"
@@ -656,7 +705,7 @@
         "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB02.md"
       ],
       "lab": "模拟断开重连、消息乱序和发送速度超过消费速度",
       "plain": "WebSocket是双向管道，但不是持久消息数据库"
@@ -746,7 +795,8 @@
         "https://www.postgresql.org/docs/current/textsearch.html"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB03.md",
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB04.md"
       ],
       "lab": "文件元数据与原始对象分离，比较文本与向量召回负例",
       "plain": "数据库不是把所有文件塞一张表；向量检索不是业务权限系统"
@@ -858,7 +908,7 @@
         "https://modelcontextprotocol.io/docs/learn/architecture"
       ],
       "upstream": [
-        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/enterprise-ai-application-capstone.md"
+        "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/tracks/project-driven/lab-guides/LAB06.md"
       ],
       "lab": "最小MCP工具定义+非法参数/拒绝未授权调用",
       "plain": "MCP是AI上下文和工具互操作协议，不是REST或通用消息队列的替代品"

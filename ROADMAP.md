@@ -1,19 +1,19 @@
-# 全栈开发系统学习路线 V2.0 — 唯一执行主线
+# 全栈开发系统学习路线 V3.0 — 唯一执行主线（24 周能力全景）
 
 > 状态：**PLAN / NOT_RUN / UNASSESSED**（初始建库，未代表已学完、代码已跑通或生产已部署）。
-> 版本：2026-11-13；目标：**8 周 × 6 天 × 3 小时 = 144 小时参考预算**。学习可因工作和面试调整，能力以证据验收而非时间打卡为准。
+> 版本：2026-11-14；**W1–W8 = 144h 基础阶段；W9–W24 = 288h 拓展；24 周累计 432h 参考预算**。不按日历毕业，真实岗位可依据 Gap 跳学，证据验收仍不可跳过。
 
 ## 0. 一句话决策
 
-**只执行这一条全栈路线**。前端、后端既有路线降为专项知识字典，遇到真实 Gap 再查阅和补实验，不分别推进第二套 8 周进度。上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 保留岗位驱动六周专题作为*参考与紧急 Gap 训练*，与本仓八周统一执行主线不是相互竞争的进度表。
+**只执行这一条全栈路线（W1–W24）**。前端、后端既有路线降为专项知识字典，遇到真实 Gap 再查阅和补实验，不分别推进第二套 8 周进度。上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 保留岗位驱动六周专题作为*参考与紧急 Gap 训练*，与本仓八周统一执行主线不是相互竞争的进度表。
 
 ## 1. 学习目标与非目标
 
 - 目标：掌握 **需求→设计→数据模型→API 契约→前端→后端→异步→测试→部署→观测→排障→复盘** 全链路；独立维护并解释一个 AI Web 工作台。
 - 已有 Python/FastAPI/RAG/Agent 经验可快速诊断、跳过重复入门，但必须完成实际考核；不存在“做过项目=掌握”的自动豁免。
 - 项目：`ai-fullstack-workbench`（本学习仓内工作目录，按项目规模逐步扩展；无需立刻创建独立远程仓）。
-- 本期核心栈：React + TypeScript + Vite + React Router + TanStack Query + Tailwind/shadcn/ui；FastAPI + Pydantic + SQLAlchemy/Alembic；PostgreSQL + Redis + Celery；OpenAPI + Orval；Docker Compose + Nginx + pytest + Playwright + GitHub Actions。
-- 明确后置：Next.js 深度、Java/Spring Boot 深度、Kubernetes、复杂微服务与重复构建完整 RAG 平台。若有效 JD 触发 MUST，可按需插入针对性实验并记录变更理由。
+- 核心栈：React + TypeScript + Vite/React Router + TanStack Query/Tailwind/shadcn/ui；Python FastAPI/Pydantic/SQLAlchemy；**Java 核心/JVM/Spring Boot/Spring MVC/Spring Security/Spring Data**；PostgreSQL/Redis/Celery；OpenAPI/Orval；Docker/Nginx/CI/E2E。W9–W24 增加 Java/JVM、前端进阶、Node/SSR 原理和分布式可靠性。
+- **Java/Spring Boot 已升级为 W9–W13 必修**；Next.js SSR 核心比较与 Node 运行时基础安排 W17–W18，深度框架迁移、Kubernetes 真机集群、复杂微服务与重复构建完整 RAG 平台仍是 P2。岗位 MUST 可触发优先级重排并记录原因。
 - 资源优先官方文档；不追求工具数量。无客户授权时只用合成/许可数据；不产生真实业务/生产部署宣称。
 
 ## 2. 学习与交付边界
@@ -27,7 +27,9 @@
 - SSE 必须处理网络块≠事件、代理缓冲、重连以及连接取消；原生 EventSource 与 fetch-stream 的 Header/方法限制不同。
 - AI 可生成重复 UI/CRUD/CI 初稿，但**跨端状态、认证刷新、并发锁、幂等与流解析**必须先本人独立实现最小正确版本；所有代码均需本人审查和测试。
 
-## 3. 八周学习计划
+## 3. 阶段 A：W1–W8 端到端基础（原 V2.0 保留）
+
+> 下列八周是**阶段 A 基线，不是整个 V3.0 的全部**。八周 144h 的 G01–G12 不受拓展课程替代。
 
 | 周 | 主题 | 预算 | 验收产物 |
 |---|---|---:|---|
@@ -221,7 +223,7 @@ FastAPI Router + Pydantic（接口权威）
 - 每周记录 [学习进度](docs/learning/PROGRESS.md)；使用 [实验模板](docs/learning/EXPERIMENT-TEMPLATE.md) 记测试命令、结果、环境、截图/日志定位、未验证项。
 - 允许停止/延期：面试、工作交付、安全/成本、缺少环境与授权。优先真实业务和求职任务，不凭日历填“完成”。
 
-## 6. 能力验收清单（总 Gate）
+## 6. 阶段 A 能力验收清单（G01–G12）
 
 [最终 12 项可执行验收与证据模板](docs/learning/ACCEPTANCE.md) 使用 G01–G12 编号，与以下 12 项一一对应：
 
@@ -257,10 +259,258 @@ FastAPI Router + Pydantic（接口权威）
 统一看 [仓库索引](docs/REPOSITORY-INDEX.md)。主线知识和个人学习证据在此；工程方法在 Dev-Workbench，业务验证在 Utility-Sites；**知识引用不构成发布/改造/商业授权**。
 ## 9. 执行补充：唯一项目结构、评分与资料检索约定
 
-- **唯一 Roadmap**：根目录 `ROADMAP.md`；不要另创建 `docs/learning/roadmap.md` 造成冲突。
-- **唯一进度**：`docs/learning/PROGRESS.md`；当前所有周均 `NOT_RUN / UNASSESSED`。
+- **唯一 Roadmap**：根目录 `ROADMAP.md`，现覆盖 W1–W24；不要另创建 `docs/learning/roadmap.md` 造成冲突。
+- **唯一进度**：`docs/learning/PROGRESS.md`；当前 W1–W24 均 `NOT_RUN / UNASSESSED`。
 - **唯一项目**：`ai-fullstack-workbench` 是计划中的应用工作目录，目标结构见 [完整项目蓝图](docs/project/PROJECT-BLUEPRINT.md)；今天没有创建应用功能代码。
 - **参考字典**：[frontend](docs/learning/references/frontend.md) / [backend](docs/learning/references/backend.md) 按 Gap 查资料、做最小实验、回主线记录证据，不是第二/第三份进度计划。
 - **AI 边界**：重点跨端状态、刷新并发、数据库锁/幂等、SSE 解析、Worker 恢复本人先写；CRUD/UI/测试/CI 框架可 AI 辅助，所有生成代码仍需运行与审查。参见 [AI-CODING-POLICY](docs/learning/AI-CODING-POLICY.md)。
 - **L1/L2/L3**：L1 不看资料解释，L2 自己实现与测试，L3 故障注入/归因/修复/取舍；与上游 0–4 和 Dev-Workbench L0–L6 各自分离。
 - **内容验收映射**：[V2.0 落盘覆盖矩阵](docs/quality/ROADMAP-COVERAGE.md)；这是文档核对，不是个人技能通过。
+
+## 十、V3.0 升级：八周不是完整全栈的终点
+
+**原 V2.0 的 W1–W8 保留为第一阶段“端到端基线”，其学时、实验和 G01–G12 验收不重置。** 但它只覆盖 React/FastAPI 主链路，无法代表具备 Java/Spring 生态、成熟前端架构、复杂数据一致性与生产级交付的完整能力。V3.0 在**同一个 ROADMAP** 中继续 W9–W24，不另创建“Java 8 周”或“前端 8 周”竞争路线。
+
+| 阶段 | 周次 | 目标 | 时间预算 | 过关含义 |
+|---|---|---|---:|---|
+| **A 基础纵切** | W1–W8 | 原 React+FastAPI+DB/Redis/Celery+部署 MVP | 8×18=**144h** | 能做基础前后端闭环，G01–G12 |
+| **B 语言/框架深入** | W9–W16 | Java/JVM/Spring 完整基础，深入 HTML/CSS/TS/React 工程 | 8×18=**144h** | 能维护 Java API + 前端进阶，不靠教程照抄 |
+| **C 多栈交付与架构** | W17–W24 | SSR/Node 原理、消息与一致性、安全/云/性能和最终答辩 | 8×18=**144h** | 两种后端协作 + 前端性能/跨端故障，G01–G24 |
+
+总参考：**24 周 / 432 小时**（每周 6 天，每天约 3h）。它是学习与验收预算，不是“保证 24 周成为资深架构师”。岗位面试可按真实 JD 使用同一任务台账进行 **Gap Jump**：重排例如 W9 Java 基础 / W12 Spring API 的具体实验，仍需补回对应 Gate，不产生第二套计划。
+
+### 十一、扩展后的技术能力地图（每个方向都有最小实测）
+
+| 能力域 | 必备知识（非仅会调用 SDK） | 学习周次 | 级别 |
+|---|---|---|---|
+| CS/Web | 网络/TLS/HTTP2-3基础、Cookie/缓存/浏览器渲染、Linux 进程/线程/内存/网络 | W1、W14、W22 | P0 |
+| HTML/CSS/a11y | HTML 表单语义、布局/Flex/Grid/定位、CSS 层叠/响应式、键盘和可访问性 | W2、W14 | P0 |
+| JS/TypeScript | 原型/闭包/Event Loop、ESM、泛型/映射类型、异常/异步取消、构建工具 | W1、W15 | P0 |
+| React 工程 | Hooks/状态、Query/Mutation、表单、设计系统、性能分析、组件/E2E 测试 | W2、W16 | P0 |
+| 渲染选型 | CSR/SSR/SSG/ISR、Next.js/RSC 边界、SEO、缓存失效 | W17 | P1（对比实验） |
+| Node 后端基础 | Node Event Loop/Stream/背压/ESM、BFF/API、NestJS 认识 | W18 | P1（独立最小实验） |
+| Java 核心 | OOP、集合/泛型/Stream、异常、Maven/Gradle、并发/JMM/虚拟线程/JVM/GC/JFR | W9–W11 | **P0 必修** |
+| Spring 生态 | IoC/AOP/MVC、Boot 自动配置、JPA/JDBC/MyBatis 对比、事务、Security、JUnit/Testcontainers | W12–W13 | **P0 必修** |
+| Python 后端 | FastAPI、Pydantic、SQLAlchemy、依赖注入、Pytest、异步与 Worker | W3–W6 | P0（已有基础诊断可加速） |
+| 数据与中间件 | PostgreSQL/MySQL SQL 差异、Redis、RabbitMQ/Kafka 二选一、Outbox/幂等/重试/一致性 | W4、W6、W19–W20 | P0+P1 |
+| 接口与系统设计 | REST/OpenAPI/版本、OAuth2/OIDC、权限、事件契约、分层/边界、幂等、容量估算 | W3、W12–W13、W19–W24 | P0+P1 |
+| 生产交付 | Git/测试/CI/CD、Docker/Nginx、Linux、监控/Traces/性能、安全、备份/恢复 | W7–W8、W21–W24 | P0+P1 |
+| 选修生态 | Vue3 对比、GraphQL/gRPC 深挖、WebFlux、微服务拆分、K8s 集群、NoSQL/搜索 | 按真实 JD 触发 | P2 |
+
+**P0 定义**：完成最终全栈项目的必修能力；**P1**：本路线扩展期必须完成的最小比较/集成实验；**P2**：按业务需要的深挖，不强制同时上所有栈。这个优先级不代表全行业所有岗位的统一 JD。
+
+### 十二、W9–W24 唯一连续执行表
+
+| 周次 | 核心模块 | 小时 | 交付与独立验收 |
+|---|---|---:|---|
+| W09 | Java 语言核心与工程环境 | 18h | 在同一 Workbench 新建 apps/java-service 草案；手写纯 Java 领域规则、CLI 和 JUnit 5；无需复制整个 FastAPI |
+| W10 | Java 集合、Streams、常见设计模式 | 18h | 实现工作台任务去重/聚合与分页规则的纯 Java 模块；对照 HashMap 误用、空值、重键与等价比较 |
+| W11 | Java 并发、JVM、数据库访问 | 18h | 制造共享计数器竞态，分别用锁/原子变量解决；对照虚拟线程与线程池 I/O 负载；用 JDBC 操作 PostgreSQL |
+| W12 | Spring / Spring Boot Web API | 18h | 实现独立 Java 业务边界：通知/审计规则服务（或一个无需迁移的单独业务功能）；新建 Controller→Service→Repository；OpenAPI 暴露 API |
+| W13 | Spring 数据、安全与集成测试 | 18h | Java 服务使用独立 schema/表和 Testcontainers PostgreSQL；资源权限 403、失败事务回滚、依赖测试；只深入实现 JPA 或 MyBatis 一条主路径 |
+| W14 | HTML/CSS、浏览器布局与可访问性 | 18h | 将工作台后台页在桌面/移动端实现真实布局，独立修复 3 个溢出/焦点/表单问题；设计 Token 与暗黑模式可选 |
+| W15 | JavaScript/TypeScript 深层与前端构建 | 18h | 实现类型安全组件表格与 API 错误模型；切换包大小/懒加载策略；分析 Network/Bundle 输出 |
+| W16 | React 高级架构与前端测试 | 18h | 重构任务工作台为 feature slices；大列表虚拟化，Mutation 回滚与并发缓存；错误边界和表单/无障碍自动测试 |
+| W17 | 渲染架构：SPA、SSR、SSG、Next.js | 18h | 在 Workbench 的 labs/rendering-comparison 创建最小公开页对比 Vite SPA 与 Next.js SSR/SSG；不替换主 Web 应用 |
+| W18 | Node.js 运行时与 BFF/API 思维 | 18h | 用同一工作台合成数据做 Node 小 BFF/流式文件处理对比实验（单独 lab）；不再建第二套生产后端 |
+| W19 | 消息系统与最终一致性 | 18h | 为 Java 服务与 Python 任务链设计一个可靠事件/审计链路，在独立 broker 测试环境跑 Outbox→消费→重复投递 |
+| W20 | 数据库、缓存、搜索与分布式边界 | 18h | 跨 Python/Java 用同一 SQL 业务语义验证事务/约束；实现高并发分页与缓存失效；追加 MySQL SQL 方言对比卡 |
+| W21 | 身份、授权与 API 安全进阶 | 18h | 通过合成租户/模拟 OIDC Provider 验证 Python+Java API 的服务端授权及服务间身份；模拟跨租户越权和 Token 过期 |
+| W22 | Linux、云部署、基础设施与容灾 | 18h | 将主应用和 Java 可选服务使用 Compose profile 编排，构建可复现部署/恢复脚本；绘制单机→云环境演进图 |
+| W23 | 性能、安全与可观测性深挖 | 18h | 制造三类性能问题（前端渲染/Java I/O/数据库），取浏览器、JFR 和 Span 对照；提出优化并复测 |
+| W24 | 完整系统设计、跨语言集成与独立毕业验收 | 18h | 完成主 Workbench（React+FastAPI）与 Java 独立业务服务集成；一条前端→Python→消息/Java→DB→UI 的可观测纵切；答辩与故障恢复 |
+
+#### W09｜Java 语言核心与工程环境（18h）
+
+**必须掌握**：Java 21+ LTS/项目 JDK 冻结；Maven/Gradle 基础、包/模块、泛型、面向对象、异常、Record/枚举/注解、NIO/日期。
+
+**同一个 Workbench 内的实验**：在同一 Workbench 新建 apps/java-service 草案；手写纯 Java 领域规则、CLI 和 JUnit 5；无需复制整个 FastAPI。
+
+**独立验收**：本人解释 Java 与 Python 类型/异常差异；泛型/异常/边界测试可运行，提交准确 JDK 与构建版本。
+
+**验收编号**：G13。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W10｜Java 集合、Streams、常见设计模式（18h）
+
+**必须掌握**：List/Set/Map/HashMap、equals/hashCode、Comparable/Comparator、Streams/Optional、Lambda、接口分层、不可变对象；基础算法与复杂度。
+
+**同一个 Workbench 内的实验**：实现工作台任务去重/聚合与分页规则的纯 Java 模块；对照 HashMap 误用、空值、重键与等价比较。
+
+**独立验收**：集合正确性、复杂度与 Stream 副作用负例；可手写并测试 2 种数据结构方案。
+
+**验收编号**：G13。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W11｜Java 并发、JVM、数据库访问（18h）
+
+**必须掌握**：Thread/Executor/CompletableFuture、synchronized/volatile/Lock、线程安全、虚拟线程与阻塞 I/O、内存模型、堆栈/GC、JFR/jcmd、JDBC/HikariCP。
+
+**同一个 Workbench 内的实验**：制造共享计数器竞态，分别用锁/原子变量解决；对照虚拟线程与线程池 I/O 负载；用 JDBC 操作 PostgreSQL。
+
+**独立验收**：实际线程/GC/连接池日志；能解释吞吐≠延迟与虚拟线程适用边界；并发断言通过。
+
+**验收编号**：G14。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W12｜Spring / Spring Boot Web API（18h）
+
+**必须掌握**：Spring IoC/DI、Bean 作用域/生命周期、配置/自动装配、AOP/代理、Spring MVC DispatcherServlet、Filter/Interceptor、Validation、异常响应、Profiles/Actuator。
+
+**同一个 Workbench 内的实验**：实现独立 Java 业务边界：通知/审计规则服务（或一个无需迁移的单独业务功能）；新建 Controller→Service→Repository；OpenAPI 暴露 API。
+
+**独立验收**：异常/参数/依赖注入测试；对比 FastAPI Depends；能解释 Spring 代理、HTTP 请求路径。
+
+**验收编号**：G15。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W13｜Spring 数据、安全与集成测试（18h）
+
+**必须掌握**：Spring Data JPA/Hibernate、JdbcTemplate/JDBC、MyBatis 机制对比、N+1、事务传播/隔离、@Transactional 自调用、Spring Security FilterChain、认证与授权、JUnit/Mockito/Testcontainers。
+
+**同一个 Workbench 内的实验**：Java 服务使用独立 schema/表和 Testcontainers PostgreSQL；资源权限 403、失败事务回滚、依赖测试；只深入实现 JPA 或 MyBatis 一条主路径。
+
+**独立验收**：复现 @Transactional 不生效边界与 N+1；数据库集成测试必须使用真实 PostgreSQL 容器，不靠纯 H2。
+
+**验收编号**：G16。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W14｜HTML/CSS、浏览器布局与可访问性（18h）
+
+**必须掌握**：语义化 HTML、表单/Constraint Validation、CSS 层叠/特异性/布局流/定位/Flex/Grid、响应式/Container Queries、BEM/CSS Modules、a11y/ARIA/键盘导航、浏览器渲染流水线。
+
+**同一个 Workbench 内的实验**：将工作台后台页在桌面/移动端实现真实布局，独立修复 3 个溢出/焦点/表单问题；设计 Token 与暗黑模式可选。
+
+**独立验收**：390px/1280px 截图与键盘操作；表单标签/焦点/对比度检查；不得只依赖 Tailwind 现成类名。
+
+**验收编号**：G17。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W15｜JavaScript/TypeScript 深层与前端构建（18h）
+
+**必须掌握**：原型链/this/模块、闭包、事件循环与内存泄漏、TS 条件/映射/工具类型、unknown vs any、类型边界、pnpm workspace、Vite 打包/Tree-shaking/代码分割、Source Map。
+
+**同一个 Workbench 内的实验**：实现类型安全组件表格与 API 错误模型；切换包大小/懒加载策略；分析 Network/Bundle 输出。
+
+**独立验收**：TS strict 通过、无无理由 any；对比 JS 分包前后产物与实际加载；能解释 ESM 与打包机制。
+
+**验收编号**：G18。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W16｜React 高级架构与前端测试（18h）
+
+**必须掌握**：渲染与引用稳定性、useReducer/Context、状态分层、React Hook Form + Zod、TanStack Query/Table、Zustand/Redux 选择、Portal/Error Boundary、虚拟列表、Vitest/RTL/Playwright。
+
+**同一个 Workbench 内的实验**：重构任务工作台为 feature slices；大列表虚拟化，Mutation 回滚与并发缓存；错误边界和表单/无障碍自动测试。
+
+**独立验收**：React Profiler/组件测试证明优化前后；不为状态管理而状态管理；请求竞态和回滚负例通过。
+
+**验收编号**：G19。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W17｜渲染架构：SPA、SSR、SSG、Next.js（18h）
+
+**必须掌握**：CSR/SSR/SSG/ISR、SEO、Hydration、RSC 与 Client Components、App Router、Server Actions/Route Handlers、缓存和失效、跨层鉴权边界；Vue3 比较按岗位补充。
+
+**同一个 Workbench 内的实验**：在 Workbench 的 labs/rendering-comparison 创建最小公开页对比 Vite SPA 与 Next.js SSR/SSG；不替换主 Web 应用。
+
+**独立验收**：对比首屏、索引可达性、缓存、构建和部署复杂度；能画服务端/客户端数据和 Secret 边界。
+
+**验收编号**：G20。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W18｜Node.js 运行时与 BFF/API 思维（18h）
+
+**必须掌握**：Node Event Loop、libuv、Stream/背压、Buffer、ESM/CJS、npm/pnpm 安全与配置、Express/Fastify 最小 API、NestJS 概念；GraphQL/gRPC 与 REST 的选择。
+
+**同一个 Workbench 内的实验**：用同一工作台合成数据做 Node 小 BFF/流式文件处理对比实验（单独 lab）；不再建第二套生产后端。
+
+**独立验收**：验证 Streams 背压与异常传播，能解释与 FastAPI/Spring 的运行模型及部署差异；NestJS 非强制完整项目。
+
+**验收编号**：G20。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W19｜消息系统与最终一致性（18h）
+
+**必须掌握**：RabbitMQ 或 Kafka 二选一深入；消息 ACK、重投递、Consumer Group/Offset 概念、幂等消费、重试/DLQ、Outbox、事件 Schema/版本、失败恢复。
+
+**同一个 Workbench 内的实验**：为 Java 服务与 Python 任务链设计一个可靠事件/审计链路，在独立 broker 测试环境跑 Outbox→消费→重复投递。
+
+**独立验收**：服务断开/重复/乱序时不丢业务或无不可控副作用；有实际数据库与队列证据；不要求双学 Kafka/RabbitMQ。
+
+**验收编号**：G21。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W20｜数据库、缓存、搜索与分布式边界（18h）
+
+**必须掌握**：PostgreSQL/常见 MySQL 差异、索引/执行计划/事务对照、连接池/分页/键集分页、Redis 缓存一致性、容量与扩容、分布式锁风险；搜索 ElasticSearch 可按需。
+
+**同一个 Workbench 内的实验**：跨 Python/Java 用同一 SQL 业务语义验证事务/约束；实现高并发分页与缓存失效；追加 MySQL SQL 方言对比卡。
+
+**独立验收**：慢查询定位与容量估算，说明串行化边界/隔离策略；避免假设微服务可共写同一数据表。
+
+**验收编号**：G21。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W21｜身份、授权与 API 安全进阶（18h）
+
+**必须掌握**：OAuth2/OIDC、授权码+PKCE、Session/Refresh Token、CSRF/XSS/SSRF、RBAC/ABAC/多租户隔离、OWASP API Top10、审计、CSP、依赖/镜像漏洞、密钥轮换。
+
+**同一个 Workbench 内的实验**：通过合成租户/模拟 OIDC Provider 验证 Python+Java API 的服务端授权及服务间身份；模拟跨租户越权和 Token 过期。
+
+**独立验收**：越权/伪造/重放负例；证明角色权限不是前端控制；不自建安全协议或在公开库放 Secret。
+
+**验收编号**：G22。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W22｜Linux、云部署、基础设施与容灾（18h）
+
+**必须掌握**：Linux 进程/网络/文件权限/systemd、Nginx/反代/TLS、容器安全、CI/CD 工件/SBOM、环境/Secrets、备份/恢复、蓝绿/灰度；K8s 核心对象与调度概念（选修真机）。
+
+**同一个 Workbench 内的实验**：将主应用和 Java 可选服务使用 Compose profile 编排，构建可复现部署/恢复脚本；绘制单机→云环境演进图。
+
+**独立验收**：健康检查、回滚和数据恢复；资源/部署成本说明；K8s 不要求为学习故意建立复杂集群。
+
+**验收编号**：G23。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W23｜性能、安全与可观测性深挖（18h）
+
+**必须掌握**：Web Vitals LCP/INP/CLS、React Profiler、Bundle/瀑布图、JVM JFR/GC/线程、SQL/Redis/HTTP P95/P99、OpenTelemetry 跨 Python/Java trace、Prometheus/Grafana 概念、负载与容量测试。
+
+**同一个 Workbench 内的实验**：制造三类性能问题（前端渲染/Java I/O/数据库），取浏览器、JFR 和 Span 对照；提出优化并复测。
+
+**独立验收**：固定机器/并发/数据规模/环境；前后对照与失败日志真实存在，不能无条件宣称达某 QPS。
+
+**验收编号**：G23。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+#### W24｜完整系统设计、跨语言集成与独立毕业验收（18h）
+
+**必须掌握**：架构拆分边界、API/事件版本、Saga/Outbox、可维护性/成本、威胁建模、ADR、SLO/SLI、灾备/RTO/RPO、测试金字塔、产品演示与技术面试。
+
+**同一个 Workbench 内的实验**：完成主 Workbench（React+FastAPI）与 Java 独立业务服务集成；一条前端→Python→消息/Java→DB→UI 的可观测纵切；答辩与故障恢复。
+
+**独立验收**：按 G01–G24 清单复核，闭卷独立改一个陌生业务约束；不可用 Mock/文档替代运行验收。
+
+**验收编号**：G24。必须提供 JDK/Node/前端版本、`repo@commit`、真实命令与原始日志、失败注入和本人独立说明；未执行写 `NOT_RUN`。
+
+### 十三、跨语言项目架构决策（防止“学会两套后端”变成无意义复杂微服务）
+
+- **W1–W8**：保持 React + FastAPI 单体分层纵向链路。
+- **W9–W11**：在同仓 Java `labs/java-core` / `apps/java-service` 学语言和 JVM，不拆 Python 主业务。
+- **W12–W13**：新增一个 **Java 专属业务边界**（例如审计/通知规则，不迁移现有项目 CRUD），有独立表、权限、集成测试，不双端同时写同一张表。
+- **W17–W18**：Next.js/Node 仅为同仓 `labs/` 对比实验，不替换生产主前端、也不构造第二套重复的用户系统。
+- **W19–W24**：只有在消息/跨服务实验需要时，通过 REST/受控事件连接 Python 与 Java；在 Compose Profile 中可单独启停。无服务间认证/超时/幂等/归属边界就不算通过。
+
+单一应用蓝图见 [PROJECT-BLUEPRINT](docs/project/PROJECT-BLUEPRINT.md)；详细专题在 [前端字典](docs/learning/references/frontend.md) 和 [后端字典](docs/learning/references/backend.md)。
+
+### 十四、扩展毕业门槛与证据规则
+
+原 **G01–G12** 不降级，新增 **G13–G24**，详见 [ACCEPTANCE](docs/learning/ACCEPTANCE.md)：
+- **G13** Java 语言/集合/泛型/构建/设计规则；**G14** JVM、JMM/并发、JFR 与 I/O 负载；
+- **G15** Spring Boot IoC/MVC/API；**G16** Spring Data/事务/Security/Testcontainers；
+- **G17** HTML/CSS/响应式/a11y；**G18** JS/TS/ESM/Vite 构建与类型安全；
+- **G19** React 架构/表单/状态/渲染性能；**G20** SSR/Next.js 与 Node runtime 比较；
+- **G21** 中间件/事件投递/事务一致性/数据库差异；**G22** OAuth2/OIDC/多租户/OWASP；
+- **G23** Linux/部署恢复/可观测性/前后端性能；**G24** 真正跨 Python+Java 的完整纵切、设计说明与独立变更。
+
+**等级**：L1 关文档讲明原理；L2 独立编码/测试；L3 独立复现故障、定位根因、解释取舍并换场景复考。AI 生成初稿可加速，但不能代替个人独立验收。所有新增 Gate 初始 `NOT_RUN / UNASSESSED`，不能因为本次写入文档就判通过。
+
+### 十五、官方资源补全
+
+- [Dev.java General Tutorials](https://dev.java/learn/)：Java 语言、集合、泛型、Streams、并发、虚拟线程、JFR/JVM。
+- [Oracle Java 25 Virtual Threads](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)：虚拟线程与性能、Pinned Threads；实际 JDK 以项目固定的受支持 LTS 为准。
+- [Spring Boot Reference](https://docs.spring.io/spring-boot/reference/) + [Spring Security](https://docs.spring.io/spring-security/reference/) + [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/)：IoC/MVC/数据/事务/认证鉴权。
+- [Testcontainers Java + Spring Boot](https://testcontainers.com/guides/testing-spring-boot-rest-api-using-testcontainers/)：真实 PostgreSQL 集成测试。
+- [MDN Core Web](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core) + [Accessibility](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility) + [Web Performance](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance)：HTML/CSS/交互/性能基础。
+- [React Learn](https://react.dev/learn) / [Next.js App Router](https://nextjs.org/docs/app) / [Node.js Learn](https://nodejs.org/en/learn)：状态、SSR/Server Components、Node 运行时。
+- [Vitest](https://vitest.dev/guide/) / [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) / [Playwright](https://playwright.dev/docs/intro)：前端单元、组件、E2E。
+- [OWASP API Security](https://owasp.org/API-Security/) / [OpenTelemetry](https://opentelemetry.io/docs/) / [Docker](https://docs.docker.com/)：安全、观测与交付。
+
+学习资源以**官方链接+手动实验**为主，不宣称所有文档已被完整阅读或最新版已在本地验证。课程实例、CLI 命令与依赖具体版本必须在开始实验时重新核对并锁定。

@@ -32,7 +32,7 @@ def validate():
         days.extend(range(a, z + 1))
     if days != list(range(1, 15)):
         raise AssertionError("optional 14-day sprint has gaps/overlap")
-    weeks = [int(x) for x in re.findall(r"^\| W([1-8]) \|", modes, re.M)]
+    weeks = [int(x) for x in re.findall(r"^\| W([1-8]) [^|]+\|", modes, re.M)]
     if weeks != list(range(1, 9)):
         raise AssertionError("optional 8-week curriculum incomplete")
     qs = [int(x) for x in re.findall(r"^\| Q(\d{2}) ", drills, re.M)]

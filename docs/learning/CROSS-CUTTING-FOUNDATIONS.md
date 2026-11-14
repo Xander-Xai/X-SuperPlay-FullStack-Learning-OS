@@ -126,6 +126,8 @@ flowchart TB
 
 **权威资料**：[阅读官方/标准/课程原文](https://www.w3.org/TR/WCAG22/)。
 
+**精确分主题资料**：[WAI WCAG标准解读](https://www.w3.org/WAI/standards-guidelines/wcag/)。
+
 **动手实验（设计状态）**：做登录表单和弹窗，分别测试仅键盘、错误提示、窄屏、200%缩放和焦点返回。
 
 **故障/负例**：模态关闭焦点丢失、无label、错误只靠颜色提示。
@@ -143,6 +145,8 @@ flowchart TB
 **与42节点的关系**：F02、F03、D01。这里的P1按需是按适用场景的认知优先级，**不是要求所有项目先把它完成**。
 
 **权威资料**：[阅读官方/标准/课程原文](https://www.w3.org/International/quicktips/index)。
+
+**精确分主题资料**：[MDN Intl.DateTimeFormat时区](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) · [RFC3339日期时间语义](https://www.rfc-editor.org/rfc/rfc3339.html)。
 
 **动手实验（设计状态）**：同一UTC事件显示洛杉矶/上海，覆盖DST变化；中文/阿语表单与金额千分位/精度测试。
 
@@ -180,6 +184,8 @@ flowchart TB
 
 **权威资料**：[阅读官方/标准/课程原文](https://www.rfc-editor.org/rfc/rfc9110.html)。
 
+**精确分主题资料**：[OpenAPI接口契约](https://spec.openapis.org/oas/latest.html) · [GitHub Webhook验签示例](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries)。
+
 **动手实验（设计状态）**：实现分页与稳定排序；删除响应字段看契约检查失败；重复推送Webhook验签/去重。
 
 **故障/负例**：分页漏条/重复、破坏兼容、错误回调重复处理。
@@ -197,6 +203,8 @@ flowchart TB
 **与42节点的关系**：E01、B01。这里的P0工程是按适用场景的认知优先级，**不是要求所有项目先把它完成**。
 
 **权威资料**：[阅读官方/标准/课程原文](https://playwright.dev/docs/writing-tests)。
+
+**精确分主题资料**：[Pytest Fixtures测试数据隔离](https://docs.pytest.org/en/stable/how-to/fixtures.html)。
 
 **动手实验（设计状态）**：故意改OpenAPI字段、删除DB约束，验证哪类测试会失败；CI中恢复。
 
@@ -216,6 +224,8 @@ flowchart TB
 
 **权威资料**：[阅读官方/标准/课程原文](https://asvs.owasp.org/)。
 
+**精确分主题资料**：[NIST安全软件开发框架](https://csrc.nist.gov/pubs/sp/800/218/final)。
+
 **动手实验（设计状态）**：为文件上传画信任边界；使用合成账户模拟IDOR/恶意类型并记录拒绝证据。
 
 **故障/负例**：仅靠隐藏按钮拦越权、SSRF下载内网地址、敏感错误暴露。
@@ -233,6 +243,8 @@ flowchart TB
 **与42节点的关系**：E01、E02、E03。这里的P0交付是按适用场景的认知优先级，**不是要求所有项目先把它完成**。
 
 **权威资料**：[阅读官方/标准/课程原文](https://docs.github.com/en/code-security/concepts/supply-chain-security/supply-chain-security)。
+
+**精确分主题资料**：[GitHub PR依赖审核](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-review)。
 
 **动手实验（设计状态）**：新增一个已知不安全或不合规的合成依赖并在隔离PR检查依赖审查，不上传真实密钥。
 
@@ -252,6 +264,8 @@ flowchart TB
 
 **权威资料**：[阅读官方/标准/课程原文](https://asvs.owasp.org/)。
 
+**精确分主题资料**：[NIST隐私框架](https://www.nist.gov/privacy-framework)。
+
 **动手实验（设计状态）**：合成用户请求导出/删除，验证主表/对象/缓存/日志及备份恢复后的边界。
 
 **故障/负例**：删主表但对象存储还可读、日志包含token/PII。
@@ -269,6 +283,8 @@ flowchart TB
 **与42节点的关系**：E04、P03。这里的P1生产服务是按适用场景的认知优先级，**不是要求所有项目先把它完成**。
 
 **权威资料**：[阅读官方/标准/课程原文](https://sre.google/workbook/table-of-contents/)。
+
+**精确分主题资料**：[Google事故管理实践](https://sre.google/resources/practices-and-processes/incident-management-guide/)。
 
 **动手实验（设计状态）**：隔离环境注入慢接口和断连，按运行手册定位，记录发现/恢复时间与改进项。
 
@@ -341,6 +357,8 @@ flowchart TB
 **与42节点的关系**：B01、F03、D01。这里的P0数据是按适用场景的认知优先级，**不是要求所有项目先把它完成**。
 
 **权威资料**：[阅读官方/标准/课程原文](https://www.rfc-editor.org/rfc/rfc3339.html)。
+
+**精确分主题资料**：[PostgreSQL精确numeric与浮点比较](https://www.postgresql.org/docs/current/datatype-numeric.html) · [JS Intl时区格式化](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)。
 
 **动手实验（设计状态）**：同一时间/金额字段经浏览器→API→数据库往返并对照，测0.1+0.2/空值/夏令时。
 

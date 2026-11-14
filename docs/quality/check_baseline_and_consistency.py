@@ -51,6 +51,12 @@ def validate() -> dict:
         url = urlparse(t.get("official", ""))
         if url.scheme != "https" or not url.hostname:
             raise AssertionError(f"{t['id']}: invalid canonical reference")
+        for extra in t.get("extra_references", []):
+            u = urlparse(extra.get("url", ""))
+            if u.scheme != "https" or not u.hostname or len(extra.get("label", "")) < 4:
+                raise AssertionError(f"{t['id']}: invalid extra chapter")
+            if extra["url"] not in cards or extra["label"] not in cards:
+                raise AssertionError(f"{t['id']}: precise subject reference not indexed")
         if not re.search(r"^### " + re.escape(t["id"]) + r" ", cards, re.M):
             raise AssertionError(f"{t['id']}: missing professional/plain-language topic card")
         for content in (t["title"], t["definition"], t["analogy"], t["boundary"],
@@ -102,7 +108,7 @@ def validate() -> dict:
     if "尚未" not in audit or "已覆盖" not in audit or "遗漏" not in audit:
         raise AssertionError("cross-topic audit must distinguish prior coverage, gaps and limits")
     return {"core_nodes":len(core_ids), "cross_cutting_topics":len(topics),
-            "valid_parent_mappings":parent_links, "sources":len(topics),
+            "valid_parent_mappings":parent_links, "sources":sum(1+len(t.get("extra_references",[])) for t in topics),
             "contradiction_rules":sum(map(len,prohibited.values())),
             "historical_notices":4}
 

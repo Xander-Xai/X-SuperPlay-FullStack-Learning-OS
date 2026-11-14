@@ -142,6 +142,12 @@
         "a11y",
         "WCAG",
         "可访问性"
+      ],
+      "extra_references": [
+        {
+          "label": "WAI WCAG标准解读",
+          "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        }
       ]
     },
     {
@@ -173,6 +179,16 @@
         "UTF8",
         "货币",
         "decimal"
+      ],
+      "extra_references": [
+        {
+          "label": "MDN Intl.DateTimeFormat时区",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+        },
+        {
+          "label": "RFC3339日期时间语义",
+          "url": "https://www.rfc-editor.org/rfc/rfc3339.html"
+        }
       ]
     },
     {
@@ -229,6 +245,16 @@
         "接口兼容",
         "错误码",
         "幂等"
+      ],
+      "extra_references": [
+        {
+          "label": "OpenAPI接口契约",
+          "url": "https://spec.openapis.org/oas/latest.html"
+        },
+        {
+          "label": "GitHub Webhook验签示例",
+          "url": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries"
+        }
       ]
     },
     {
@@ -257,6 +283,12 @@
         "fixtures",
         "回归测试",
         "负载测试"
+      ],
+      "extra_references": [
+        {
+          "label": "Pytest Fixtures测试数据隔离",
+          "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+        }
       ]
     },
     {
@@ -285,6 +317,12 @@
         "漏洞",
         "SSRF",
         "XSS"
+      ],
+      "extra_references": [
+        {
+          "label": "NIST安全软件开发框架",
+          "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+        }
       ]
     },
     {
@@ -313,6 +351,12 @@
         "secrets",
         "密钥泄露",
         "第三方依赖"
+      ],
+      "extra_references": [
+        {
+          "label": "GitHub PR依赖审核",
+          "url": "https://docs.github.com/en/code-security/concepts/supply-chain-security/dependency-review"
+        }
       ]
     },
     {
@@ -341,6 +385,12 @@
         "GDPR",
         "隐私合规",
         "日志脱敏"
+      ],
+      "extra_references": [
+        {
+          "label": "NIST隐私框架",
+          "url": "https://www.nist.gov/privacy-framework"
+        }
       ]
     },
     {
@@ -369,6 +419,12 @@
         "Runbook",
         "告警",
         "错误预算"
+      ],
+      "extra_references": [
+        {
+          "label": "Google事故管理实践",
+          "url": "https://sre.google/resources/practices-and-processes/incident-management-guide/"
+        }
       ]
     },
     {
@@ -481,6 +537,16 @@
         "时间戳",
         "RFC3339",
         "数据契约"
+      ],
+      "extra_references": [
+        {
+          "label": "PostgreSQL精确numeric与浮点比较",
+          "url": "https://www.postgresql.org/docs/current/datatype-numeric.html"
+        },
+        {
+          "label": "JS Intl时区格式化",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+        }
       ]
     }
   ]

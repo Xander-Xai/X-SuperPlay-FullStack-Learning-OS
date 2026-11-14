@@ -93,6 +93,39 @@ class TestDemandRouter(unittest.TestCase):
         deps = [n["id"] for n in route_need.minimum_prerequisites(self.nodes["F05"], self.nodes)]
         self.assertEqual(["F02", "F03", "F04"], deps)
 
+    def test_cross_cutting_topic_catalog_and_parent_ids(self):
+        supplementary = route_need.load_topics()
+        self.assertEqual(17, len(supplementary))
+        for topic in supplementary.values():
+            with self.subTest(topic=topic["id"]):
+                self.assertTrue(topic["parent_nodes"])
+                self.assertTrue(all(p in self.nodes for p in topic["parent_nodes"]))
+                self.assertTrue(topic["official"].startswith("https://"))
+                self.assertEqual("UNASSESSED", route_need.topic_to_dict(topic, self.nodes)["state"])
+
+    def test_cross_cutting_real_need_search(self):
+        topic_catalog = route_need.load_topics()
+        cases = {
+            "我要学习数据结构和算法复杂度": "X02",
+            "前端项目国际化时区问题": "X06",
+            "升级依赖后供应链安全检查": "X11",
+            "SLO事故复盘": "X13",
+            "域名DNS证书过期": "X15",
+            "API版本兼容和游标分页": "X08",
+            "VSCode调试断点": "X03",
+        }
+        for query, expected in cases.items():
+            with self.subTest(query=query):
+                got = [x["id"] for x in route_need.find_topics(query, topic_catalog)]
+                self.assertIn(expected, got)
+
+    def test_cross_cutting_query_preserves_core(self):
+        self.assertIn("F08", [n["id"] for n in route_need.find("Vue3后台", self.nodes)])
+        self.assertEqual([], route_need.find_topics("不存在的神秘工具名"))
+        topic = route_need.load_topics()["X06"]
+        self.assertIn("D01", route_need.describe_topic(topic, self.nodes))
+        self.assertNotIn("PASS_WITH_EVIDENCE", route_need.describe_topic(topic, self.nodes))
+
     def test_known_node_and_unknown_query(self):
         self.assertEqual(route_need.find("B04", self.nodes)[0]["id"], "B04")
         self.assertEqual(route_need.find("不存在的神秘工具名", self.nodes), [])

@@ -1,5 +1,7 @@
 # ADR-0002：V3.0 扩展 Java/Spring、前端深度和学习周期
 
+> **历史V3全量覆盖决策**：本页的“Java/Next必修、WorkBench单项目”**不适用于现行需求驱动学习与所有下游项目**。现行优先级见[ADR-0004](ADR-0004-fullstack-foundations-and-authority.md)和[ADR-0003](ADR-0003-demand-driven-learning.md)。
+
 - 日期：2026-11-14
 - 状态：**PARTIALLY_SUPERSEDED_BY_ADR-0003**（历史V3全量能力覆盖有效；单一项目和24周固定执行顺序已失效）。请以[ADR-0003](ADR-0003-demand-driven-learning.md)为当前学习治理决策。
 - 关系：继承 [ADR-0001](ADR-0001-stack-and-boundaries.md) 的 Phase A 决策，但**将其中“Java/Spring Boot 深度后置 P2”这一句明确更新为 W9–W13 必修**，不是撤销 Vite/FastAPI 主链路。

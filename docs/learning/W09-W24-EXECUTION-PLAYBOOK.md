@@ -1,5 +1,7 @@
 # 历史W09–W24六日任务模板（按需选择，不强制顺序）
 
+> **历史V3手册；现行治理见[ADR-0004](../decisions/ADR-0004-fullstack-foundations-and-authority.md)**。此手册中的“必修/先修验收”只针对**自主选择做完整W09–W24全覆盖挑战**，并非当前所有项目/岗位的强制先修；按需先修请查[知识图](KNOWLEDGE-GRAPH.md)。
+
 > **OPTIONAL_GUIDED_SPRINT / LEARNER_NOT_RUN**。本文件保留旧24周课程中W09–W24的96个D1–D6实验，可在需要系统补课时择取。**当前主入口为[需求驱动学习](DEMAND-ROUTER.md)**：选目标模块→补最小先修→官方资料→真实实验，不必整周/整月按顺序执行。
 
 ## 使用说明（选择本模板时才执行）
@@ -259,6 +261,6 @@
 
 ## 课程范围清单
 
-- **必修**：Java Core/JVM/Spring Data/Security；HTML/CSS/a11y、TS/React、Next SSR/SPA 原理、Node 最小 BFF、消息一致性、OAuth/OIDC、Linux/性能/安全/跨语言纵切。
+- **仅限自选旧全量覆盖挑战的内部必做专题**：Java Core/JVM/Spring Data/Security；HTML/CSS/a11y、TS/React、Next SSR/SPA 原理、Node 最小 BFF、消息一致性、OAuth/OIDC、Linux/性能/安全/跨语言纵切。
 - **按需选修**：把主 SPA 整体替换 Next、Vue3/Nuxt 深度、NestJS 全套、WebFlux/Spring Cloud 复杂微服务、K8s 生产级集群、Kafka/RabbitMQ 两种全套、Mongo/ES。除非目标岗位明确需要。
 - **现实能力层级**：此计划旨在建立可证明的实战能力，不承诺 432h 就具备多年大型企业分布式系统经验。

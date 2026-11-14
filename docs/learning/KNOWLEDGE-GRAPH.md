@@ -1,4 +1,6 @@
-# V4.2 全栈知识关系图｜概念先修、平行选型、跨层协作
+# V4.2 全栈核心知识关系图｜概念先修、平行选型、跨层协作
+
+> 除核心42节点，另有按需查阅的[17个横向基础能力](CROSS-CUTTING-FOUNDATIONS.md)（环境、算法、调试、协作、UX、国际化、性能、安全、供应链、SLO、成本等），已分别映射回核心节点并可通过[需求路由](DEMAND-ROUTER.md)搜索。它们**不是17个独立强制Gate**。
 
 > **本图不定义学习时间顺序。** 每个节点都能直达[专业定义/类比/原理/最小实验卡](NODE-STUDY-CARDS.md)、[官方阅读](OFFICIAL-RESOURCES.md)、[上游源资料](UPSTREAM-ASSET-INDEX.md)。W1–W24仅作为历史知识坐标；个人状态仍在[PROGRESS](PROGRESS.md)。
 

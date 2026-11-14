@@ -4,6 +4,12 @@
 >
 > **完整覆盖与执行顺序分离**：保留 W1–W24、G01–G24 的系统性知识地图，原432小时只是全部覆盖时的参考预算。**不要求从W1顺序学到W24**，也不要求所有下游应用同时采用Python、Java、React和Next.js。
 
+## 当前有效治理与横向基础知识
+
+- **[ADR-0004 当前权威规则](docs/decisions/ADR-0004-fullstack-foundations-and-authority.md)**：历史V3“必修”仅适用于自愿全量课程；本仓只保留一套总地图/一份学员进度台账，代码、CI、学员与生产状态必须分开。
+- **[17个横向基础专题](docs/learning/CROSS-CUTTING-FOUNDATIONS.md)**：环境命令行、算法复杂度、断点调试、Git协作、UX与国际化、API生命周期、测试、安全供应链、隐私、SLO、成本、DNS、数据精度等；有专业原理、类比、官方链接和反例。
+- **[跨来源完整性/一致性审计](docs/quality/BASELINE-AND-CONSISTENCY-AUDIT-20261114.md)**：区分真实缺失、已有覆盖、部分实现与尚未执行的练习。
+
 ## 先看清楚技术全景，再按当前问题跳学
 
 **[前后端脑内全景图：专业定义 + 大白话 + 3张关系图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：用一个点击提交的流程理解浏览器、Vue/React、HTTP、FastAPI/Spring/Nest、数据库、任务、交付与监控如何协作。
@@ -27,6 +33,8 @@
 - **[20道全栈工程答辩题](docs/learning/INTERVIEW-ENGINEERING-DRILLS.md)**：题目关联42知识节点、官方资料与亲手负例，按岗位选择。
 - **[30项细节查漏与官方章节](docs/learning/DETAIL-GAP-INDEX-2026.md)**：浏览器存储、JS原型/this、TS Utility Types、Next渲染、ORM N+1、Linux/systemd、OWASP等。
 - **[本次增量落盘与严格验收](docs/quality/INTEGRATION-2026-REVIEW.md)**：哪些已覆盖/真正新增/仍未实践，防止“文件已存在=学会”。
+
+**想补一个容易遗漏的基础？** 直接查 `python docs/learning/route_need.py --query "时区"` 或 `--topic X06`；完整主题列表 `--list-topics`。这17个专题不会替换已有42个核心知识节点。
 
 ## 第一入口：我当前要做什么？
 
@@ -54,7 +62,7 @@
 
 | 入口 | 作用 | 事实状态 |
 |---|---|---|
-| [ROADMAP.md](ROADMAP.md) | V4.0 全面知识覆盖坐标；原24周可选引导式学习，不强制先后顺序 | REFERENCE + OPTIONAL_PLAN |
+| [ROADMAP.md](ROADMAP.md) | V4.2 全面知识覆盖坐标；原24周可选引导式学习，不强制先后顺序 | REFERENCE + OPTIONAL_PLAN |
 | [学习进度](docs/learning/PROGRESS.md) | **以真实需求会话为先**；W坐标/Gate只做能力覆盖与证据索引 | NOT_RUN |
 | [能力地图](docs/learning/CAPABILITY-MATRIX.md) | 旧24模块和Gate对照，新42节点以知识图为准 | REFERENCE |
 | [W09–W24 执行手册](docs/learning/W09-W24-EXECUTION-PLAYBOOK.md) | 可选系统补基础的D1–D6任务样例，非必修日历 | OPTIONAL_SPRINT_TEMPLATE |

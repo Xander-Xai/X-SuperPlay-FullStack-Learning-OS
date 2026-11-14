@@ -20,6 +20,12 @@
 
 **唯一执行规则依旧是：需求/JD/报错→最小知识缺口→官方原理→真实代码与负例→本人独立复测→回归业务。** 14天和8周只是额外可选视图；保留原W1–W24覆盖坐标、G01–G24，不重新指定唯一项目，不凭资料更新修改学员的NOT_RUN状态。
 
+## 容易忽略的通用工程基础（2026-11-14审计补充）
+
+- **[17个横向基础专题及关系图](docs/learning/CROSS-CUTTING-FOUNDATIONS.md)**：从命令行/文件系统、算法复杂度、断点调试与Git协作，到UX/a11y、国际化时区、API版本、测试、供应链/隐私、SLO/事故响应、DNS/HTTPS、配置/数据精度，逐点附权威资料、专业/大白话解释与故障实验。
+- **[当前治理与历史决策优先级](docs/decisions/ADR-0004-fullstack-foundations-and-authority.md)**：42个核心知识节点+17个横向细分主题，依然只有一个ROADMAP与一个PROGRESS；不是17个新Gate，也无需先把所有专题学完。
+- **[一致性审计与修复证据](docs/quality/BASELINE-AND-CONSISTENCY-AUDIT-20261114.md)**：核对是否存在“历史必修写成当前必修”“已实现S0写成代码不存在”等矛盾。
+
 ## 先在脑中建立技术的整体关系（不要求同时实作所有方向）
 
 - **[一张全栈链路图 + 一张语言/框架树 + 一张请求时序图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：解释客户端、网络与API、后端、数据、异步、安全、CI与运维各自负责什么。
@@ -254,14 +260,14 @@ FastAPI Router + Pydantic（接口权威）
 
 ## 4. ReconLab 可选教学案例：MVP / P1 / P2
 
-**设计目标目录、业务数据流、API 草案和按阶段演进见 [PROJECT-BLUEPRINT](docs/project/PROJECT-BLUEPRINT.md)**。业务代码目录尚不存在，不将蓝图视为已实现。
+**设计目标目录、业务数据流、API 草案和按阶段演进见 [PROJECT-BLUEPRINT](docs/project/PROJECT-BLUEPRINT.md)**。当前已有最小 React/FastAPI S0 合成练习代码；完整登录/上传/数据库/异步/部署蓝图仍未实现，不将目标目录视为已交付。
 
 | 级别 | 功能 | 验收重点 |
 |---|---|---|
-| MVP（必须先完成） | 登录/登出、项目 CRUD、列表筛选分页、基础 RBAC、统一错误态 | 浏览器→API→DB 可见；403 越权负例 |
+| MVP（仅该可选案例建议先做） | 登录/登出、项目 CRUD、列表筛选分页、基础 RBAC、统一错误态 | 浏览器→API→DB 可见；403 越权负例 |
 | P1（核心工程） | 上传、业务任务状态、Worker/Redis、SSE 进度、OpenAPI 自动化、数据库迁移、CI/部署 | 断连重连、重复提交、数据一致性、干净环境复现 |
 | P2（可选扩展） | 真实 RAG 问答、高级 OTel 仪表盘、完整 Next.js 迁移、NestJS/Vue/K8s 集群和其他专项 | 有真实业务/JD 触发才投入，Java/Spring旧W09–W13为覆盖坐标，现按需选择 |
-| P1（W8 必修补充） | 最小 OpenTelemetry Trace/Span 跨边界实测 | 不可由 Request ID 的日志关联替代 |
+| P1（选择W8/G08完整追踪挑战时须实测） | 最小 OpenTelemetry Trace/Span 跨边界实测 | 不可由 Request ID 的日志关联替代 |
 
 **不可提前将 Mock/API Stub/单次 CI 通过写作生产交付或个人独立能力达标。**
 
@@ -286,7 +292,7 @@ FastAPI Router + Pydantic（接口权威）
 - [ ] **G05** Redis 缓存失效/并发回源故障与保护实验
 - [ ] **G06** Worker 中断、重试、去重、幂等与持久任务状态实验
 - [ ] **G07** SSE 分块/断连/重连/取消与资源清理实验
-- [ ] **G08** Request ID 日志关联；W8 最小 OTel Trace/Span 实测（必修）
+- [ ] **G08** Request ID 日志关联；若选择W8/G08，最小OTel Trace/Span必须实测
 - [ ] **G09** Compose 从新环境复现启动、健康检查、数据持久化
 - [ ] **G10** CI、单元/集成、Playwright E2E 和服务端越权负例
 - [ ] **G11** HTTPS、密钥隔离、备份/恢复及版本回退演练
@@ -344,14 +350,14 @@ FastAPI Router + Pydantic（接口权威）
 | 渲染选型 | CSR/SSR/SSG/ISR、Next.js/RSC 边界、SEO、缓存失效 | W17 | P1（对比实验） |
 | Node 后端基础 | Node Event Loop/Stream/背压/ESM、BFF/API、NestJS 认识 | W18 | P1（独立最小实验） |
 | Java 核心 | OOP、集合/泛型/Stream、异常、Maven/Gradle、并发/JMM/虚拟线程/JVM/GC/JFR | W9–W11 | **按目标需求补齐** |
-| Spring 生态 | IoC/AOP/MVC、Boot 自动配置、JPA/JDBC/MyBatis 对比、事务、Security、JUnit/Testcontainers | W12–W13 | **P0 必修** |
+| Spring 生态 | IoC/AOP/MVC、Boot 自动配置、JPA/JDBC/MyBatis 对比、事务、Security、JUnit/Testcontainers | W12–W13 | **旧全量覆盖P0；当前按JD/业务触发** |
 | Python 后端 | FastAPI、Pydantic、SQLAlchemy、依赖注入、Pytest、异步与 Worker | W3–W6 | P0（已有基础诊断可加速） |
 | 数据与中间件 | PostgreSQL/MySQL SQL 差异、Redis、RabbitMQ/Kafka 二选一、Outbox/幂等/重试/一致性 | W4、W6、W19–W20 | P0+P1 |
 | 接口与系统设计 | REST/OpenAPI/版本、OAuth2/OIDC、权限、事件契约、分层/边界、幂等、容量估算 | W3、W12–W13、W19–W24 | P0+P1 |
 | 生产交付 | Git/测试/CI/CD、Docker/Nginx、Linux、监控/Traces/性能、安全、备份/恢复 | W7–W8、W21–W24 | P0+P1 |
 | 选修生态 | Vue3 对比、GraphQL/gRPC 深挖、WebFlux、微服务拆分、K8s 集群、NoSQL/搜索 | 按真实 JD 触发 | P2 |
 
-**P0/P1/P2 是全面能力地图的覆盖深度，不是所有项目共同的技术栈**。当前需求只有静态工具时，Java/Spring和消息队列不应变成上线阻塞。需求选择请以[需求路由](docs/learning/DEMAND-ROUTER.md)为准。这个优先级不代表全行业所有岗位的统一 JD。
+**P0/P1/P2 仅描述自愿全面学习挑战的知识覆盖深度，不是所有项目共同的技术栈**。当前需求只有静态工具时，Java/Spring和消息队列不应变成上线阻塞。需求选择请以[需求路由](docs/learning/DEMAND-ROUTER.md)为准。这个优先级不代表全行业所有岗位的统一 JD。
 
 ### 十二、W9–W24 强化知识坐标（可任意选择专题）
 

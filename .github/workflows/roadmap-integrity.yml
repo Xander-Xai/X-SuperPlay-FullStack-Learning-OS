@@ -40,5 +40,7 @@ jobs:
         run: |
           python docs/quality/check_knowledge_map.py
           python -m unittest discover -s docs/quality -p 'test_need_router.py'
+      - name: Validate 17 cross-cutting fundamentals and repository consistency
+        run: python docs/quality/check_baseline_and_consistency.py
       - name: Validate 2026 incremental learning integration
         run: python docs/quality/check_2026_integration.py

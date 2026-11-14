@@ -6,6 +6,13 @@
 
 **AI辅助路线**：如果只有业务需求，参考[上游BDL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md)；已明确技能目标，参考[上游ANL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md)。完整可复制的导师指令见[AI原生按需学习协议](AI-NATIVE-LEARNING-PROTOCOL.md)。
 
+## 选一个入口：有需求、有时间压力，还是只想构建全局认知？
+
+- **手头有具体业务/Bug**：继续走本页默认需求路由→42节点，直接在现存代码动手。
+- **14天内要面试**：使用[14天可选冲刺](OPTIONAL-EXECUTION-MODES.md)与[20道面试题](INTERVIEW-ENGINEERING-DRILLS.md)，根据JD挑题和对应负例，不给已会的能力强制分配重复课程。
+- **希望系统性做项目**：使用[8周可选能力簇](OPTIONAL-EXECUTION-MODES.md)与[交付纵向链路](DELIVERY-LIFECYCLE.md)。
+- **知道原理名称却不懂细节**：用[30项细节补漏](DETAIL-GAP-INDEX-2026.md)和[节点卡](NODE-STUDY-CARDS.md)查专业定义、类比及官方具体章节。
+
 ## 命令行按需反查（可运行，不只是一张表）
 
 在仓库根目录使用Python 3.12+：

@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 
 GRAPH_PATH = Path(__file__).with_name("knowledge-map.json")
+TOPICS_PATH = Path(__file__).with_name("cross-cutting-topics.json")
 ALIASES = {
     "F01": ["http", "cors", "网络请求", "浏览器", "cookie", "tls"],
     "F02": ["html", "css", "布局", "响应式", "无障碍", "表单"],
@@ -58,6 +59,59 @@ ALIASES = {
 def load() -> dict:
     data = json.loads(GRAPH_PATH.read_text(encoding="utf-8"))
     return {n["id"]: n for n in data["nodes"]}
+
+
+def load_topics() -> dict:
+    """Return supplementary cross-cutting topics without changing 42 core node IDs."""
+    data = json.loads(TOPICS_PATH.read_text(encoding="utf-8"))
+    return {n["id"]: n for n in data["topics"]}
+
+
+def find_topics(query: str, catalog: dict | None = None) -> list[dict]:
+    """Match specific foundational gaps; preserve core find() behavior and its ID contract."""
+    catalog = catalog if catalog is not None else load_topics()
+    q = query.casefold().strip()
+    if not q:
+        return []
+    hits: list[tuple[int, dict]] = []
+    for topic in catalog.values():
+        score = 100 if q == topic["id"].casefold() else 0
+        title = topic["title"].casefold()
+        if q in title or title in q:
+            score += 25
+        for alias in topic["aliases"]:
+            if alias_matches(alias, q):
+                score += 10 + min(len(alias), 12)
+        if score:
+            hits.append((score, topic))
+    hits.sort(key=lambda pair: (-pair[0], pair[1]["id"]))
+    return [node for _, node in hits[:3]]
+
+
+def topic_to_dict(topic: dict, core: dict) -> dict:
+    return {
+        "id": topic["id"], "kind": "cross_cutting_topic", "title": topic["title"],
+        "priority": topic["priority"], "parent_nodes": [
+            {"id": id_, "title": core[id_]["title"]} for id_ in topic["parent_nodes"]],
+        "definition": topic["definition"], "analogy": topic["analogy"],
+        "boundary": topic["boundary"], "official": topic["official"],
+        "lab": topic["lab"], "failure": topic["failure"],
+        "state": "UNASSESSED",
+    }
+
+
+def describe_topic(topic: dict, core: dict) -> str:
+    t = topic_to_dict(topic, core)
+    return "\n".join([
+        f"{t['id']} · {t['title']} (横向补漏，不新增学习Gate)",
+        "适用范围：" + t["priority"],
+        "原42节点归属：" + "、".join(n["id"] for n in t["parent_nodes"]),
+        "专业定义：" + t["definition"], "大白话：" + t["analogy"],
+        "适用边界：" + t["boundary"],
+        "权威阅读：" + t["official"],
+        "最小实验：" + t["lab"], "失败注入：" + t["failure"],
+        "状态：UNASSESSED，需本人真实实验/复测，静态索引不算学会",
+    ])
 
 
 def alias_matches(alias: str, query: str) -> bool:
@@ -153,10 +207,29 @@ def main() -> None:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--query", help='natural task text, e.g. "Spring API"')
     group.add_argument("--node", help="knowledge node ID, e.g. B04")
-    group.add_argument("--list", action="store_true", help="list available capability IDs")
+    group.add_argument("--list", action="store_true", help="list 42 core capability IDs")
+    group.add_argument("--topic", help="cross-cutting topic ID, e.g. X06")
+    group.add_argument("--list-topics", action="store_true", help="list supporting X01-X17 topics")
     parser.add_argument("--json", action="store_true", help="emit structured skill cards for coding agents")
     args = parser.parse_args()
     catalog = load()
+    supporting = load_topics()
+    if args.list_topics:
+        if args.json:
+            print(json.dumps([{"id": t["id"], "title": t["title"]} for t in supporting.values()], ensure_ascii=False, indent=2))
+        else:
+            for t in supporting.values():
+                print(f"{t['id']} · {t['title']}")
+        return
+    if args.topic:
+        selected = supporting.get(args.topic.upper())
+        if selected is None:
+            parser.error(f"Unknown cross-cutting topic {args.topic}; use --list-topics")
+        if args.json:
+            print(json.dumps(topic_to_dict(selected, catalog), ensure_ascii=False, indent=2))
+        else:
+            print(describe_topic(selected, catalog))
+        return
     if args.list:
         if args.json:
             print(json.dumps([{"id": x["id"], "title": x["title"]} for x in catalog.values()], ensure_ascii=False, indent=2))
@@ -174,13 +247,21 @@ def main() -> None:
             print(describe(target, catalog))
         return
     matches = find(args.query, catalog)
-    if not matches:
-        parser.error("No confident match; use --list and select a node directly")
+    extra = find_topics(args.query, supporting)
+    if not matches and not extra:
+        parser.error("No confident match; use --list or --list-topics to select an ID")
     if args.json:
-        print(json.dumps([to_dict(n, catalog) for n in matches], ensure_ascii=False, indent=2))
+        # Keep the historical JSON array shape for query consumers.
+        print(json.dumps(
+            [to_dict(n, catalog) for n in matches] +
+            [topic_to_dict(t, catalog) for t in extra],
+            ensure_ascii=False, indent=2))
     else:
         for n in matches:
             print(describe(n, catalog))
+            print()
+        for t in extra:
+            print(describe_topic(t, catalog))
             print()
 
 

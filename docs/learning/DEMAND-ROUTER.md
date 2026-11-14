@@ -13,6 +13,10 @@
 - **希望系统性做项目**：使用[8周可选能力簇](OPTIONAL-EXECUTION-MODES.md)与[交付纵向链路](DELIVERY-LIFECYCLE.md)。
 - **知道原理名称却不懂细节**：用[30项细节补漏](DETAIL-GAP-INDEX-2026.md)和[节点卡](NODE-STUDY-CARDS.md)查专业定义、类比及官方具体章节。
 
+## 交叉基础补漏：不属于单一框架，却不能遗漏
+
+[17个横向基础卡](CROSS-CUTTING-FOUNDATIONS.md)按42节点归属，例如算法/复杂度归F03/B03/P02，安全威胁建模归E03/P02，国际化/金额时区归F03/D01。**查询这些现实问题时同样能获得官方链接与负例实验**；不会强制安排新的周次或Gate。
+
 ## 命令行按需反查（可运行，不只是一张表）
 
 在仓库根目录使用Python 3.12+：
@@ -25,10 +29,15 @@ python docs/learning/route_need.py --query "Electron桌面应用"
 python docs/learning/route_need.py --query "MCP Server"
 python docs/learning/route_need.py --node B04
 python docs/learning/route_need.py --node F08 --json
+python docs/learning/route_need.py --query "数据结构与复杂度"
+python docs/learning/route_need.py --query "国际化时区"
+python docs/learning/route_need.py --query "SLO故障响应"
+python docs/learning/route_need.py --topic X06 --json
+python docs/learning/route_need.py --list-topics
 python docs/learning/route_need.py --list
 ~~~
 
-程序读取[机器可读知识图](knowledge-map.json)，输出**专业定义、机制、大白话、理解边界、最低先修、官方专题章节、上游相关资料类型、实验与失败负例**；`--json` 可交给Coding Agent做定向学习计划，不能由它自动认定个人已会。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
+程序读取[机器可读知识图](knowledge-map.json)，输出**专业定义、机制、大白话、理解边界、最低先修、官方专题章节、上游相关资料类型、实验与失败负例**；`--json` 可交给Coding Agent做定向学习计划，不能由它自动认定个人已会。`--query`现在返回核心节点与相关X专题的候选卡（JSON数组中后者标为 `kind: cross_cutting_topic`）；`--topic X01...X17` 可精确进入横向专题，不建立第二份学习状态。关键词匹配是**初步路由**，不替代理解需求；不匹配时按节点列表人工选择。
 
 ## 可运行的按需实验示例
 

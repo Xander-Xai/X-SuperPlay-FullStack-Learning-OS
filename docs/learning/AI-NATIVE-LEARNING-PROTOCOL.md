@@ -4,6 +4,10 @@
 >
 > 边界：AI 可帮写脚手架、重复CRUD和测试框架，但**AI输出不是本人掌握**；真正的权限、数据一致性、故障恢复与生产上线必须有实测和人工判断。参见[AI Coding协作边界](AI-CODING-POLICY.md)。
 
+## 基础知识触发：从常见Bug反查横向专题
+
+当出现“终端命令找不到”“算法规模退化”“夏令时跨天”“依赖漏洞”“SLO事故”时，先调用 `python docs/learning/route_need.py --query "当前问题"`；它会同时返回[42节点](KNOWLEDGE-GRAPH.md)及匹配的[17个横向基础卡](CROSS-CUTTING-FOUNDATIONS.md)。专业原理/大白话/官方资料/负例/独立复测仍使用同一套会话与PROGRESS。
+
 ## 当前交付或面试场景的额外入口
 
 - 业务要开发到上线：参考[完整交付链路与AI知识库案例](DELIVERY-LIFECYCLE.md)，按真实项目选相关Gate，不能未经批准操作生产。

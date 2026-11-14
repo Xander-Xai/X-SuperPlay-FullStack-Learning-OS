@@ -9,6 +9,8 @@
 | 下游（工程方法） | [X-SuperPlay-Dev-Workbench](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench) | 工程生命周期、Profiles、Skills、交付与验证范式 | `src/catalog.mjs` 的 11 阶段 + `docs/learning/START-HERE.md` | 按需复用方法；不在本仓再发明另一套工程状态机 |
 | 下游（产品候选） | [X-SuperPlay-Utility-Sites](https://github.com/Xander-Xai/X-SuperPlay-Utility-Sites) | 可能用于未来产品实战的业务项目 | 本项目 README 中的产品定位与**开发授权状态** | 目前 `SELECTED_FOR_VALIDATION / DEVELOPMENT_ON_HOLD`；未经授权不得当作本学习项目的生产交付对象 |
 
+> **现行治理决策**：[ADR-0004](decisions/ADR-0004-fullstack-foundations-and-authority.md) 补充[ADR-0003](decisions/ADR-0003-demand-driven-learning.md)；42主节点与[17横向基础专题](learning/CROSS-CUTTING-FOUNDATIONS.md)统一供需求路由使用，学员状态仍只记PROGRESS。
+
 ## 权威冲突时的优先级
 
 - **学习路线/实际优先级**：本仓[按需路由](learning/DEMAND-ROUTER.md)+[知识图](learning/KNOWLEDGE-GRAPH.md)负责定位当前需要的知识；W1–W24只是完整知识覆盖坐标（24周/432h旧参考预算），[PROGRESS](learning/PROGRESS.md)是唯一实际学习会话/证据台账。

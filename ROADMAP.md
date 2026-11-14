@@ -6,6 +6,20 @@
 >
 > **实战载体不限定单个项目**：有权限的当前下游项目、隔离Labs、以及[ReconLab可选合成演示](ai-fullstack-workbench/README.md)均可。该演示CI通过不等于学习者独立掌握或ReconCheck获授权上线。
 
+## 2026增量补充：保留知识全景，按需进入深度与交付
+
+**这份新增的2026全栈路线与现有V4.2是互补关系，而不是替换关系：**网络/React/FastAPI/Java/PG/Redis/部署等已在下方原知识坐标及42张节点卡覆盖，不再重复抄一套从零到一的课表；原资料较弱的工程交付、面试题与细分知识已经补成可以直接查阅和演练的入口。
+
+| 我现在的问题 | 应先打开什么 | 和现有知识图怎么衔接 |
+|---|---|---|
+| 我想知道做产品到底分哪些步骤 | [需求到上线的交付链路与案例](docs/learning/DELIVERY-LIFECYCLE.md) | P01/P02→F/B/D/E→P03，12项产品验收不是新增Gate |
+| 我有很近的全栈/AI岗位面试 | [20道工程题](docs/learning/INTERVIEW-ENGINEERING-DRILLS.md) + [可选14天冲刺](docs/learning/OPTIONAL-EXECUTION-MODES.md) | 按JD选择题目与节点，不必按天机械执行 |
+| 我想以真实产品系统性动手练 | [可选8周参考节奏](docs/learning/OPTIONAL-EXECUTION-MODES.md) | 只选当前项目真正需要的阶段，验收不过返回Gap |
+| 我想补JS、JWT、ORM、Next、Linux等细节 | [30项精确资料与负例索引](docs/learning/DETAIL-GAP-INDEX-2026.md) | 对应既有F01/F03/B02/D01/E02等节点，不再新增重复节点 |
+| 我只想知道技术在哪一层 | [专业定义与大白话的关系图](docs/learning/FULLSTACK-MENTAL-MODEL.md) | 42节点地图不等于所有技术都必学 |
+
+**唯一执行规则依旧是：需求/JD/报错→最小知识缺口→官方原理→真实代码与负例→本人独立复测→回归业务。** 14天和8周只是额外可选视图；保留原W1–W24覆盖坐标、G01–G24，不重新指定唯一项目，不凭资料更新修改学员的NOT_RUN状态。
+
 ## 先在脑中建立技术的整体关系（不要求同时实作所有方向）
 
 - **[一张全栈链路图 + 一张语言/框架树 + 一张请求时序图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：解释客户端、网络与API、后端、数据、异步、安全、CI与运维各自负责什么。

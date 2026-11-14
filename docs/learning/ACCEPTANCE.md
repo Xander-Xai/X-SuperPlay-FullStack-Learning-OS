@@ -17,6 +17,12 @@
 | G11 | HTTPS/密钥/备份恢复/回滚 | TLS 与配置证据、恢复后的完整性 | Secret 泄漏、备份不可恢复 |
 | G12 | 架构/ERD/API/部署/答辩 | 图文资料、问题回答、独立陌生约束复测 | 讲不清根因或 AI 代写含糊 |
 
+## 面试答辩与产品交付的独立核查（不是额外G编号）
+
+- [20道工程问答与负例](INTERVIEW-ENGINEERING-DRILLS.md)作为G01–G24的自测题，不因答题数量增加“学习已通过”。
+- [需求→设计→实现→部署→维护的12项产品清单](DELIVERY-LIFECYCLE.md)是**业务项目交付门禁**，依发布授权及实际场景决定，不是G25–G36，也不要求所有轻量静态工具安装数据库/任务队列。
+- 14天/8周[学习参考节奏](OPTIONAL-EXECUTION-MODES.md)不产生第二套进度；唯一证据仍进本仓[PROGRESS](PROGRESS.md)。
+
 ## 状态与硬门槛
 
 - `NOT_RUN` 未执行；`IN_PROGRESS` 正在做；`PARTIAL` 有缺失；`FAIL` 测试失败；`BLOCKED` 外部前提不足；`PASS_WITH_EVIDENCE` 真实命令、负例、解释和复测完整。

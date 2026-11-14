@@ -1,5 +1,7 @@
 # 后端专项深挖字典 V4.1：Java/JVM/Spring + Python + 数据/架构
 
+> **2026新增可查入口**：[后端/数据/部署高频细节](../DETAIL-GAP-INDEX-2026.md)、[20道工程面试题](../INTERVIEW-ENGINEERING-DRILLS.md)、[按需求到交付的完整链路](../DELIVERY-LIFECYCLE.md)。这些补充是既有知识卡的专题索引，非第二学习进度。
+
 > **REFERENCE / NOT_RUN / NEED_FIRST**。本字典仅作深挖资料，优先从[需求路由](../DEMAND-ROUTER.md)与[知识依赖图](../KNOWLEDGE-GRAPH.md)定位问题。W序号是旧课程坐标，不要求按顺序学习。本页按[知识地图](../../../ROADMAP.md)检索；Java Core/JVM/Spring属于全面覆盖的重要专题，但只有当前需求/岗位使用Java时才需优先学，不是每个下游产品的强制栈。语言熟悉程度不由历史项目自动推断。
 
 ## 本次上游补充：多后端语言与跨端协作

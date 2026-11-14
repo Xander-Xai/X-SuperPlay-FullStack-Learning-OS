@@ -20,6 +20,14 @@
 
 **[前后端技术生态外围分支](docs/learning/OPTIONAL-TECH-LANDSCAPE.md)**：.NET/C#、PHP/Laravel、Ruby/Rails、Angular/SvelteKit、GraphQL/gRPC、Spring Cloud、Serverless、MongoDB等只需认知定位；不是新的必修课。
 
+## 新增：2026学习路线的增量内容（不建立第二套强制课程）
+
+- **[从需求到上线：全栈交付链路与AI知识库案例](docs/learning/DELIVERY-LIFECYCLE.md)**：8个工程阶段、真实故障边界及12项产品交付核查；静态工具站/SaaS/Java岗位均可替换案例。
+- **[可选14天面试冲刺、8周项目实践](docs/learning/OPTIONAL-EXECUTION-MODES.md)**：按真实需求跳学仍为默认；节奏只是预算，不是第二套进度台账。
+- **[20道全栈工程答辩题](docs/learning/INTERVIEW-ENGINEERING-DRILLS.md)**：题目关联42知识节点、官方资料与亲手负例，按岗位选择。
+- **[30项细节查漏与官方章节](docs/learning/DETAIL-GAP-INDEX-2026.md)**：浏览器存储、JS原型/this、TS Utility Types、Next渲染、ORM N+1、Linux/systemd、OWASP等。
+- **[本次增量落盘与严格验收](docs/quality/INTEGRATION-2026-REVIEW.md)**：哪些已覆盖/真正新增/仍未实践，防止“文件已存在=学会”。
+
 ## 第一入口：我当前要做什么？
 
 1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。
@@ -28,7 +36,8 @@
 4. **[42节点学习卡](docs/learning/NODE-STUDY-CARDS.md)**：从一个知识点理解到真实错误实验，不强制整张图通关。
 5. **[下游能力覆盖表](docs/learning/REQUIREMENTS-COVERAGE.md)**：静态工具/SaaS/企业Web/Java/CLI/微信小程序/移动App/AI应用等。
 6. **[需求学习会话模板](docs/learning/GAP-SESSION-TEMPLATE.md)**：原理→亲手改代码→错误注入→独立验收→继续项目。
-7. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
+7. **[2026实战与面试可选入口](docs/learning/OPTIONAL-EXECUTION-MODES.md)**：岗位紧迫可选14天、项目迭代可选8周，其他情况按需求跳学。
+8. **[ROADMAP 全面知识地图](ROADMAP.md)**：W1–W24作为覆盖坐标和可选的系统性补全路径，不是强制日历。
 
 **还可用**：Vue3列表状态 → F08；Nuxt SSR → F09；NestJS API → B07；Electron/Tauri → M03；MCP Server → A02；已有上游LAB可按节点直达，**不必再创建一个练习项目**。
 

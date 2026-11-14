@@ -82,7 +82,7 @@ python docs/learning/route_need.py --list
 | **移动App** | M02、P01 | React Native选F03，Flutter补Dart基础；接口补B01，离线/权限按平台官方 | 必须学Next或小程序 |
 | **数据库死锁/缓存失效/任务失败** | D01 / D02 / B06 / D03 | 发生在哪层就补哪层，联合E04找证据 | 先造一个完整后台项目 |
 
-## 三、三个实例：学习顺序确实可以不一样
+## 四、三个实例：学习顺序确实可以不一样
 
 **场景A：接到 Spring Boot API 岗位任务**
 
@@ -113,7 +113,7 @@ python docs/learning/route_need.py --list
 
 此时优先修真实故障，前端React/Next可能完全与该问题无关。
 
-## 四、项目不是“指定练习题”，而是可选的实战载体
+## 五、项目不是“指定练习题”，而是可选的实战载体
 
 - **用户自己的当前项目**：首选，前提是获授权并且不会触碰真实客户敏感数据。学习内容由当前项目的需求和故障定义。
 - **Dev-Workbench**：已有Node/测试/CI代码，可作为现有软件维护、调试、工程化的真实案例，遵循其11阶段和PR流程。
@@ -122,7 +122,7 @@ python docs/learning/route_need.py --list
 - **独立最小Lab**：针对Spring事务、React并发、Docker恢复等难以在现有项目安全故障注入的知识点；代码与测试仍要实际跑通。
 - **未来新增任何项目**：在 [需求覆盖矩阵](REQUIREMENTS-COVERAGE.md) 中按产品类型反查节点，无需重写24周计划。
 
-## 五、每次“学什么”都能留下具体记录
+## 六、每次“学什么”都能留下具体记录
 
 复制 [需求驱动学习会话模板](GAP-SESSION-TEMPLATE.md) 到 Issue 或 `docs/learning/sessions/`。**唯一实际学习状态**仍在 [PROGRESS.md](PROGRESS.md) 中；Issue是任务和证据链接，不是第二本进度账。没有实测的知识点写 NOT_RUN/UNASSESSED，不强制一次把全部G01–G24做完。
 

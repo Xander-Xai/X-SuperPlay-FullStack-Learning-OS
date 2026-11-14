@@ -4,6 +4,10 @@
 >
 > 基于 [Dev-Workbench 四条路线、静态Web、AI叠加层的产品指南](https://github.com/Xander-Xai/X-SuperPlay-Dev-Workbench/blob/main/docs/learning/PRODUCT-GUIDES.md) 以及 [Utility-Sites 当前公开方向](https://github.com/Xander-Xai/X-SuperPlay-Utility-Sites)。这只是**学习能力覆盖检查**，不构成产品方向获市场验证或开发/发布授权。
 
+## 通用基础不能漏：不新增单独业务项目
+
+原42节点涵盖常见前端/后端/数据/AI/运维栈；[17项横向基础](CROSS-CUTTING-FOUNDATIONS.md)补上工程环境、算法、调试、Git协作、UX、国际化、供应链、数据生命周期、SLO与DNS等横向能力。这些能力在多类下游任务中按场景触发，不会把整个学习仓绑定到任何一个产品。
+
 ## 1. 目前应支持的主要产品 / 工作流
 
 | 场景 | 核心产品交付链 | 推荐能力节点 | 典型独立实验 / Release Gate | 不必要的强制项 |

@@ -1,4 +1,6 @@
-# V4.2 全栈知识地图与按需学习一致性核查
+# V4.2 全栈知识地图与按需学习一致性核查（历史分期记录）
+
+> **最新横向基础/措辞一致性审计**：[BASELINE-AND-CONSISTENCY-AUDIT-20261114.md](BASELINE-AND-CONSISTENCY-AUDIT-20261114.md)。本文件下文分V4.0/V4.1/V4.2记录历史验收，不能把旧称谓和旧全覆盖训练优先级解释成当前必修。
 
 > **KNOWLEDGE_GRAPH_VERIFIED / OPTIONAL_S0_DEMO_CI_VERIFIED / LEARNER_NOT_RUN**。本仓覆盖下游多种产品，不再要求按W1–W24日历或只做ReconLab。静态知识图验证与学生技能、商业产品上线仍严格分离。
 

@@ -1,0 +1,34 @@
+name: Cleanup audited merged PR branches
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cleanup-merged-pr-branches.yml"
+      - "docs/quality/cleanup_merged_pr_branches.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  cleanup:
+    if: github.repository == 'Xander-Xai/X-SuperPlay-FullStack-Learning-OS' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify offline delete guards
+        run: python -m unittest discover -s docs/quality -p 'test_cleanup_merged_pr_branches.py' -v
+      - name: Delete only audited, unchanged branches from already merged PRs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python docs/quality/cleanup_merged_pr_branches.py --apply
+
+# Workflow dispatch intentionally does not delete anything: the job only runs
+# for an authenticated push to main. Candidate list/PR/sha checks are immutable.

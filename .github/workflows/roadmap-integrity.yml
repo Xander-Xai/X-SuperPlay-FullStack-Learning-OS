@@ -44,3 +44,7 @@ jobs:
         run: python docs/quality/check_baseline_and_consistency.py
       - name: Validate 2026 incremental learning integration
         run: python docs/quality/check_2026_integration.py
+      - name: Test branch cleanup safeguards without GitHub API or token
+        run: |
+          python docs/quality/cleanup_merged_pr_branches.py --plan
+          python -m unittest discover -s docs/quality -p 'test_cleanup_merged_pr_branches.py' -v

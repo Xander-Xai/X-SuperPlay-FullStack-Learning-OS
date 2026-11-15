@@ -1,3 +1,9 @@
+## PR / Branch / Issue 治理（2026-11-15）
+
+- **[三类治理严格复核](docs/quality/GOVERNANCE-PR-BRANCH-ISSUES-20261115.md)**：已合并历史 PR #6–#8、精确 SHA 旧分支安全清理、S0–S4 Issue 的真实证据与阻塞边界。
+- **[分支删除保护与离线测试](docs/quality/cleanup_merged_pr_branches.py)**：只允许 main push 的独立工作流在合并后删除匹配已合并 PR Head 的旧分支；分支新增提交或权限不足即拒绝操作。后续 PR 使用 [验收模板](.github/PULL_REQUEST_TEMPLATE.md)。
+- **Issue #1–#5 保留 OPEN**：它们是可选教学任务/发布门禁，不是历史文档 PR 的遗留未合并代码；不可把源码基线的 CI、AI 协助或本轮治理当成学员独立通过、真实数据库/Java 集成或商业产品授权。
+
 # X-SuperPlay-FullStack-Learning-OS
 
 > **V4.2 全栈能力操作系统** · 需求驱动学习 · 知识图谱与权威资料 · 实战及独立验收。

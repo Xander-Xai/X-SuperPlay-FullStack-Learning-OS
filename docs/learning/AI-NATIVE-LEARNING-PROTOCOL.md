@@ -14,6 +14,10 @@
 - 临近面试：参考[20题工程答辩](INTERVIEW-ENGINEERING-DRILLS.md)与[14天可选冲刺](OPTIONAL-EXECUTION-MODES.md)，让AI先追问、本人独立回答和实现，再评审。
 - 只想补某些细节：查[30项技术盲点与官方链接](DETAIL-GAP-INDEX-2026.md)，依旧只在本次Gap实作；不产生第二课表。
 
+### 当用户要求真正的逐行教程，而非只要路线图
+
+用 [J01 15节目标与练习](J01-HAIBOTE-FULLSTACK-LESSONS.md) 作为一个**可选具体示例**；第一节可直接按 [L00逐行教程](labs/J01-L00-WEB-REQUEST-TUTORIAL.md) 授课：先大白话解释关键概念→带着读10～30行核心代码→让学员亲手实现→独立变式→失败/修复→口述验收。不是仅给网址或课表。学员阶段必须和本仓 [L1/L2/L3标准](AI-CODING-POLICY.md) 对齐，个人状态只能写 [PROGRESS](PROGRESS.md)，资料完成不得自动通过。
+
 ## 1. 两个不同的入口
 
 | 我现在知道什么 | 使用哪条路 | 核心动作 |

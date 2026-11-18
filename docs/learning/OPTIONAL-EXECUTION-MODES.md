@@ -24,6 +24,8 @@ flowchart LR
 
 **AI Coding两模式**：学习时先给挑战和评分，再让AI评审、反问、提示；交付时可让AI生成脚手架/重复CRUD，但真实用户验收、授权、事务、上线与独立能力不能交给AI自动打PASS。参考[AI-Native协议](AI-NATIVE-LEARNING-PROTOCOL.md)。
 
+**特定 Vue 3 + Python + Java 岗位的另一种可选视图**：[J01 海博特15节具体知识与实践路线](J01-HAIBOTE-FULLSTACK-LESSONS.md)，其中 [L00完整逐行教程](labs/J01-L00-WEB-REQUEST-TUTORIAL.md) 已配合成实验代码。只是把本仓现有42节点映射到这个面试，**不是取代14天/8周、不是新增必修，也不新建成绩册**。
+
 ## B. 可选“14天面试加速”｜目标是高频问答＋最小证据
 
 > 适用于临近需要展示React/FastAPI/SQL/部署基本能力的岗位面试。**不代表14天学会全部全栈，不要求确实连续14天完成。** 与当前JD不相关的行允许跳过；已通过独立测评的模块直接用20题清单复盘，不强制再写一次Demo。

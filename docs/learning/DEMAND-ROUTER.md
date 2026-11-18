@@ -4,7 +4,7 @@
 >
 > **不限 ReconLab 或某个下游仓**。工作台/静态站/SaaS/企业系统/小程序/移动App/AI应用/Java岗位都可触发不同学习路径。真正开发需遵循对应仓库授权与工程流程。
 
-**AI辅助路线**：如果只有业务需求，参考[上游BDL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md)；已明确技能目标，参考[上游ANL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md)。完整可复制的导师指令见[AI原生按需学习协议](AI-NATIVE-LEARNING-PROTOCOL.md)。
+**AI辅助路线**：如果只有业务需求，参考[上游BDL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/business-demand-learning/v1.0.0/01-business-demand-to-learning-goals.md)；已明确技能目标，参考[上游ANL](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/prompts/ai-native-learning/v1.0.0/01-github-ai-learning-research.md)。完整可复制的导师指令见[AI原生按需学习协议](AI-NATIVE-LEARNING-PROTOCOL.md)；当问题是“知识点怎么学、代码要不要亲手敲、什么叫会”时，直接用 [通用学习执行法](LEARNING-BY-EVIDENCE.md) 和 [交互式 AI 教练](AI-TUTOR-COACH.md)，回填现有会话卡与唯一进度台账。
 
 ## 选一个入口：有需求、有时间压力，还是只想构建全局认知？
 

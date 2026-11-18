@@ -2,6 +2,8 @@
 
 > 先认清整张地图，再按真正需求学其中一小块。本页是解释层，不是另一个课程进度表。配套：[知识图](KNOWLEDGE-GRAPH.md) · [按需学习](DEMAND-ROUTER.md) · [上游具体资料](UPSTREAM-ASSET-INDEX.md)。
 
+**可动手的对应教材：**如果图看懂但不知道具体敲什么，直接做 [J01 L00：原生页面提交→FastAPI→JSON→页面更新](labs/J01-L00-WEB-REQUEST-TUTORIAL.md)。它用两个实际代码文件和正负例测试帮助从架构图落到可执行功能；J01 专项导航见 [15节可选路径](J01-HAIBOTE-FULLSTACK-LESSONS.md)。不要求同时部署图中的所有模块。
+
 ## 一、一次业务请求如何穿过整个技术系统
 
 ~~~mermaid

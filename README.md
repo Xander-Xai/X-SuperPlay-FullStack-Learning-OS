@@ -42,6 +42,11 @@
 
 **想补一个容易遗漏的基础？** 直接查 `python docs/learning/route_need.py --query "时区"` 或 `--topic X06`；完整主题列表 `--list-topics`。这17个专题不会替换已有42个核心知识节点。
 
+## 本次 J01 全栈面试可选专项（2026-11-18）
+
+- **[J01 15节学习路径：具体学什么、怎么动手、怎么验收](docs/learning/J01-HAIBOTE-FULLSTACK-LESSONS.md)**：针对 Vue 3 / FastAPI / MySQL / Java Gateway / Redis / Docker 的岗位证据拆解，复用现有42节点，不设第二套进度。
+- **[第一节 L00 完整逐行教程与可运行代码](docs/learning/labs/J01-L00-WEB-REQUEST-TUTORIAL.md)**：从 HTML/CSS/JS 到 HTTP/JSON/FastAPI；包含真实实验文件、正负例测试与独立变式。**教学资料落盘不代表学员已完成实验。**
+
 ## 第一入口：我当前要做什么？
 
 1. **[按需求查学习模块](docs/learning/DEMAND-ROUTER.md)**：从当前业务功能、岗位JD或Bug切入，找到最小需要的技能与实战。

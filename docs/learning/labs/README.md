@@ -2,6 +2,21 @@
 
 > **真实可运行的实验与课程设计严格分开。** 这个目录包含一个不依赖浏览器/框架的Node测试，用于证明JavaScript请求竞态的核心机制。它**不等于**Vue/React组件级验收，也不等于本人关闭AI完成训练。
 
+## 实验零：J01 L00 浏览器→FastAPI→JSON 的第一条链路（教学基线，NOT_RUN）
+
+这是针对海博特 J01 面试的**可选入门实验**，适合概念已听过但不知道该看代码还是自己敲的学习者，直接阅读 [完整逐行教程](J01-L00-WEB-REQUEST-TUTORIAL.md)，并打开 [原生HTML/JS + FastAPI代码](j01-web-request/)。采用合成学校数据，**没有 MySQL、登录或生产上线**。
+
+~~~bash
+cd docs/learning/labs/j01-web-request
+python -m venv .venv
+# 激活虚拟环境（Windows PowerShell: .venv\Scripts\Activate.ps1）
+python -m pip install -r requirements.txt
+python -m pytest -q
+python -m uvicorn main:app --reload --port 8000
+~~~
+
+浏览器访问 http://127.0.0.1:8000/、/api/schools?q=广东 和 /docs，用 DevTools Network 验证GET/JSON/状态码；**关答案独立新增省份筛选并补测试**才具备能力证据。此处命令为操作说明，本次仅落盘未代表个人已执行。
+
 ## 实验一：前端列表搜索返回顺序错误（F03 → F08/F04）
 
 **实际需求**：用户输入搜索词A后立即输入B；B更快返回，界面却最后显示A。先用纯JS把竞态变成可靠单测，再回原Vue/React项目修复。

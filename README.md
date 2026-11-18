@@ -22,6 +22,10 @@
 
 **[AI原生按需学习操作协议](docs/learning/AI-NATIVE-LEARNING-PROTOCOL.md)**：可复制的AI导师指令，当前需求→诊断Gap→专业与大白话解释→官方小节→真实故障实验→独立复测。
 
+**[通用学习执行法：概念、看代码、亲手敲、独立修改和五项验收](docs/learning/LEARNING-BY-EVIDENCE.md)**：已适配上游 AI-Learning-OS 的 TPPAD / 诊断优先 / 变式 / 正负例 / 证据分离，继续沿用本仓 **L1/L2/L3 + PROGRESS 唯一台账**。
+
+**[可复制的 AI 导师与独立考官提示词](docs/learning/AI-TUTOR-COACH.md)**：让 AI 真正逐点教学、给最小代码、先问再提示，区分讲解、辅助编程和本人独立考试。
+
 **[上游 AI-Learning-OS 20份资料直达索引](docs/learning/UPSTREAM-ASSET-INDEX.md)**：技术语言图、Vue3/FastAPI实训、Java专项、18个企业AI LAB、多端产品、BDL/ANL教练与独立评分，打开链接即可读到原文。
 
 **[42节点知识图 + 官方原文](docs/learning/KNOWLEDGE-GRAPH.md)**：补足Vue/Nuxt、Node/NestJS、桌面Electron/Tauri、Go/Rust/C++、MCP/实时协议、PWA等；覆盖广不等于每个项目都要用。

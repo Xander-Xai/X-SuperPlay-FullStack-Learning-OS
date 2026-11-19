@@ -48,6 +48,6 @@ docs/learning/GAP-SESSION-TEMPLATE.md
 ## 两个使用示例
 
 - **J01 Vue 3**：输入“我要独立给 Vue 3 管理后台增加筛选，当前不会解释 `computed` 与 `watch`”，指定 F08，目标 L2；先让导师讲 10–30 行，再自己加变式、验证空列表及竞态，保留测试日志。
-- **J05 Spring Boot / Outbox**：输入“我要解释 Spring 事务提交后消息发送失败的问题并做合成实验”，选择 B04/B05/D01/D03 相关最小节点。先让导师讲事务边界，不能凭讲解或 AI 生成的代码就宣称独立 L3。
+- **J05 Java/Spring Boot / Outbox**：按 [J05 从零专题路线](J05-JAVA-PYTHON-LESSONS.md) 和每单元教材组织授课；例如“我要解释 Spring 事务提交后消息发送失败的问题并做合成实验”，选择 B04/B05/D01/D03 相关最小节点。先让导师讲事务边界，不能凭讲解或 AI 生成的代码就宣称独立 L3。首个完整教材为 [J05-00/01 请求链路与证据边界](labs/J05-L00-L01-REQUEST-AND-BOUNDARIES.md)。
 
 独立验收结果与原始日志请填写 [GAP 会话卡](GAP-SESSION-TEMPLATE.md)，随后在 [PROGRESS](PROGRESS.md) 留唯一进度链接。

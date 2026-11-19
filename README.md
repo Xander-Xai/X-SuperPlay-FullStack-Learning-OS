@@ -46,6 +46,11 @@
 
 **想补一个容易遗漏的基础？** 直接查 `python docs/learning/route_need.py --query "时区"` 或 `--topic X06`；完整主题列表 `--list-topics`。这17个专题不会替换已有42个核心知识节点。
 
+## J05 Java/Spring Boot 与 Python 集成面试专项（2026-11-19）
+
+- **[J05 从零学习路径（00–17）](docs/learning/J05-JAVA-PYTHON-LESSONS.md)**：固定每单元的知识内容、节点、练习、负例、变式和验收，按项目证据与设计题边界组织；可选专题，不建立第二份进度台账。
+- **[J05-00/01 完整首课：证据边界与请求链路](docs/learning/labs/J05-L00-L01-REQUEST-AND-BOUNDARIES.md)**：零基础解释证据层级与 HTTP 请求旅程；复用 J01 的合成实验，不宣称已运行 Java/MySQL 集成。
+
 ## 本次 J01 全栈面试可选专项（2026-11-18）
 
 - **[J01 15节学习路径：具体学什么、怎么动手、怎么验收](docs/learning/J01-HAIBOTE-FULLSTACK-LESSONS.md)**：针对 Vue 3 / FastAPI / MySQL / Java Gateway / Redis / Docker 的岗位证据拆解，复用现有42节点，不设第二套进度。

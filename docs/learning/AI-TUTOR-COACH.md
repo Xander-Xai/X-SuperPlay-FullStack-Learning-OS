@@ -1,5 +1,7 @@
 # 可复制的全栈学习 AI 教练 / 考官提示词
 
+> **外部资料学习**：博客/教程/官方文档/论文阅读入口参考上游 [Source-to-Mastery](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/learning/source-to-mastery.md)。采用已有教学/练习/独立考官模式；不增加能力等级，不能把 AI 摘要当本人的闭卷解释。
+
 > **TEMPLATE / NOT_EXECUTED**。适配上游 [通用 AI 教练](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/templates/general-learning-ai-coach.md)；以本仓 [通用学习执行法](LEARNING-BY-EVIDENCE.md)、[L1/L2/L3 标准](AI-CODING-POLICY.md)、[唯一进度](PROGRESS.md) 与相关 [Gate](ACCEPTANCE.md) 为准。模板不是本人已完成学习的证据。
 
 ## 复制下面这段作为每节课的要求

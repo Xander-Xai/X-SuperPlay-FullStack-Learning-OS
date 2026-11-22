@@ -4,6 +4,8 @@
 >
 > 边界：AI 可帮写脚手架、重复CRUD和测试框架，但**AI输出不是本人掌握**；真正的权限、数据一致性、故障恢复与生产上线必须有实测和人工判断。参见[AI Coding协作边界](AI-CODING-POLICY.md)。
 
+**从博客/教程/官网/论文发现知识时**：先参考上游 [Source-to-Mastery 外部资料内化指南](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/learning/source-to-mastery.md)，判断是否属于当前学习目标、明确版本与来源，选一个知识点闭卷解释并找到本仓已有节点/实验。之后仍走本协议与 [需求路由](DEMAND-ROUTER.md) → [学习会话卡](GAP-SESSION-TEMPLATE.md) → [PROGRESS](PROGRESS.md) 的唯一执行路径；不创建新等级、影子笔记库或平行进度表。
+
 **学习执行层（已适配上游方法）**：[从看懂到独立完成：通用学习执行法](LEARNING-BY-EVIDENCE.md) 明确 TPPAD、看/敲/改代码的策略、五项学习检查、AI 提示梯度、分级验收和延迟复测；[可复制的教学/考官指令](AI-TUTOR-COACH.md) 提供每次实际授课流程。两者是本协议的**操作补充**，不新增 L0–L4 量表、不变更本仓 L1/L2/L3 或唯一 [PROGRESS](PROGRESS.md)。
 
 ## 基础知识触发：从常见Bug反查横向专题

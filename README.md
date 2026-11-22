@@ -20,7 +20,7 @@
 
 **[前后端脑内全景图：专业定义 + 大白话 + 3张关系图](docs/learning/FULLSTACK-MENTAL-MODEL.md)**：用一个点击提交的流程理解浏览器、Vue/React、HTTP、FastAPI/Spring/Nest、数据库、任务、交付与监控如何协作。
 
-**[AI原生按需学习操作协议](docs/learning/AI-NATIVE-LEARNING-PROTOCOL.md)**：可复制的AI导师指令，当前需求→诊断Gap→专业与大白话解释→官方小节→真实故障实验→独立复测。
+**[外部资料如何内化：Source-to-Mastery](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/learning/source-to-mastery.md)**：博客、教程、官网、论文先建立轻量知识地图，闭卷解释后再做最小验证；沿用现有全栈节点、L1/L2/L3 和 PROGRESS，不复制第二套课程。\n\n**[AI原生按需学习操作协议](docs/learning/AI-NATIVE-LEARNING-PROTOCOL.md)**：可复制的AI导师指令，当前需求→诊断Gap→专业与大白话解释→官方小节→真实故障实验→独立复测。
 
 **[通用学习执行法：概念、看代码、亲手敲、独立修改和五项验收](docs/learning/LEARNING-BY-EVIDENCE.md)**：已适配上游 AI-Learning-OS 的 TPPAD / 诊断优先 / 变式 / 正负例 / 证据分离，继续沿用本仓 **L1/L2/L3 + PROGRESS 唯一台账**。
 

@@ -13,7 +13,7 @@
 - 本人关闭完整答案与 AI 解题指导、按约定可查官方文档，独立完成新任务且记录命令和结果：才可申请**对应任务**的能力验收。
 - 没有真实岗位/客户需求时，可以用合成练习，标记 **SELF_SET**；不伪称买家证据或实际交付。
 
-## 2. 从结果倒推，而不是先刷 24 周目录
+### 外部资料入口：先消化，再进入本仓节点\n\n遇到优秀博客、官方文档、GitHub 项目、论文或技术教程时，先参考上游 [Source-to-Mastery](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/learning/source-to-mastery.md)：按“目的→轻量知识地图→带问题精读→闭卷提取”形成一个待验证的 Gap，随后在本仓 [42 节点卡](NODE-STUDY-CARDS.md) 和 [现有实验](labs/README.md) 中找最小复用入口。\n\n资料的作者观点、本人闭卷理解、实际运行证据分别保留；**本仓仍使用 L1/L2/L3、唯一 [PROGRESS](PROGRESS.md) 和现有五项验收**。查阅一次 API 若问题已解决，可按 Stop Rule 停止，不必强行写 Demo 或复制完整博客摘要。\n\n## 2. 从结果倒推，而不是先刷 24 周目录
 
 每次先写清六项：**Who**（为谁学）→ **Why**（为什么）→ **Outcome**（会做什么）→ **Evidence**（拿什么验）→ **Constraints**（环境/时间/授权）→ **Stop Rule**（何时停止）。
 
